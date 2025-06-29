@@ -484,6 +484,248 @@
             font-size: 0.9rem;
             margin-top: 0.5rem;
         }
+
+        /* ===== PUBLICATIONS SECTION STYLES ===== */
+        /* Add this to your existing CSS file */
+        
+        .publications-section {
+            padding: 80px 0;
+            background: var(--bg-color);
+            min-height: auto;
+        }
+        
+        .publications-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 100%;
+        }
+        
+        .publication-item {
+            background: var(--card-bg, #ffffff);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-color, #007bff);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .publication-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color, #007bff), var(--secondary-color, #6c757d));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .publication-item:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .publication-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .publication-title {
+            color: var(--text-color, #333333);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+        
+        .publication-item:hover .publication-title {
+            color: var(--primary-color, #007bff);
+        }
+        
+        .publication-authors {
+            color: var(--text-color, #333333);
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        
+        .publication-authors strong {
+            color: var(--primary-color, #007bff);
+            font-weight: 600;
+        }
+        
+        .publication-venue {
+            color: var(--primary-color, #007bff);
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        .publication-description {
+            color: var(--text-color, #333333);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+        
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--primary-color, #007bff);
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            white-space: nowrap;
+        }
+        
+        .pub-link:hover {
+            background: var(--secondary-color, #6c757d);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #ffffff !important;
+        }
+        
+        .pub-link:focus {
+            outline: none;
+            border-color: var(--primary-color, #007bff);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        .pub-link i {
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        
+        /* Dark mode support */
+        [data-theme="dark"] .publication-item {
+            background: var(--card-bg, #2d3748);
+            border-left-color: var(--primary-color, #4299e1);
+        }
+        
+        [data-theme="dark"] .publication-title {
+            color: var(--text-color, #e2e8f0);
+        }
+        
+        [data-theme="dark"] .publication-authors {
+            color: var(--text-color, #cbd5e0);
+        }
+        
+        [data-theme="dark"] .publication-description {
+            color: var(--text-color, #a0aec0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .publications-section {
+                padding: 60px 0;
+            }
+            
+            .publication-item {
+                padding: 20px;
+                margin: 0 10px;
+            }
+            
+            .publication-title {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            
+            .publication-authors {
+                font-size: 0.9rem;
+            }
+            
+            .publication-venue {
+                font-size: 0.85rem;
+            }
+            
+            .publication-description {
+                font-size: 0.9rem;
+            }
+            
+            .publication-links {
+                gap: 8px;
+                margin-top: 15px;
+            }
+            
+            .pub-link {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                gap: 4px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .publication-item {
+                padding: 15px;
+                margin: 0 5px;
+            }
+            
+            .publication-title {
+                font-size: 1.1rem;
+            }
+            
+            .publication-links {
+                justify-content: flex-start;
+            }
+            
+            .pub-link {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Animation for section entry */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .publication-item {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .publication-item:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        
+        .publication-item:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        .publication-item:nth-child(4) {
+            animation-delay: 0.3s;
+        }
         
         /* Projects Section */
         /* Projects Section */
@@ -1400,6 +1642,125 @@
                 text-align: center;
             }
         }
+
+        /* Pagination Styles for project section*/
+        .pagination-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .pagination-info {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .pagination-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .pagination-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .pagination-btn:hover:not(:disabled) {
+            background: rgba(88, 166, 255, 0.2);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(88, 166, 255, 0.3);
+        }
+        
+        .pagination-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .pagination-numbers {
+            display: flex;
+            gap: 0.25rem;
+            margin: 0 0.5rem;
+        }
+        
+        .page-number {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .page-number:hover {
+            background: rgba(88, 166, 255, 0.2);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .page-number.active {
+            background: linear-gradient(135deg, var(--primary-color), #4ECDC4);
+            border-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(88, 166, 255, 0.4);
+        }
+        
+        .page-ellipsis {
+            color: var(--text-secondary);
+            padding: 0 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Responsive pagination */
+        @media (max-width: 768px) {
+            .pagination-container {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .pagination-controls {
+                justify-content: center;
+            }
+            
+            .pagination-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            
+            .page-number {
+                width: 35px;
+                height: 35px;
+            }
+        }
         
         /* Skills Section */
         .skills {
@@ -1739,6 +2100,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li> 
                 <li><a href="#featured-projects">Featured</a></li>
                 <li><a href="#all-projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -1829,6 +2191,37 @@
                     </div> 
                 </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <!-- Insert this after your skills section and before contact section -->
+    
+    <section id="publications" class="publications-section">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-grid">        
+                <!-- Publication Item 1 -->
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <h3 class="publication-title">A Data-Driven Spatiotemporal Framework for Retail Analytics</h3>
+                        <p class="publication-authors"><strong>Randika Prabashwara</strong>, H.K. Gayani V.L. Wickramarathna, Uthayasanker Thayasivam</p>
+                        <p class="publication-venue">ADScAI Symposium 2025</p>
+                        <p class="publication-description">
+                            This paper introduces DSFRA, a novel framework integrating Spatial-Aware LSTM and Adaptive Spatiotemporal DBSCAN 
+                            for enhanced retail analytics, achieving 86.5% prediction accuracy and 20.3% delivery cost reduction.
+                        </p>
+                        <div class="publication-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            <a href="https://github.com/randikapra/Dealer_Dynamics" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Add more publication items as needed -->
+    
             </div>
         </div>
     </section>
@@ -2114,6 +2507,38 @@
             <div class="all-projects-grid" id="allProjectsGrid">
                 <!-- Project cards will be dynamically inserted here -->
             </div>
+
+            <!-- Add this pagination section right after the projects grid div -->
+            <div class="pagination-container">
+                <div class="pagination-info">
+                    <span id="paginationInfo">Showing 1-2 of 15 projects</span>
+                </div>
+                <div class="pagination-controls">
+                    <button class="pagination-btn" id="firstBtn" disabled>
+                        <i class="fas fa-angle-double-left"></i>
+                        First
+                    </button>
+                    <button class="pagination-btn" id="prevBtn" disabled>
+                        <i class="fas fa-angle-left"></i>
+                        Previous
+                    </button>
+                    
+                    <div class="pagination-numbers" id="paginationNumbers">
+                        <!-- Page numbers will be dynamically inserted here -->
+                    </div>
+                    
+                    <button class="pagination-btn" id="nextBtn">
+                        Next
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                    <button class="pagination-btn" id="lastBtn">
+                        Last
+                        <i class="fas fa-angle-double-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            
         </div>
     </section>
 
@@ -2850,12 +3275,24 @@
         }
         
         // Initialize all projects with enhanced features
+        // Add at the top of your JS file
+        let currentPage = 1;
+        let projectsPerPage = 2;
+        let filteredProjects = [];
+        let totalPages = 1;
+
         function initializeAllProjects() {
             const projectsGrid = document.getElementById('allProjectsGrid');
             if (!projectsGrid) return;
             
-            const projectsHTML = allProjectsData.map(project => generateProjectCard(project)).join('');
-            projectsGrid.innerHTML = projectsHTML;
+            // Initialize filtered projects with all projects
+            filteredProjects = [...allProjectsData];
+            
+            // Initialize pagination
+            initializePagination();
+            
+            // Display first page
+            displayProjectsPage(1);
             
             // Add enhanced filter functionality with animations
             const filterButtons = document.querySelectorAll('.filter-btn');
@@ -2888,7 +3325,7 @@
             
             // Add project card hover effects
             addProjectCardEffects();
-        }
+}
         
         // Enhanced filter with staggered animations
         function filterProjectsWithAnimation(category) {
@@ -2911,6 +3348,9 @@
                     }, 300);
                 }
             });
+            setTimeout(() => {
+                filterProjectsWithPagination(category);
+            }, 350);
         }
         
         // Enhanced search with animations
@@ -2939,7 +3379,184 @@
                     }, 300);
                 }
             });
+            setTimeout(() => {
+                searchProjectsWithPagination(query);
+            }, 350);
         }
+
+        // Initialize pagination controls
+        function initializePagination() {
+            const firstBtn = document.getElementById('firstBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const lastBtn = document.getElementById('lastBtn');
+            
+            if (!firstBtn || !prevBtn || !nextBtn || !lastBtn) return;
+            
+            firstBtn.addEventListener('click', () => goToPage(1));
+            prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
+            nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
+            lastBtn.addEventListener('click', () => goToPage(totalPages));
+        }
+        
+        // Display projects for a specific page
+        function displayProjectsPage(page) {
+            currentPage = page;
+            totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+            
+            const startIndex = (page - 1) * projectsPerPage;
+            const endIndex = startIndex + projectsPerPage;
+            const projectsToShow = filteredProjects.slice(startIndex, endIndex);
+            
+            const projectsGrid = document.getElementById('allProjectsGrid');
+            const projectsHTML = projectsToShow.map(project => generateProjectCard(project)).join('');
+            projectsGrid.innerHTML = projectsHTML;
+            
+            // Update pagination controls
+            updatePaginationControls();
+            
+            // Re-add scroll animations and hover effects for new cards
+            setTimeout(() => {
+                addScrollAnimations();
+                addProjectCardEffects();
+            }, 100);
+        }
+        
+        // Update pagination controls
+        function updatePaginationControls() {
+            const firstBtn = document.getElementById('firstBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const lastBtn = document.getElementById('lastBtn');
+            const paginationInfo = document.getElementById('paginationInfo');
+            
+            if (!firstBtn || !prevBtn || !nextBtn || !lastBtn || !paginationInfo) return;
+            
+            // Enable/disable buttons
+            firstBtn.disabled = currentPage === 1;
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages;
+            lastBtn.disabled = currentPage === totalPages;
+            
+            // Update info text
+            const startItem = (currentPage - 1) * projectsPerPage + 1;
+            const endItem = Math.min(currentPage * projectsPerPage, filteredProjects.length);
+            paginationInfo.textContent = `Showing ${startItem}-${endItem} of ${filteredProjects.length} projects`;
+            
+            // Update page numbers
+            updatePageNumbers();
+        }
+        
+        // Update page numbers
+        function updatePageNumbers() {
+            const paginationNumbers = document.getElementById('paginationNumbers');
+            if (!paginationNumbers) return;
+            
+            let numbersHTML = '';
+            
+            // Calculate which page numbers to show
+            let startPage = Math.max(1, currentPage - 2);
+            let endPage = Math.min(totalPages, currentPage + 2);
+            
+            // Show first page if not in range
+            if (startPage > 1) {
+                numbersHTML += `<button class="page-number" onclick="goToPage(1)">1</button>`;
+                if (startPage > 2) {
+                    numbersHTML += `<span class="page-ellipsis">...</span>`;
+                }
+            }
+            
+            // Show page numbers in range
+            for (let i = startPage; i <= endPage; i++) {
+                const activeClass = i === currentPage ? 'active' : '';
+                numbersHTML += `<button class="page-number ${activeClass}" onclick="goToPage(${i})">${i}</button>`;
+            }
+            
+            // Show last page if not in range
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    numbersHTML += `<span class="page-ellipsis">...</span>`;
+                }
+                numbersHTML += `<button class="page-number" onclick="goToPage(${totalPages})">${totalPages}</button>`;
+            }
+            
+            paginationNumbers.innerHTML = numbersHTML;
+        }
+        
+        // Go to specific page
+        function goToPage(page) {
+            if (page < 1 || page > totalPages || page === currentPage) return;
+            
+            // Add animation effect
+            const projectsGrid = document.getElementById('allProjectsGrid');
+            projectsGrid.style.opacity = '0.5';
+            projectsGrid.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                displayProjectsPage(page);
+                projectsGrid.style.opacity = '1';
+                projectsGrid.style.transform = 'translateY(0)';
+                
+                // Scroll to top of projects section
+                document.getElementById('all-projects').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 200);
+        }
+        
+        // Filter function that works with pagination
+        function filterProjectsWithPagination(category) {
+            // Filter projects based on category
+            if (category === 'all') {
+                filteredProjects = [...allProjectsData];
+            } else {
+                filteredProjects = allProjectsData.filter(project => project.category === category);
+            }
+            
+            // If there's an active search, apply it to the filtered results
+            const searchInput = document.getElementById('projectSearch');
+            if (searchInput && searchInput.value.trim()) {
+                const searchTerm = searchInput.value.toLowerCase();
+                filteredProjects = filteredProjects.filter(project => {
+                    const title = project.title.toLowerCase();
+                    const description = project.description.toLowerCase();
+                    const techStack = project.techStack.join(' ').toLowerCase();
+                    
+                    return title.includes(searchTerm) || description.includes(searchTerm) || techStack.includes(searchTerm);
+                });
+            }
+            
+            // Reset to page 1 and display
+            displayProjectsPage(1);
+        }
+        
+        // Search function that works with pagination
+        function searchProjectsWithPagination(query) {
+            const searchTerm = query.toLowerCase();
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            
+            // Start with filtered projects based on current category
+            let baseProjects = activeFilter === 'all' ? allProjectsData : allProjectsData.filter(project => project.category === activeFilter);
+            
+            if (!query.trim()) {
+                // If no search query, show all projects from current filter
+                filteredProjects = baseProjects;
+            } else {
+                // Search within the current filter category
+                filteredProjects = baseProjects.filter(project => {
+                    const title = project.title.toLowerCase();
+                    const description = project.description.toLowerCase();
+                    const techStack = project.techStack.join(' ').toLowerCase();
+                    
+                    return title.includes(searchTerm) || description.includes(searchTerm) || techStack.includes(searchTerm);
+                });
+            }
+            
+            // Reset to page 1 and display
+            displayProjectsPage(1);
+        }
+
         
         // Add scroll animations for project cards
         function addScrollAnimations() {
@@ -3167,6 +3784,89 @@
             document.body.style.transition = 'opacity 0.5s ease-in-out';
         });
 
+        // Publications section functionality
+        function initializePublications() {
+            // Handle publications navigation link
+            const publicationsLink = document.querySelector('a[href="#publications"]');
+            if (publicationsLink) {
+                publicationsLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector('#publications');
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update URL without jumping
+                        if (history.pushState) {
+                            history.pushState(null, null, '#publications');
+                        }
+                    }
+                });
+            }
+            
+            // Add intersection observer for publications section animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const publicationsObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        
+                        // Animate publication items with stagger
+                        const publicationItems = entry.target.querySelectorAll('.publication-item');
+                        publicationItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, index * 100);
+                        });
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe publications section
+            const publicationsSection = document.querySelector('#publications');
+            if (publicationsSection) {
+                publicationsObserver.observe(publicationsSection);
+                
+                // Set initial state for animation
+                const publicationItems = publicationsSection.querySelectorAll('.publication-item');
+                publicationItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(30px)';
+                    item.style.transition = 'all 0.6s ease';
+                });
+            }
+            
+            // Add click tracking and visual feedback for publication links
+            const pubLinks = document.querySelectorAll('.pub-link');
+            pubLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const linkType = this.textContent.trim().toLowerCase();
+                    const publicationTitle = this.closest('.publication-item').querySelector('.publication-title').textContent;
+                    
+                    // Add visual feedback
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+                
+                // Add keyboard navigation support
+                link.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+
 
         // Theme toggle functionality (fixed for artifacts)
         let currentTheme = 'dark'; // Default theme
@@ -3250,6 +3950,7 @@
             initializeAllProjects(); // Your existing function
             initializeThemeToggle(); // Updated function
             initializeScrollToTop(); // New function
+            initializePublications(); // NEW: Add this line
             
             // Your existing code for counter animation...
             const aboutSection = document.querySelector('.about');
