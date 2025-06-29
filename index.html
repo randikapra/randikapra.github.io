@@ -1577,7 +1577,158 @@
         * {
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
- 
+
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color, #333333); /* Use text color variable */
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /*        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            /* background: currentColor; */
+            background: rgba(255, 255, 255, 0.8); /* Changed from currentColor */
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color, #ffffff);
+            opacity: 0.9; /* Slightly transparent */
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex !important;
+            }
+        
+            nav.container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+        
+            .nav-links {
+            position: fixed !important;
+            right: -100% !important;
+            top: 0 !important;
+            flex-direction: column !important;
+            /* background-color: var(--bg-color, #0a0a0a) !important; */
+            background-color: rgba(10, 10, 10, 0.95) !important; 
+            width: 300px !important; /* Changed from 100% */
+            height: 100vh !important;
+            text-align: left !important; /* Changed from center */
+            transition: right 0.3s ease !important; 
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5) !important;
+            padding: 4rem 1rem 2rem !important; /* Adjusted padding */
+            overflow-y: auto !important;
+            z-index: 1000 !important;
+            justify-content: flex-start !important;
+            align-items: stretch !important; /* Changed from center */
+            margin: 0 !important;
+            list-style: none !important;
+            backdrop-filter: blur(10px) !important;
+        }
+        
+        .nav-links.active {
+            right: 0 !important;
+        }
+        
+        .nav-links li {
+            margin: 0.5rem 0 !important; /* Reduced margin */
+            width: 100% !important;
+            max-width: none !important; /* Removed max-width */
+        }
+        
+        .nav-links a {
+            padding: 0.75rem 1rem !important; /* Reduced padding */
+            display: block !important;
+            width: 100% !important;
+            font-size: 1rem !important; /* Reduced font size */
+            border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1)) !important;
+            color: var(--text-color, #ffffff) !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            border-radius: 4px !important; /* Reduced border radius */
+        }
+
+            .nav-links a:hover {
+                background-color: var(--accent-color, #64b5f6) !important;
+                color: var(--bg-color, #0a0a0a) !important;
+            }
+        
+            .theme-toggle {
+                margin: 2rem auto !important;
+                padding: 0.75rem 1.5rem !important;
+                font-size: 1rem !important;
+                width: auto !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 0.5rem !important;
+            }
+
+            /* Hide desktop nav on mobile */
+            .nav-links:not(.active) {
+                display: none !important;
+            }
+
+            /* Show mobile nav when active */
+            .nav-links.active {
+                display: flex !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links {
+                padding: 3rem 1rem 1rem !important;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-links a {
+                font-size: 1rem !important;
+                padding: 0.8rem 1rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1599,6 +1750,12 @@
                     </button>
                 </li>
             </ul>
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -3009,80 +3166,7 @@
             document.body.style.opacity = '0';
             document.body.style.transition = 'opacity 0.5s ease-in-out';
         });
-        
-        // Enhanced mobile menu with better UX
-        const createMobileMenu = () => {
-            const nav = document.querySelector('nav');
-            let menuToggle = document.querySelector('.menu-toggle');
-            
-            if (window.innerWidth <= 768) {
-                if (!menuToggle) {
-                    menuToggle = document.createElement('div');
-                    menuToggle.className = 'menu-toggle';
-                    menuToggle.innerHTML = `
-                        <div class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    `;
-                    nav.appendChild(menuToggle);
-                    
-                    menuToggle.addEventListener('click', () => {
-                        const navLinks = document.querySelector('.nav-links');
-                        const hamburger = menuToggle.querySelector('.hamburger');
-                        
-                        navLinks.classList.toggle('active');
-                        hamburger.classList.toggle('active');
-                        
-                        // Prevent body scroll when menu is open
-                        if (navLinks.classList.contains('active')) {
-                            document.body.style.overflow = 'hidden';
-                        } else {
-                            document.body.style.overflow = 'auto';
-                        }
-                    });
-                }
-            } else if (menuToggle) {
-                nav.removeChild(menuToggle);
-                document.body.style.overflow = 'auto';
-            }
-        };
 
-        /*
-        // Theme toggle functionality
-        function initializeThemeToggle() {
-            const themeToggle = document.createElement('button');
-            themeToggle.className = 'theme-toggle';
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            themeToggle.setAttribute('aria-label', 'Toggle dark mode');
-            
-            document.body.appendChild(themeToggle);
-            
-            // Check for saved theme preference
-            const savedTheme = localStorage.getItem('portfolio-theme');
-            if (savedTheme) {
-                document.body.classList.add(savedTheme);
-                if (savedTheme === 'dark-theme') {
-                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                }
-            }
-            
-            themeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-theme');
-                const isDark = document.body.classList.contains('dark-theme');
-                
-                themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-                localStorage.setItem('portfolio-theme', isDark ? 'dark-theme' : 'light-theme');
-                
-                // Add transition effect
-                themeToggle.style.transform = 'rotate(360deg)';
-                setTimeout(() => {
-                    themeToggle.style.transform = 'rotate(0deg)';
-                }, 300);
-            });
-        }
-        */
 
         // Theme toggle functionality (fixed for artifacts)
         let currentTheme = 'dark'; // Default theme
@@ -3161,27 +3245,6 @@
  
         
         // Initialize everything when DOM is loaded
-        /*
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeAllProjects();
-            initializeThemeToggle();
-            
-            // Trigger counter animation when about section is visible
-            const aboutSection = document.querySelector('.about');
-            if (aboutSection) {
-                const aboutObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            animateCounters();
-                            aboutObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-                
-                aboutObserver.observe(aboutSection);
-            }
-        });
-        */
         // Update your existing DOMContentLoaded event
         document.addEventListener('DOMContentLoaded', () => {
             initializeAllProjects(); // Your existing function
@@ -3203,10 +3266,6 @@
                 aboutObserver.observe(aboutSection);
             }
         });
-        
-        // Initialize mobile menu on resize
-        window.addEventListener('resize', createMobileMenu);
-        createMobileMenu();
         
         // Add keyboard navigation support
         document.addEventListener('keydown', (e) => {
@@ -3244,6 +3303,89 @@
             
             card.addEventListener('blur', function() {
                 this.style.outline = 'none';
+            });
+        });
+
+        // Mobile menu toggle function
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                
+                /*
+                // Prevent body scroll when menu is open
+                if (navLinks.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+                */
+            }
+        }
+        
+        // Add event listeners when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', toggleMenu);
+            }
+        
+            // Close menu when clicking on navigation links
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const hamburger = document.getElementById('hamburger');
+                    const navLinksContainer = document.querySelector('.nav-links');
+                    
+                    if (hamburger && navLinksContainer) {
+                        hamburger.classList.remove('active');
+                        navLinksContainer.classList.remove('active');
+                    }
+                });
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                const hamburger = document.getElementById('hamburger');
+                const navLinksContainer = document.querySelector('.nav-links');
+                
+                if (hamburger && navLinksContainer && 
+                    !hamburger.contains(e.target) && 
+                    !navLinksContainer.contains(e.target) &&
+                    navLinksContainer.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinksContainer.classList.remove('active');
+                }
+            });
+        
+            // Close menu on window resize to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    const hamburger = document.getElementById('hamburger');
+                    const navLinksContainer = document.querySelector('.nav-links');
+                    
+                    if (hamburger && navLinksContainer) {
+                        hamburger.classList.remove('active');
+                        navLinksContainer.classList.remove('active');
+                    }
+                }
+            });
+        
+            // Close menu with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const hamburger = document.getElementById('hamburger');
+                    const navLinksContainer = document.querySelector('.nav-links');
+                    
+                    if (hamburger && navLinksContainer && navLinksContainer.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        navLinksContainer.classList.remove('active');
+                    }
+                }
             });
         });
     
