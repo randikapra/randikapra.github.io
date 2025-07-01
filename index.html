@@ -854,13 +854,18 @@
         /* Circular Progress Indicator Styles */
         .circular-progress-container {
             position: relative;
-            display: inline-flex;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
             align-items: center;
             justify-content: center;
             margin-left: 8px;
+            flex-shrink: 0;
         }
 
         .circular-progress {
+            width: 100%;
+            height: 100%;
             transform: rotate(0deg);
             transition: all 0.3s ease;
         }
@@ -872,11 +877,15 @@
 
         .progress-percentage-small {
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-size: 8px;
             font-weight: 600;
             color: #374151;
             line-height: 1;
             text-align: center;
+            pointer-events: none;
         }
 
         /* Enhanced Project Status Styles */
@@ -884,7 +893,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            min-width: 0;
         }
 
         /* Status indicator colors */
@@ -926,20 +936,25 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .project-status {
-                justify-content: space-between;
-                width: 100%;
+                justify-content: flex-end;
+                gap: 6px;
             }
             
             .circular-progress-container {
-                margin-left: auto;
+                width: 20px;
+                height: 20px;
+                margin-left: 6px;
             }
             
             .progress-percentage-small {
-                font-size: 7px;
+                font-size: 6px;
+            }
+            
+            .circular-progress {
+                width: 20px;
+                height: 20px;
             }
         }
-
-
 
         /* Progress Legend Styles (for the legend/explanation) */
         .progress-legend {
@@ -3496,26 +3511,6 @@
                 `;
             };
 
-            // Generate progress indicator for ongoing projects (keeping the bar for project content)
-            /*
-            const generateProgressIndicator = (project) => {
-                if (project.status !== 'ongoing') return '';
-                
-                const progressPercentage = project.progress || 75;
-                
-                return `
-                    <div class="project-progress-section">
-                        <div class="progress-header">
-                            <span class="progress-label">Progress</span>
-                            <span class="progress-percentage">${progressPercentage}%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${progressPercentage}%;"></div>
-                        </div>
-                    </div>
-                `;
-            };
-            */
             return `
                 <div class="project-card" data-category="${project.category}">
                     ${project.status === 'ongoing' ? '<div class="project-progress-glow"></div>' : ''}
