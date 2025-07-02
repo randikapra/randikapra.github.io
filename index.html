@@ -3020,14 +3020,16 @@
         }
         /* CSM-SR added closed*/
         /* Search Option started */
-        /* Enhanced Project Search Styles */
-        /* Following the 's' suffix naming convention for search-related styles */
-        .search-highlight {
-            background-color: #ffeb3b;
-            padding: 2px 4px;
-            border-radius: 3px;
+        /* Enhanced Search Container */
+        .enhanced-search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
+        /* Search Clear Button */
         .search-clear-btn {
             position: absolute;
             right: 10px;
@@ -3035,35 +3037,288 @@
             transform: translateY(-50%);
             background: none;
             border: none;
-            cursor: pointer;
             color: #666;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            z-index: 10;
+            transition: color 0.2s ease;
         }
 
+        .search-clear-btn:hover {
+            color: #ff4757;
+            background-color: rgba(255, 71, 87, 0.1);
+        }
+
+        /* Search Suggestions Dropdown */
         .search-suggestions-dropdown {
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
             background: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
             max-height: 300px;
             overflow-y: auto;
-            z-index: 1000;
+            margin-top: 4px;
         }
 
         .search-suggestion-item {
-            padding: 10px;
+            padding: 12px 16px;
             cursor: pointer;
-            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #f1f3f4;
+            transition: background-color 0.2s ease;
         }
 
         .search-suggestion-item:hover {
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
         }
 
+        .search-suggestion-item:last-child {
+            border-bottom: none;
+        }
 
+        .search-suggestion-item i {
+            color: #666;
+            width: 16px;
+        }
+
+        .suggestion-count {
+            margin-left: auto;
+            background-color: #e9ecef;
+            color: #6c757d;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        /* Search History Section */
+        .search-history-section {
+            border-top: 1px solid #e1e5e9;
+            padding-top: 8px;
+        }
+
+        .search-history-header {
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .search-history-item {
+            padding: 8px 16px;
+            cursor: pointer;
+            color: #666;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .search-history-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Search Stats Container */
+        .search-stats-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 16px 0;
+            padding: 12px 0;
+            border-bottom: 1px solid #e1e5e9;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .search-results-count {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .no-results-message {
+            color: #ff4757;
+            font-style: italic;
+        }
+
+        .search-filters-active {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .active-filter-tag {
+            background-color: #007bff;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Advanced Search Toggle */
+        .advanced-search-toggle {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 12px;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .advanced-search-toggle:hover {
+            background-color: #5a6268;
+        }
+
+        .advanced-search-toggle.active {
+            background-color: #007bff;
+        }
+
+        .advanced-search-toggle i {
+            font-size: 12px;
+        }
+
+        /* Advanced Search Panel */
+        .advanced-search-panel {
+            background-color: #f8f9fa;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .advanced-search-content {
+            display: grid;
+            gap: 20px;
+        }
+
+        .search-field-group,
+        .search-options-group,
+        .search-status-filter {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .search-field-group label:first-child,
+        .search-options-group label:first-child,
+        .search-status-filter label:first-child {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .search-field-checkboxes,
+        .search-options-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .search-field-checkboxes label,
+        .search-options-checkboxes label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .search-field-checkboxes input[type="checkbox"],
+        .search-options-checkboxes input[type="checkbox"] {
+            margin: 0;
+        }
+
+        #statusFilter {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background-color: white;
+            font-size: 14px;
+            max-width: 200px;
+        }
+
+        /* Search Highlight */
+        .search-highlight {
+            background-color: #ffeb3b;
+            padding: 1px 2px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        /* Filter Buttons Active State */
+        .filter-btn.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .search-stats-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .search-field-checkboxes,
+            .search-options-checkboxes {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .advanced-search-content {
+                gap: 16px;
+            }
+            
+            .enhanced-search-container {
+                max-width: 100%;
+            }
+        }
+
+        /* Dark mode support (optional) */
+        @media (prefers-color-scheme: dark) {
+            .search-suggestions-dropdown {
+                background: #2d3748;
+                border-color: #4a5568;
+                color: white;
+            }
+            
+            .search-suggestion-item:hover,
+            .search-history-item:hover {
+                background-color: #4a5568;
+            }
+            
+            .advanced-search-panel {
+                background-color: #2d3748;
+                border-color: #4a5568;
+                color: white;
+            }
+            
+            #statusFilter {
+                background-color: #2d3748;
+                border-color: #4a5568;
+                color: white;
+            }
+            
+            .search-highlight {
+                background-color: #ffd54f;
+                color: #000;
+            }
+        }
         /* Search OPtion overed */
+        
         /* Skills Section */
         .skills {
             padding: 6rem 0;
@@ -4922,8 +5177,6 @@
             // ... Continue with other projects following the same pattern
         ];
 
-        // Enhanced project card generation with new features
-        // Enhanced project card generation to match featured projects style
         // Universal Project Card Generator - Handles all project types dynamically
         function generateUniversalProjectCard(project) {
             // Validate project data
@@ -5465,12 +5718,6 @@
                 }, 300);
             }
         }
-
-        // Enhanced Project Search System
-        // This works with your existing universal project card system
-
-        // Fixed Enhanced Project Search System
-        // This fixes the CSS class naming issues and initialization problems
 
         class ProjectSearchManager {
             constructor(containerId, searchInputId, filterButtonsSelector) {
