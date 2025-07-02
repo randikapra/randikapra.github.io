@@ -1399,6 +1399,22 @@
             }
         }
 
+        /* Featured Projects Section */
+        #featured-projects-container6 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            #featured-projects-container6 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        /* Featured Projects Section End */
+
         /* All Projects Section */
         .all-projects {
             padding: 6rem 0;
@@ -2522,7 +2538,7 @@
 
         .team-avatars-container3 {
             display: flex;
-            gap: 4px;
+            gap: -0.5rem;
         }
 
         .team-member-avatar3 {
@@ -2538,6 +2554,7 @@
             font-size: 12px;
             border: 2px solid white;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-left: -8px;
         }
 
         .team-details3 {
@@ -2706,18 +2723,19 @@
         .tech-stack-simple3 {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 1px;
         }
 
         .tech-badge-item3 {
-            padding: 6px 12px;
+            padding: 2px 4px;
             background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
             color: #475569;
             font-size: 11px;
             font-weight: 600;
-            border-radius: 16px;
+            border-radius: 14px;
             border: 1px solid #cbd5e1;
             transition: all 0.2s ease;
+            margin: 2px;
         }
 
         .tech-badge-item3:hover {
@@ -2728,7 +2746,7 @@
         }
 
         .tech-category-group3 {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .tech-category-header3 {
@@ -2745,7 +2763,7 @@
         .tech-category-badges3 {
             display: flex;
             flex-wrap: wrap;
-            gap: 4px;
+            gap: 2px;
         }
 
         /* Links section */
@@ -3318,7 +3336,53 @@
             }
         }
         /* Search OPtion overed */
-        
+
+        /* Tech stack expand */
+        .tech-stack-toggle5 {
+            background: transparent;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            margin-top: 4px;
+        }
+
+        .tech-stack-toggle5:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #475569;
+        }
+
+        .tech-stack-toggle5.expanded5 {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+
+        .toggle-icon5 {
+            transition: transform 0.2s ease;
+            font-size: 10px;
+        }
+
+        .tech-stack-controls5 {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tech-stack-hidden5,
+        .tech-category-hidden5 {
+            margin-top: 4px;
+        }
+
+
+        /* Tech stack closed */
+
         /* Skills Section */
         .skills {
             padding: 6rem 0;
@@ -3764,244 +3828,18 @@
 
     
     <!-- Projects Section -->
+     
+    <!-- Featured Projects Section -->
     <section id="featured-projects" class="projects section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-subtitle">Innovative solutions at the intersection of AI and real-world applications</p>
             
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-category">Research</span>
-                        <div class="project-status">
-                            <div class="status-indicator"></div>
-                            <span>In Progress</span>
-                        </div>
-                        <h3 class="project-title">Structure-Informed Super Resolution Technique for Scientific Imaging</h3>
-                        <div class="project-subtitle">
-                            <span>Final Year Research Project</span>
-                            <span class="project-duration">Jun 2024 - Present</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-team">
-                            <div class="team-avatars">
-                                <div class="team-avatar">R</div>
-                                <div class="team-avatar">O</div>
-                                <div class="team-avatar">G</div>
-                            </div>
-                            <span>Team of 3 • Principal Researcher</span>
-                        </div>
-                        
-                        <p class="project-description">
-                            Pioneering super-resolution framework for microscopy and nanoscience imaging using 
-                            hierarchical multi-scale learning and adaptive feature fusion to achieve unprecedented image quality.
-                        </p>
-                        
-                        <div class="project-metrics">
-                            <div class="metrics-title">Key Achievements</div>
-                            <div class="project-results">
-                                <div class="result-item">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span><strong>3.5dB PSNR</strong> improvement over state-of-the-art methods</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-eye"></i>
-                                    <span><strong>20% SSIM increase</strong>, 20% LPIPS decrease in quality metrics</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Outperformed <strong>EDSR, ESRGAN, SwinIR & HMANet</strong></span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-microscope"></i>
-                                    <span>Specialized for <strong>microscopy & nanoscience</strong> applications</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-stack-title">Technology Stack</div>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">Keras</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Deep Learning</span>
-                                <span class="tech-tag">Image Processing</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/randikapra/CSM-SR-Test3" class="project-link">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                            <a href="https://randikapra.github.io/CSM-SR-Test3/" class="project-link primary">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="progress-indicator" style="width: 75%;"></div>
-                </div>
-    
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-category">Enterprise</span>
-                        <div class="project-status">
-                            <div class="status-indicator"></div>
-                            <span>Active Development</span>
-                        </div>
-                        <h3 class="project-title">Geo-Spatial Intelligence Platform</h3>
-                        <div class="project-subtitle">
-                            <span>Enterprise Solution</span>
-                            <span class="project-duration">Dec 2024 - Present</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-team">
-                            <div class="team-avatars">
-                                <div class="team-avatar">R</div>
-                                
-                            </div>
-                            <span>Solo Project • Data-Scientist</span>
-                        </div>
-                        
-                        <p class="project-description">
-                            Enterprise-grade sales analytics platform featuring real-time GPS tracking, advanced behavioral analysis, 
-                            and automated report generation to deliver actionable business insights and optimize field operations.
-                        </p>
-                        
-                        <div class="project-metrics">
-                            <div class="metrics-title">Core Features</div>
-                            <div class="project-results">
-                                <div class="result-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span><strong>Real-time GPS tracking</strong> with intelligent route optimization</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-brain"></i>
-                                    <span><strong>ML-powered forecasting</strong> & customer segmentation</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-chart-pie"></i>
-                                    <span><strong>Interactive dashboards</strong> with live analytics & KPIs</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <span><strong>Cross-platform</strong> mobile & web application</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-stack-title">Technology Stack</div>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">Apache Kafka</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Redis</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/randikapra/Dealer_Dynamics" class="project-link">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                            <a href="#contact" class="project-link primary">
-                                <i class="fas fa-envelope"></i>
-                                Request Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="progress-indicator" style="width: 60%;"></div>
-                </div>
-    
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-category">Big Data</span>
-                        <div class="project-status">
-                            <div class="status-indicator completed"></div>
-                            <span>Completed</span>
-                        </div>
-                        <h3 class="project-title">Music Genre Classification Engine</h3>
-                        <div class="project-subtitle">
-                            <span>Big Data ML Pipeline</span>
-                            <span class="project-duration">Nov 2024</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-team">
-                            <div class="team-avatars">
-                                <div class="team-avatar">R</div>
-                            </div>
-                            <span>Solo Project • ML Engineering</span>
-                        </div>
-                        
-                        <p class="project-description">
-                            High-performance music genre classification system built on Apache Spark, designed for 
-                            large-scale audio processing and distributed machine learning with enterprise-grade scalability.
-                        </p>
-                        
-                        <div class="project-metrics">
-                            <div class="metrics-title">Technical Highlights</div>
-                            <div class="project-results">
-                                <div class="result-item">
-                                    <i class="fas fa-server"></i>
-                                    <span><strong>Spark-native</strong> distributed training pipeline</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-layer-group"></i>
-                                    <span><strong>Multi-model ensemble</strong> RF, GBT & Logistic Regression</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-expand-arrows-alt"></i>
-                                    <span><strong>Scalable architecture</strong> for massive audio datasets</span>
-                                </div>
-                                <div class="result-item">
-                                    <i class="fas fa-music"></i>
-                                    <span><strong>Advanced audio features</strong> MFCC, spectral analysis</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-stack-title">Technology Stack</div>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Apache Spark</span>
-                                <span class="tech-tag">PySpark MLlib</span>
-                                <span class="tech-tag">Audio Processing</span>
-                                <span class="tech-tag">Scikit-learn</span>
-                                <span class="tech-tag">Librosa</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/randikapra/music-genre-classifier" class="project-link">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                            <a href="#contact" class="project-link primary">
-                                <i class="fas fa-file-alt"></i>
-                                Case Study
-                            </a>
-                        </div>
-                    </div>
-                    <div class="progress-indicator" style="width: 100%;"></div>
-                </div>
+            <div class="projects-grid" id="featured-projects-container6">
+                <!-- Dynamic cards will be inserted here -->
             </div>
         </div>
     </section>
-    
     <!-- All Projects Section -->
     <!-- All Projects Section -->
     <section id="all-projects" class="all-projects section">
@@ -4346,6 +4184,137 @@
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
+
+
+        /* Featured Projects */
+        const featuredProjectsData = [
+            {
+                title: "Structure-Informed Super Resolution Technique for Scientific Imaging",
+                subtitle: "Final Year Research Project",
+                duration: "Jun 2024 - Present",
+                category: "research",
+                status: "peer-review",
+                progress: 90,
+                description: "Pioneering super-resolution framework for microscopy and nanoscience imaging using hierarchical multi-scale learning and adaptive feature fusion to achieve unprecedented image quality.",
+                teamSize: "Team of 3",
+                role: "Principal Researcher",
+                avatars: ["R", "O", "G"],
+                highlights: [
+                    {
+                        type: "key-achievements",
+                        title: "Key Achievements",
+                        items: [
+                            "<strong>3.5dB PSNR</strong> improvement over state-of-the-art methods",
+                            "<strong>20% SSIM increase</strong>, 20% LPIPS decrease in quality metrics",
+                            "Outperformed <strong>EDSR, ESRGAN, SwinIR & HMANet</strong>",
+                            "Specialized for <strong>microscopy & nanoscience</strong> applications"
+                        ]
+                    }
+                ],
+                techStack: ["Python", "TensorFlow", "Keras", "Computer Vision", "Deep Learning", "Image Processing"],
+                links: [
+                    {
+                        name: "View Code",
+                        url: "https://github.com/randikapra/CSM-SR-Test3",
+                        icon: "fab fa-github"
+                    },
+                    {
+                        name: "Live Demo",
+                        url: "https://randikapra.github.io/CSM-SR-Test3/",
+                        icon: "fas fa-external-link-alt"
+                    }
+                ]
+            },
+            {
+                title: "Dealer Dynamics",
+                subtitle: "Intern Project",
+                duration: "Dec 2023 - May 2024",
+                category: "enterprise",
+                status: "completed",
+                progress: 100,
+                description: "Enterprise-grade sales analytics platform featuring real-time GPS tracking, advanced behavioral analysis, and automated report generation to deliver actionable business insights and optimize field operations.",
+                teamSize: "Team of 2",
+                role: "Data-Scientist",
+                avatars: ["R", "G"],
+                highlights: [
+                    {
+                        type: "core-features",
+                        title: "Core Features",
+                        items: [
+                            "<strong>Real-time GPS tracking</strong> with intelligent route optimization",
+                            "<strong>ML-powered forecasting</strong> & customer segmentation",
+                            "<strong>Interactive dashboards</strong> with live analytics & KPIs",
+                            "<strong>Cross-platform</strong> mobile & web application"
+                        ]
+                    }
+                ],
+                techStack: ["Python", "FastAPI", "React", "PostgreSQL", "Apache Kafka", "Docker", "Redis"],
+                links: [
+                    {
+                        name: "View Code",
+                        url: "https://github.com/randikapra/Dealer_Dynamics",
+                        icon: "fab fa-github"
+                    },
+                    {
+                        name: "Request Demo",
+                        url: "#contact",
+                        icon: "fas fa-envelope"
+                    }
+                ]
+            },
+            {
+                title: "Music Genre Classification Engine",
+                subtitle: "Big Data ML Pipeline",
+                duration: "Nov 2024",
+                category: "data-science",
+                status: "completed",
+                progress: 100,
+                description: "High-performance music genre classification system built on Apache Spark, designed for large-scale audio processing and distributed machine learning with enterprise-grade scalability.",
+                teamSize: "Solo Project",
+                role: "ML Engineering",
+                avatars: ["R"],
+                highlights: [
+                    {
+                        type: "technical-achievements",
+                        title: "Technical Highlights",
+                        items: [
+                            "<strong>Spark-native</strong> distributed training pipeline",
+                            "<strong>Multi-model ensemble</strong> RF, GBT & Logistic Regression",
+                            "<strong>Scalable architecture</strong> for massive audio datasets",
+                            "<strong>Advanced audio features</strong> MFCC, spectral analysis"
+                        ]
+                    }
+                ],
+                techStack: ["Python", "Apache Spark", "PySpark MLlib", "Audio Processing", "Scikit-learn", "Librosa"],
+                links: [
+                    {
+                        name: "View Code",
+                        url: "https://github.com/randikapra/music-genre-classifier",
+                        icon: "fab fa-github"
+                    },
+                    {
+                        name: "Case Study",
+                        url: "#contact",
+                        icon: "fas fa-file-alt"
+                    }
+                ]
+            }
+        ];
+        function renderFeaturedProjects6() {
+            const container = document.getElementById('featured-projects-container6');
+            if (!container) return;
+            
+            const cardsHTML = featuredProjectsData.map(project => 
+                generateUniversalProjectCard(project)
+            ).join('');
+            
+            container.innerHTML = cardsHTML;
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFeaturedProjects6();
+        });
         
         // All Projects Data
         // Enhanced All Projects Data with additional metadata
@@ -4502,27 +4471,33 @@
                 links: [
                     { 
                         name: "Research Paper", 
-                        url: "#csm-sr-paper", 
+                        url: "https://drive.google.com/file/d/16IUSozUQ2Tl3gqw1NBlqbtPCHPFqLH7s/view?usp=sharing", 
                         icon: "fas fa-file-alt",
-                        description: "ICCV 2025 submission manuscript"
+                        description: "ICCV 2025 submission manuscript - peer review phase"
                     },
                     { 
                         name: "Code Repository", 
-                        url: "github.com/research/csm-sr", 
+                        url: "https://github.com/randikapra/CSM-SR-Test3", 
                         icon: "fab fa-github",
                         description: "Complete implementation and experiments"
                     },
                     { 
                         name: "Interactive Demo", 
-                        url: "#csm-sr-demo", 
+                        url: "https://randikapra.github.io/CSM-SR-Test3/", 
                         icon: "fas fa-microscope",
                         description: "Live reconstruction demonstration"
                     },
                     { 
                         name: "Supplementary Materials", 
-                        url: "#supplementary", 
+                        url: "https://github.com/randikapra/CSM-SR-Test3/blob/main/README.md", 
                         icon: "fas fa-chart-line",
                         description: "Additional experiments and analysis"
+                    },
+                    { 
+                        name: "Dataset & Benchmarks", 
+                        url: "https://www.nature.com/articles/sdata2018172#Sec7", 
+                        icon: "fas fa-database",
+                        description: "Evaluation datasets and performance benchmarks"
                     }
                 ]
             },
@@ -4649,7 +4624,7 @@
                 links: [
                     { 
                         name: "Live Demo", 
-                        url: "#geosales-demo", 
+                        url: "https://github.com/randikapra/geosales-intelligence-platform/blob/main/README.md", 
                         icon: "fas fa-rocket",
                         description: "Interactive platform demonstration"
                     },
@@ -4661,7 +4636,7 @@
                     },
                     { 
                         name: "Research Paper", 
-                        url: "#research-paper", 
+                        url: "#research-paper-inprogress", 
                         icon: "fas fa-file-alt",
                         description: "Technical innovation whitepaper"
                     }
@@ -4696,8 +4671,12 @@
                 techStack: ["Python", "Apache Spark", "PySpark MLlib", "Audio Processing", "MLOps"],
                 
                 links: [
-                    { name: "View Code", url: "https://github.com/randikapra/music-genre-classifier", icon: "fab fa-github" },
-                    { name: "Technical Report", url: "#", icon: "fas fa-file-pdf" }
+                    { 
+                        name: "Live Demo", 
+                        url: "https://drive.google.com/file/d/1Vqil4A13btuzRMgW2eh_Rr5vitSJwMHN/view?usp=sharing", 
+                        icon: "fas fa-rocket",
+                        description: "Interactive platform demonstration"
+                    }
                 ]
             },
             {
@@ -4862,29 +4841,12 @@
                 ],
                 
                 links: [
-                    { 
-                        name: "Research Paper", 
-                        url: "#safepath-ai-paper", 
-                        icon: "fas fa-file-alt",
-                        description: "CS4691 Project Report - May 2025"
-                    },
+                    
                     { 
                         name: "GitHub Repository", 
                         url: "https://github.com/randikapra/SafePathAI", 
                         icon: "fab fa-github",
                         description: "Complete implementation with models and experiments"
-                    },
-                    { 
-                        name: "Interactive Demo", 
-                        url: "#safepath-ai-demo", 
-                        icon: "fas fa-car",
-                        description: "Live trajectory prediction demonstration"
-                    },
-                    { 
-                        name: "Dataset & Benchmarks", 
-                        url: "#trajectory-datasets", 
-                        icon: "fas fa-database",
-                        description: "Evaluation datasets and performance benchmarks"
                     }
                 ]
             },
@@ -5139,7 +5101,7 @@
                 
                 links: [
                     { name: "View Code", url: "https://github.com/randikapra/Time-Series-Analysis-and-Model-Selection", icon: "fab fa-github" },
-                    { name: "Analysis Report", url: "#", icon: "fas fa-file-pdf" }
+                    { name: "Analysis Report", url: "https://drive.google.com/file/d/1kCUQYd_-0Xs8RVXjzWeAyLxglR7ogF_v/view?usp=sharing", icon: "fas fa-file-pdf" }
                 ]
             },              
             {
@@ -5192,29 +5154,108 @@
             };
 
             // Helper function to render tech stack (handles both array and object formats)
+            // Enhanced renderTechStack3 function with collapsible and smart filtering
             const renderTechStack3 = (techStack) => {
                 if (!techStack) return '';
                 
+                // Define priority technologies (most important ones to show first)
+                const priorityTechs = [
+                    'Python', 'JavaScript', 'React', 'Node.js', 'TensorFlow', 'PyTorch', 
+                    'AWS', 'Docker', 'MongoDB', 'PostgreSQL', 'Vue.js', 'Angular',
+                    'FastAPI', 'Django', 'Flask', 'Kubernetes', 'Redis', 'MySQL'
+                ];
+                
+                // Helper function to check if a tech is priority
+                const isPriorityTech = (tech) => {
+                    return priorityTechs.some(priority => 
+                        tech.toLowerCase().includes(priority.toLowerCase()) || 
+                        priority.toLowerCase().includes(tech.toLowerCase())
+                    );
+                };
+                
                 if (Array.isArray(techStack)) {
-                    return `<div class="tech-stack-simple3">${techStack.map(tech => 
-                        `<span class="tech-badge-item3">${tech}</span>`).join('')}</div>`;
+                    // For simple array format
+                    const priorityItems = techStack.filter(isPriorityTech);
+                    const otherItems = techStack.filter(tech => !isPriorityTech(tech));
+                    const showLimit = 4; // Show only 4 items initially
+                    
+                    const visibleItems = priorityItems.slice(0, showLimit);
+                    const hiddenItems = [...priorityItems.slice(showLimit), ...otherItems];
+                    
+                    return `
+                        <div class="tech-stack-simple3">
+                            ${visibleItems.map(tech => 
+                                `<span class="tech-badge-item3">${tech}</span>`
+                            ).join('')}
+                            ${hiddenItems.length > 0 ? `
+                                <div class="tech-stack-hidden5" style="display: none;">
+                                    ${hiddenItems.map(tech => 
+                                        `<span class="tech-badge-item3">${tech}</span>`
+                                    ).join('')}
+                                </div>
+                                <button class="tech-stack-toggle5" onclick="toggleTechStack5(this)">
+                                    <span class="toggle-text5">+${hiddenItems.length} more</span>
+                                    <i class="fas fa-chevron-down toggle-icon5"></i>
+                                </button>
+                            ` : ''}
+                        </div>
+                    `;
                 } else if (typeof techStack === 'object') {
+                    // For categorized object format
                     let html = '';
+                    let totalHiddenCount = 0;
+                    
                     Object.entries(techStack).forEach(([category, technologies]) => {
                         if (Array.isArray(technologies) && technologies.length > 0) {
                             const categoryLabel = category.replace(/_/g, ' ').toUpperCase();
-                            html += `<div class="tech-category-group3">
-                                <span class="tech-category-header3">${categoryLabel}</span>
-                                <div class="tech-category-badges3">
-                                    ${technologies.map(tech => `<span class="tech-badge-item3">${tech}</span>`).join('')}
+                            
+                            // Apply smart filtering to each category
+                            const priorityItems = technologies.filter(isPriorityTech);
+                            const otherItems = technologies.filter(tech => !isPriorityTech(tech));
+                            const showLimit = 3; // Show 3 items per category initially
+                            
+                            const visibleItems = priorityItems.slice(0, showLimit);
+                            const hiddenItems = [...priorityItems.slice(showLimit), ...otherItems];
+                            totalHiddenCount += hiddenItems.length;
+                            
+                            html += `
+                                <div class="tech-category-group3">
+                                    <span class="tech-category-header3">${categoryLabel}</span>
+                                    <div class="tech-category-badges3">
+                                        ${visibleItems.map(tech => 
+                                            `<span class="tech-badge-item3">${tech}</span>`
+                                        ).join('')}
+                                        ${hiddenItems.length > 0 ? `
+                                            <div class="tech-category-hidden5" style="display: none;">
+                                                ${hiddenItems.map(tech => 
+                                                    `<span class="tech-badge-item3">${tech}</span>`
+                                                ).join('')}
+                                            </div>
+                                        ` : ''}
+                                    </div>
                                 </div>
-                            </div>`;
+                            `;
                         }
                     });
+                    
+                    // Add global toggle button if there are hidden items
+                    if (totalHiddenCount > 0) {
+                        html += `
+                            <div class="tech-stack-controls5">
+                                <button class="tech-stack-toggle5" onclick="toggleAllTechStack5(this)">
+                                    <span class="toggle-text5">Show ${totalHiddenCount} more technologies</span>
+                                    <i class="fas fa-chevron-down toggle-icon5"></i>
+                                </button>
+                            </div>
+                        `;
+                    }
+                    
                     return html;
                 }
                 return '';
             };
+
+
 
             // Helper function to dynamically render highlights sections
             const renderHighlights3 = (highlights) => {
@@ -5611,6 +5652,52 @@
             `;
 
             return cardHTML;
+        }
+
+        // JavaScript functions to handle toggling (add these to your main JS file)
+        function toggleTechStack5(button) {
+            const hiddenSection = button.previousElementSibling;
+            const toggleText = button.querySelector('.toggle-text5');
+            const toggleIcon = button.querySelector('.toggle-icon5');
+            
+            if (hiddenSection.style.display === 'none') {
+                hiddenSection.style.display = 'block';
+                toggleText.textContent = 'Show less';
+                toggleIcon.style.transform = 'rotate(180deg)';
+                button.classList.add('expanded5');
+            } else {
+                hiddenSection.style.display = 'none';
+                const hiddenCount = hiddenSection.querySelectorAll('.tech-badge-item3').length;
+                toggleText.textContent = `+${hiddenCount} more`;
+                toggleIcon.style.transform = 'rotate(0deg)';
+                button.classList.remove('expanded5');
+            }
+        }
+
+        function toggleAllTechStack5(button) {
+            const techSection = button.closest('.project-tech-section3');
+            const hiddenSections = techSection.querySelectorAll('.tech-category-hidden5');
+            const toggleText = button.querySelector('.toggle-text5');
+            const toggleIcon = button.querySelector('.toggle-icon5');
+            
+            const isExpanded = button.classList.contains('expanded5');
+            
+            hiddenSections.forEach(section => {
+                section.style.display = isExpanded ? 'none' : 'block';
+            });
+            
+            if (isExpanded) {
+                const totalHidden = Array.from(hiddenSections).reduce((total, section) => {
+                    return total + section.querySelectorAll('.tech-badge-item3').length;
+                }, 0);
+                toggleText.textContent = `Show ${totalHidden} more technologies`;
+                toggleIcon.style.transform = 'rotate(0deg)';
+                button.classList.remove('expanded5');
+            } else {
+                toggleText.textContent = 'Show less';
+                toggleIcon.style.transform = 'rotate(180deg)';
+                button.classList.add('expanded5');
+            }
         }
 
         // Enhanced toggle function with internal scrolling (NO page scrolling)
