@@ -3610,6 +3610,2224 @@
             to { stroke-dashoffset: var(--end-offset); }
         }
 
+        /* CSM-SR added*/
+        /* All classes use '2' suffix to avoid conflicts */
+        .project-card2 {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card2:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #cbd5e1;
+        }
+
+        .project-card2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+            border-radius: 16px 16px 0 0;
+        }
+
+        /* Header Section */
+        .project-header-section2 {
+            margin-bottom: 20px;
+        }
+
+        .project-category-badge2 {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .project-main-title2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 8px 0;
+            line-height: 1.3;
+        }
+
+        .project-subtitle-container2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-subtitle-text2 {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .project-duration-text2 {
+            font-size: 13px;
+            color: #94a3b8;
+            background: #f1f5f9;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        /* Status Section */
+        .project-status-container2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .status-left-section2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-indicator-dot2 {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-ongoing-indicator2 {
+            background: #3b82f6;
+        }
+
+        .status-completed-indicator2 {
+            background: #10b981;
+        }
+
+        .status-production-indicator2 {
+            background: #059669;
+        }
+
+        .status-review-indicator2 {
+            background: #f59e0b;
+        }
+
+        .status-published-indicator2 {
+            background: #8b5cf6;
+        }
+
+        .status-text2 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .status-progress-section2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .circular-progress-container2 {
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+
+        .circular-progress-svg2 {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .circular-progress-text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        /* Team Info */
+        .project-team-info2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fcf8e7 100%);
+            border-radius: 12px;
+            border: 1px solid #f3e8ff;
+        }
+
+        .team-avatars-container2 {
+            display: flex;
+            gap: -8px;
+        }
+
+        .team-member-avatar2 {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-left: -4px;
+        }
+
+        .team-details2 {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .team-size-info2 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #92400e;
+        }
+
+        .team-role-info2 {
+            font-size: 12px;
+            color: #b45309;
+        }
+
+        /* Content Section */
+        .project-content-section2 {
+            margin-top: 20px;
+        }
+
+        .project-description-container2 {
+            margin-bottom: 20px;
+        }
+
+        .project-main-description2 {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #475569;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* Problem Statement */
+        .project-problem-section2 {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, #fef2f2 0%, #fbf3f3 100%);
+            border-radius: 12px;
+            border: 1px solid #fecaca;
+        }
+
+        .problem-section-header2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .problem-section-header2 i {
+            color: #dc2626;
+            font-size: 16px;
+        }
+
+        .problem-section-title2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #991b1b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .problem-description2 {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #7f1d1d;
+            margin: 0;
+        }
+
+        /* Highlights Section */
+        .project-highlights-container2 {
+            margin-bottom: 20px;
+        }
+
+        .project-highlight-section2 {
+            margin-bottom: 16px;
+            padding: 16px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+
+        .highlight-section-header2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .highlight-section-header2 i {
+            color: #0369a1;
+            font-size: 16px;
+        }
+
+        .highlight-section-title2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0c4a6e;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-items-container2 {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .highlight-item-entry2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 8px 0;
+        }
+
+        .highlight-item-icon2 {
+            color: #059669;
+            font-size: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .highlight-item-text2 {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #0f172a;
+            flex: 1;
+        }
+
+        /* Specific highlight section styles */
+        .highlight-section2-keyachievements {
+            background: linear-gradient(135deg, #fef3c7 0%, #efffc1 100%);
+            border-color: #fbbf24;
+        }
+
+        .highlight-section2-keyachievements .highlight-section-header2 i {
+            color: #d97706;
+        }
+
+        .highlight-section2-keyachievements .highlight-section-title2 {
+            color: #92400e;
+        }
+
+        .highlight-section2-businessimpact {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-color: #86efac;
+        }
+
+        .highlight-section2-businessimpact .highlight-section-header2 i {
+            color: #059669;
+        }
+
+        .highlight-section2-businessimpact .highlight-section-title2 {
+            color: #065f46;
+        }
+
+        .highlight-section2-technicalachievements,
+        .highlight-section2-technicalbreakthrough,
+        .highlight-section2-corefeatures,
+        .highlight-section2-coreinnovations {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-color: #c084fc;
+        }
+
+        .highlight-section2-technicalachievements .highlight-section-header2 i,
+        .highlight-section2-technicalbreakthrough .highlight-section-header2 i,
+        .highlight-section2-corefeatures .highlight-section-header2 i,
+        .highlight-section2-coreinnovations .highlight-section-header2 i {
+            color: #7c3aed;
+        }
+
+        .highlight-section2-technicalachievements .highlight-section-title2,
+        .highlight-section2-technicalbreakthrough .highlight-section-title2,
+        .highlight-section2-corefeatures .highlight-section-title2,
+        .highlight-section2-coreinnovations .highlight-section-title2 {
+            color: #5b21b6;
+        }
+
+        .highlight-section2-researchcontributions,
+        .highlight-section2-scientificimpact {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            border-color: #f9a8d4;
+        }
+
+        .highlight-section2-researchcontributions .highlight-section-header2 i,
+        .highlight-section2-scientificimpact .highlight-section-header2 i {
+            color: #be185d;
+        }
+
+        .highlight-section2-researchcontributions .highlight-section-title2,
+        .highlight-section2-scientificimpact .highlight-section-title2 {
+            color: #9d174d;
+        }
+
+        .highlight-section2-marketanalysis,
+        .highlight-section2-results {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-color: #6ee7b7;
+        }
+
+        .highlight-section2-marketanalysis .highlight-section-header2 i,
+        .highlight-section2-results .highlight-section-header2 i {
+            color: #047857;
+        }
+
+        .highlight-section2-marketanalysis .highlight-section-title2,
+        .highlight-section2-results .highlight-section-title2 {
+            color: #064e3b;
+        }
+
+        /* Technology Stack Section */
+        .project-tech-section2 {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .tech-section-header2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .tech-section-header2 i {
+            color: #475569;
+            font-size: 16px;
+        }
+
+        .tech-section-title2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-stack-container2 {
+            margin-top: 12px;
+        }
+
+        .tech-stack-simple2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-badge-item2 {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .tech-badge-item2:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+        }
+
+        .tech-category-group2 {
+            margin-bottom: 12px;
+        }
+
+        .tech-category-header2 {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-category-badges2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        /* Project Links Section */
+        .project-links-section2 {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-radius: 12px;
+            border: 1px solid #fed7aa;
+        }
+
+        .links-section-header2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .links-section-header2 i {
+            color: #d97706;
+            font-size: 16px;
+        }
+
+        .links-section-title2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #92400e;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-links-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-action-link2 {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+            color: #475569;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .project-action-link2:hover {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            color: #334155;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+
+        .project-action-link2 i:first-child {
+            font-size: 12px;
+        }
+
+        .link-text2 {
+            flex: 1;
+        }
+
+        .link-external-icon2 {
+            font-size: 10px;
+            opacity: 0.7;
+        }
+
+        /* Expandable Content */
+        .project-expandable-container2 {
+            margin-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 16px;
+        }
+
+        .expand-details-btn2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+        }
+
+        .expand-details-btn2:hover {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+        }
+
+        .expand-details-btn2.expanded-state2 {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+        }
+
+        .expand-details-btn2.expanded-state2:hover {
+            background: linear-gradient(135deg, #b91c1c, #991b1b);
+        }
+
+        .expand-btn-text2 {
+            font-weight: 600;
+        }
+
+        .expand-btn-icon2 {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .expand-details-btn2.expanded-state2 .expand-btn-icon2 {
+            transform: rotate(180deg);
+        }
+
+        /* Internal Scrolling Expandable Content - Version 3 */
+        .expandable-content-wrapper3 {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            margin-top: 12px;
+        }
+
+        .expandable-content-slider3 {
+            max-height: 400px; /* Fixed height for internal scrolling */
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 16px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Custom scrollbar styling */
+        .expandable-content-slider3::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .expandable-content-slider3::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 4px;
+            margin: 4px 0;
+        }
+
+        .expandable-content-slider3::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #94a3b8, #64748b);
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .expandable-content-slider3::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #64748b, #475569);
+        }
+
+        /* Firefox scrollbar */
+        .expandable-content-slider3 {
+            scrollbar-width: thin;
+            scrollbar-color: #94a3b8 #e2e8f0;
+        }
+
+        .project-expandable-container3 {
+            margin-top: 20px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 8px;
+        }
+
+        .expand-details-btn3 {
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expand-details-btn3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .expand-details-btn3:hover::before {
+            left: 100%;
+        }
+
+        .expand-details-btn3:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+        }
+
+        .expand-details-btn3:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .expand-details-btn3.expanded-state3 {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+        }
+
+        .expand-details-btn3.expanded-state3:hover {
+            background: linear-gradient(135deg, #b91c1c, #991b1b);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+        }
+
+        .expand-btn-text3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .expand-btn-icon3 {
+            transition: transform 0.3s ease;
+            font-size: 16px;
+        }
+
+        .expand-details-btn3:hover .expand-btn-icon3 {
+            transform: scale(1.1);
+        }
+
+        /* Enhanced expandable sections styling */
+        .project-expandable-section3 {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 16px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .expandable-section-header3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .expandable-section-header3 i {
+            font-size: 18px;
+            color: #3b82f6;
+        }
+
+        .expandable-section-title3 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .expandable-subsection3 {
+            margin-bottom: 16px;
+            padding: 12px;
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .expandable-subsection-title3 {
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .expandable-list-items3 {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .expandable-list-item3 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 4px 0;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .expandable-list-item3 i {
+            color: #3b82f6;
+            margin-top: 2px;
+            font-size: 8px;
+        }
+
+        .expandable-text-content3 {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Roadmap specific styling */
+        .project-roadmap-section3 {
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(99, 102, 241, 0.1));
+            border-radius: 8px;
+            padding: 16px;
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .roadmap-section-header3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: #7c3aed;
+            font-weight: 600;
+        }
+
+        .roadmap-section-header3 i {
+            font-size: 18px;
+            color: #8b5cf6;
+        }
+
+        .roadmap-section-title3 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .roadmap-items-container3 {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .roadmap-item3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 6px;
+            color: #64748b;
+            font-size: 13px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .roadmap-item3:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+        }
+
+        .roadmap-item3 i {
+            color: #8b5cf6;
+            font-size: 12px;
+        }
+
+        /* Nested expandable content styling */
+        .expandable-nested-container3 {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .expandable-nested-section3 {
+            padding: 10px;
+            background: rgba(241, 245, 249, 0.8);
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .expandable-nested-title3 {
+            color: #334155;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .expandable-nested-item3 {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            padding: 3px 0;
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .expandable-nested-item3 i {
+            color: #06b6d4;
+            margin-top: 2px;
+            font-size: 10px;
+        }
+
+        .expandable-nested-text3 {
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Project card main structure */
+        .project-card3 {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+            background-size: 300% 100%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .project-card3:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Header section */
+        .project-header-section3 {
+            margin-bottom: 20px;
+        }
+
+        .project-category-badge3 {
+            display: inline-block;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #ddd6fe, #c4b5fd);
+            color: #6d28d9;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(109, 40, 217, 0.2);
+        }
+
+        .project-main-title3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 12px 0 8px 0;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        .project-subtitle-container3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .project-subtitle-text3 {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .project-duration-text3 {
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Status indicator */
+        .project-status-container3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 16px;
+        }
+
+        .status-left-section3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-indicator-dot3 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-ongoing-indicator3 {
+            background-color: #3b82f6;
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 1);
+        }
+
+        .status-completed-indicator3 {
+            background-color: #10b981;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 1);
+        }
+
+        .status-production-indicator3 {
+            background-color: #059669;
+            box-shadow: 0 0 0 0 rgba(5, 150, 105, 1);
+        }
+
+        .status-review-indicator3 {
+            background-color: #f59e0b;
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 1);
+        }
+
+        .status-published-indicator3 {
+            background-color: #8b5cf6;
+            box-shadow: 0 0 0 0 rgba(139, 92, 246, 1);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+
+        .status-text3 {
+            color: #475569;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-progress-section3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .circular-progress-container3 {
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+
+        .circular-progress-svg3 {
+            transform: rotate(-90deg);
+        }
+
+        .circular-progress-text3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        /* Content section */
+        .project-content-section3 {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Team info styling */
+        .project-team-info3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+            border-radius: 10px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .team-avatars-container3 {
+            display: flex;
+            gap: 4px;
+        }
+
+        .team-member-avatar3 {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 12px;
+            border: 2px solid white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-details3 {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .team-size-info3 {
+            color: #475569;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .team-role-info3 {
+            color: #94a3b8;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Description styling */
+        .project-description-container3 {
+            padding: 16px;
+            background: rgba(248, 250, 252, 0.6);
+            border-radius: 10px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .project-main-description3 {
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Problem statement styling */
+        .project-problem-section3 {
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(220, 38, 38, 0.05));
+            border-radius: 10px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .problem-section-header3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .problem-section-header3 i {
+            font-size: 16px;
+        }
+
+        .problem-section-title3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .problem-description3 {
+            color: #7f1d1d;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Highlights section */
+        .project-highlights-container3 {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .project-highlight-section3 {
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.05));
+        }
+
+        .highlight-section-header3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            color: #059669;
+            font-weight: 600;
+        }
+
+        .highlight-section-header3 i {
+            font-size: 16px;
+        }
+
+        .highlight-section-title3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-items-container3 {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .highlight-item-entry3 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .highlight-item-icon3 {
+            color: #10b981;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+        .highlight-item-text3 {
+            color: #064e3b;
+            font-size: 13px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* Tech stack styling */
+        .project-tech-section3 {
+            padding: 16px;
+            background: rgba(249, 250, 251, 0.8);
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .tech-section-header3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .tech-section-header3 i {
+            font-size: 16px;
+            color: #6b7280;
+        }
+
+        .tech-section-title3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-stack-container3 {
+            margin-top: 8px;
+        }
+
+        .tech-stack-simple3 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tech-badge-item3 {
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            color: #475569;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 16px;
+            border: 1px solid #cbd5e1;
+            transition: all 0.2s ease;
+        }
+
+        .tech-badge-item3:hover {
+            background: linear-gradient(135deg, #ddd6fe, #c4b5fd);
+            color: #6d28d9;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(109, 40, 217, 0.2);
+        }
+
+        .tech-category-group3 {
+            margin-bottom: 12px;
+        }
+
+        .tech-category-header3 {
+            display: block;
+            color: #374151;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            padding-left: 4px;
+        }
+
+        .tech-category-badges3 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        /* Links section */
+        .project-links-section3 {
+            padding: 16px;
+            background: rgba(245, 247, 250, 0.8);
+            border-radius: 10px;
+            border: 1px solid #e1e5e9;
+        }
+
+        .links-section-header3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .links-section-header3 i {
+            font-size: 16px;
+            color: #6b7280;
+        }
+
+        .links-section-title3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-links-container3 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-action-link3 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            color: #475569;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .project-action-link3:hover {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
+            text-decoration: none;
+        }
+
+        .link-text3 {
+            font-weight: 600;
+        }
+
+        .link-external-icon3 {
+            font-size: 10px;
+            opacity: 0.7;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .project-card3 {
+                padding: 16px;
+                margin: 12px 0;
+            }
+            
+            .project-main-title3 {
+                font-size: 18px;
+            }
+            
+            .project-subtitle-container3 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .project-status-container3 {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+            
+            .team-avatars-container3 {
+                justify-content: center;
+            }
+            
+            .expandable-content-slider3 {
+                max-height: 300px;
+                padding: 12px;
+            }
+            
+            .tech-stack-simple3,
+            .project-links-container3 {
+                justify-content: center;
+            }
+        }
+        
+
+        .expandable-content-wrapper2 {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+        }
+
+        .expandable-content-slider2 {
+            padding-top: 16px;
+        }
+
+        /* Expandable Sections */
+        .project-expandable-section2 {
+            margin-bottom: 16px;
+            padding: 16px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+
+        .expandable-section-header2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .expandable-section-header2 i {
+            color: #0369a1;
+            font-size: 16px;
+        }
+
+        .expandable-section-title2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0c4a6e;
+        }
+
+        .expandable-section-content2 {
+            margin-left: 24px;
+        }
+
+        .expandable-subsection2 {
+            margin-bottom: 16px;
+        }
+
+        .expandable-subsection-title2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 4px;
+        }
+
+        .expandable-list-items2 {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .expandable-list-item2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .expandable-list-item2 i {
+            color: #3b82f6;
+            font-size: 8px;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .expandable-list-item2 span {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #475569;
+        }
+
+        .expandable-text-content2 {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #475569;
+            margin: 0;
+        }
+
+        .expandable-nested-container2 {
+            margin-left: 16px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 16px;
+        }
+
+        .expandable-nested-section2 {
+            margin-bottom: 12px;
+        }
+
+        .expandable-nested-title2 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .expandable-nested-item2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            padding: 2px 0;
+        }
+
+        .expandable-nested-item2 i {
+            color: #64748b;
+            font-size: 8px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .expandable-nested-item2 span {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #64748b;
+        }
+
+        .expandable-nested-text2 {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Roadmap Section */
+        .project-roadmap-section2 {
+            margin-bottom: 16px;
+            padding: 16px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 12px;
+            border: 1px solid #fbbf24;
+        }
+
+        .roadmap-section-header2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .roadmap-section-header2 i {
+            color: #d97706;
+            font-size: 16px;
+        }
+
+        .roadmap-section-title2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #92400e;
+        }
+
+        .roadmap-items-container2 {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-left: 24px;
+        }
+
+        .roadmap-item2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 6px 0;
+        }
+
+        .roadmap-item2 i {
+            color: #d97706;
+            font-size: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .roadmap-item2 span {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #92400e;
+        }
+
+        /* Modal Styles */
+        .project-modal-overlay2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+        }
+
+        .project-modal-overlay2.modal-active2 {
+            opacity: 1;
+        }
+
+        .project-modal-content2 {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .project-modal-overlay2.modal-active2 .project-modal-content2 {
+            transform: scale(1);
+        }
+
+        .modal-close-btn2 {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .modal-close-btn2:hover {
+            background: #e5e7eb;
+            transform: scale(1.1);
+        }
+
+        .modal-close-btn2 i {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .modal-header-section2 {
+            padding: 24px 24px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .modal-category-badge2 {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .modal-main-title2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 8px 0;
+            line-height: 1.2;
+        }
+
+        .modal-subtitle2 {
+            font-size: 16px;
+            color: #64748b;
+            margin: 0 0 12px 0;
+        }
+
+        .modal-meta-info2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .modal-meta-info2 span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .modal-meta-info2 i {
+            font-size: 10px;
+        }
+
+        .modal-status-badge2 {
+            padding: 2px 6px !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            font-size: 10px !important;
+        }
+
+        .modal-status-badge2.ongoing {
+            background: #dbeafe !important;
+            color: #1d4ed8 !important;
+        }
+
+        .modal-status-badge2.completed {
+            background: #d1fae5 !important;
+            color: #059669 !important;
+        }
+
+        .modal-status-badge2.production-ready {
+            background: #a7f3d0 !important;
+            color: #047857 !important;
+        }
+
+        .modal-status-badge2.peer-review {
+            background: #fef3c7 !important;
+            color: #d97706 !important;
+        }
+
+        .modal-status-badge2.published {
+            background: #e9d5ff !important;
+            color: #7c3aed !important;
+        }
+
+        .modal-body-section2 {
+            max-height: calc(90vh - 200px);
+            overflow-y: auto;
+        }
+
+        .modal-content-scroll2 {
+            padding: 16px 24px 24px;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-card2 {
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+            
+            .project-main-title2 {
+                font-size: 18px;
+            }
+            
+            .project-subtitle-container2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            
+            .project-status-container2 {
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+            }
+            
+            .status-progress-section2 {
+                align-self: flex-end;
+            }
+            
+            .project-team-info2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .tech-stack-simple2 {
+                gap: 6px;
+            }
+            
+            .tech-badge-item2 {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+            
+            .project-links-container2 {
+                flex-direction: column;
+            }
+            
+            .project-action-link2 {
+                justify-content: flex-start;
+            }
+            
+            .expandable-section-content2 {
+                margin-left: 12px;
+            }
+            
+            .expandable-nested-container2 {
+                margin-left: 8px;
+                padding-left: 8px;
+            }
+            
+            .expandable-nested-section2 {
+                margin-bottom: 8px;
+            }
+            
+            .expandable-nested-title2 {
+                font-size: 12px;
+            }
+            
+            .expandable-nested-item2 span,
+            .expandable-nested-text2 {
+                font-size: 12px;
+            }
+            
+            .expandable-list-item2 span,
+            .expandable-text-content2 {
+                font-size: 13px;
+            }
+            
+            .roadmap-items-container2 {
+                margin-left: 12px;
+            }
+            
+            .roadmap-item2 span {
+                font-size: 13px;
+            }
+            
+            .project-modal-content2 {
+                max-width: 95%;
+                margin: 10px;
+            }
+            
+            .modal-header-section2 {
+                padding: 16px 16px 12px;
+            }
+            
+            .modal-main-title2 {
+                font-size: 20px;
+            }
+            
+            .modal-subtitle2 {
+                font-size: 14px;
+            }
+            
+            .modal-content-scroll2 {
+                padding: 12px 16px 16px;
+            }
+            
+            .modal-meta-info2 {
+                gap: 8px;
+            }
+            
+            .modal-meta-info2 span {
+                font-size: 11px;
+            }
+            
+            .modal-close-btn2 {
+                width: 28px;
+                height: 28px;
+                top: 12px;
+                right: 12px;
+            }
+            
+            .modal-close-btn2 i {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-card2 {
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+            
+            .project-main-title2 {
+                font-size: 16px;
+            }
+            
+            .project-subtitle-text2 {
+                font-size: 13px;
+            }
+            
+            .project-duration-text2 {
+                font-size: 12px;
+            }
+            
+            .project-category-badge2 {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+            
+            .project-main-description2 {
+                font-size: 14px;
+            }
+            
+            .tech-badge-item2 {
+                font-size: 10px;
+                padding: 3px 6px;
+            }
+            
+            .tech-category-header2 {
+                font-size: 11px;
+            }
+            
+            .team-member-avatar2 {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+            
+            .team-size-info2 {
+                font-size: 12px;
+            }
+            
+            .team-role-info2 {
+                font-size: 11px;
+            }
+            
+            .status-text2 {
+                font-size: 12px;
+            }
+            
+            .circular-progress-container2 {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .circular-progress-svg2 {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .circular-progress-text2 {
+                font-size: 9px;
+            }
+            
+            .highlight-section-title2,
+            .tech-section-title2,
+            .links-section-title2,
+            .problem-section-title2 {
+                font-size: 12px;
+            }
+            
+            .highlight-item-text2,
+            .problem-description2 {
+                font-size: 13px;
+            }
+            
+            .expandable-section-title2 {
+                font-size: 14px;
+            }
+            
+            .expandable-subsection-title2 {
+                font-size: 13px;
+            }
+            
+            .expand-details-btn2 {
+                font-size: 13px;
+                padding: 10px 14px;
+            }
+            
+            .project-action-link2 {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            
+            .project-modal-content2 {
+                max-width: 100%;
+                margin: 5px;
+                border-radius: 12px;
+            }
+            
+            .modal-main-title2 {
+                font-size: 18px;
+            }
+            
+            .modal-subtitle2 {
+                font-size: 13px;
+            }
+        }
+
+        /* Additional utility classes */
+        .project-hidden2 {
+            display: none !important;
+        }
+
+        .project-visible2 {
+            display: block !important;
+        }
+
+        .project-loading2 {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .project-error2 {
+            border-color: #f87171 !important;
+            background: linear-gradient(145deg, #fef2f2 0%, #fee2e2 100%) !important;
+        }
+
+        .project-success2 {
+            border-color: #34d399 !important;
+            background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%) !important;
+        }
+
+        /* Accessibility improvements */
+        .project-card2:focus-within {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        .expand-details-btn2:focus,
+        .project-action-link2:focus,
+        .modal-close-btn2:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .project-card2 {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            
+            .expand-details-btn2 {
+                display: none;
+            }
+            
+            .expandable-content-wrapper2 {
+                display: block !important;
+                max-height: none !important;
+                opacity: 1 !important;
+            }
+            
+            .project-action-link2 {
+                color: #000 !important;
+                text-decoration: underline;
+            }
+            
+            .project-modal-overlay2 {
+                display: none !important;
+            }
+        }
+
+        /* Dark mode support (optional) */
+        @media (prefers-color-scheme: dark) {
+            .project-card2 {
+                background: linear-gradient(145deg, #1f2937 0%, #111827 100%);
+                border-color: #374151;
+                color: #f9fafb;
+            }
+            
+            .project-main-title2 {
+                color: #f9fafb;
+            }
+            
+            .project-subtitle-text2,
+            .project-duration-text2 {
+                color: #d1d5db;
+            }
+            
+            .project-main-description2,
+            .highlight-item-text2,
+            .expandable-text-content2 {
+                color: #e5e7eb;
+            }
+            
+            .project-status-container2 {
+                background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+                border-color: #4b5563;
+            }
+            
+            .project-team-info2 {
+                background: linear-gradient(135deg, #92400e 0%, #78350f 100%);
+            }
+            
+            .project-tech-section2 {
+                background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+                border-color: #4b5563;
+            }
+            
+            .project-links-section2 {
+                background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+                border-color: #92400e;
+            }
+            
+            .project-action-link2 {
+                background: linear-gradient(135deg, #374151, #1f2937);
+                color: #e5e7eb;
+                border-color: #4b5563;
+            }
+            
+            .project-action-link2:hover {
+                background: linear-gradient(135deg, #4b5563, #374151);
+                color: #f9fafb;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .project-card2 {
+                border: 2px solid #000;
+                background: #fff;
+            }
+            
+            .project-category-badge2 {
+                background: #000;
+                color: #fff;
+                border: 1px solid #000;
+            }
+            
+            .tech-badge-item2 {
+                background: #000;
+                color: #fff;
+                border: 1px solid #000;
+            }
+            
+            .expand-details-btn2 {
+                background: #000;
+                color: #fff;
+                border: 2px solid #000;
+            }
+            
+            .project-action-link2 {
+                background: #fff;
+                color: #000;
+                border: 2px solid #000;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .project-card2,
+            .project-action-link2,
+            .expand-details-btn2,
+            .tech-badge-item2,
+            .expandable-content-wrapper2,
+            .project-modal-overlay2,
+            .project-modal-content2,
+            .expand-btn-icon2 {
+                transition: none;
+            }
+            
+            .status-indicator-dot2 {
+                animation: none;
+            }
+            
+            .project-card2:hover {
+                transform: none;
+            }
+        }
+
+        /* CSM-SR added closed*/
+
         /* 2701 */
         /* Skills Section */
         .skills {
@@ -4641,12 +6859,12 @@
             {
                 title: "CSM-SR: Conditional Structure-Informed Multi-Scale Super-Resolution GAN",
                 subtitle: "Advanced Deep Learning Framework for High-Fidelity Scientific Image Reconstruction",
-                category: "computer-vision-research",
+                category: "research",
                 status: "peer-review",
                 progress: 90,
                 duration: "Jan 2024 - Present",
                 teamSize: "Research Team",
-                avatars: ['R', 'T', 'S'],
+                avatars: ['R', 'O', 'G'],
                 role: "Lead Research Engineer & Algorithm Developer",
                 description: "Novel deep learning architecture that revolutionizes super-resolution imaging for scientific applications by integrating structural coherence preservation, multi-scale feature processing, and semantic awareness to achieve unprecedented reconstruction quality in nanoscience and biomedical imaging.",
                 
@@ -4656,13 +6874,13 @@
                 // Primary highlights (always shown)
                 highlights: [
                     {
-                        type: "technical-breakthrough",
-                        title: "Technical Breakthroughs",
+                        type: "key-achievements",
+                        title: "Key Achievements",
                         items: [
-                            "📊 <strong>Superior benchmark performance:</strong> 38.79/0.978 PSNR/SSIM on nanoscale datasets, outperforming all state-of-the-art methods",
-                            "🔬 <strong>2.8dB PSNR improvement</strong> over competing methods with 0.171 increase in SSIM on scientific imaging",
-                            "⚡ <strong>Multi-scale feature learning:</strong> MCFL approach achieving 37.982 PSNR with 0.956 SSIM through progressive resolution processing",
-                            "🎯 <strong>Advanced loss function design:</strong> Hybrid SSL combining perceptual, contextual, and structural losses for optimal reconstruction"
+                            "<strong>3.5dB PSNR</strong> improvement over state-of-the-art methods",
+                            "<strong>20% SSIM increase</strong>, 20% LPIPS decrease in quality metrics",
+                            "Outperformed <strong>EDSR, ESRGAN, SwinIR & HMANet</strong>",
+                            "Specialized for <strong>microscopy & nanoscience</strong> applications"
                         ]
                     },
                     {
@@ -4745,7 +6963,19 @@
                             academicContributions: "Novel loss function formulation and multi-scale discriminator design contributing to computer vision research community"
                         },
                         defaultExpanded: false
-                    }
+                    },
+                    {
+                        id: "technical-breakthrough",
+                        title: "Technical Breakthroughs",
+                        content: {
+                            TechnicalAcievement: [
+                            "📊 <strong>Superior benchmark performance:</strong> 38.79/0.978 PSNR/SSIM on nanoscale datasets, outperforming all state-of-the-art methods",
+                            "🔬 <strong>2.8dB PSNR improvement</strong> over competing methods with 0.171 increase in SSIM on scientific imaging",
+                            "⚡ <strong>Multi-scale feature learning:</strong> MCFL approach achieving 37.982 PSNR with 0.956 SSIM through progressive resolution processing",
+                            "🎯 <strong>Advanced loss function design:</strong> Hybrid SSL combining perceptual, contextual, and structural losses for optimal reconstruction"
+                            ]
+                        },
+                    },
                 ],
                 
                 // Technical implementation details
@@ -4755,7 +6985,7 @@
                     optimization: ["Adam Optimizer", "Learning Rate Scheduling", "Gradient Clipping"],
                     evaluation: ["PSNR", "SSIM", "LPIPS", "FID", "Structural Similarity"],
                     infrastructure: ["NVIDIA A100 GPUs", "Docker", "Weights & Biases", "TensorBoard"],
-                    datasets: ["DIV2K", "Flickr2K", "SEM Nanoscale", "Medical Imaging"]
+                    datasets: ["DIV2K", "Flickr2K", "SEM Nanoscale Dataset", "Medical Imaging"]
                 },
                 
                 // Research methodology
@@ -4803,41 +7033,6 @@
                 ]
             },
             {
-                title: "Structure-Informed Super Resolution Technique for Scientific Imaging",
-                subtitle: "Final Year Research Project",
-                category: "research",
-                status: "ongoing",
-                progress: 95,
-                duration: "Jun 2024 - Present",
-                teamSize: "Team of 3",
-                avatars: ['R', 'O', 'G'],
-                role: "Principal Researcher",
-                description: "Pioneering super-resolution framework for microscopy and nanoscience imaging using hierarchical multi-scale learning and adaptive feature fusion to achieve unprecedented image quality.",
-                
-                highlights: [
-                    {
-                        type: "key-achievements",
-                        title: "Key Achievements",
-                        items: [
-                            "<strong>3.5dB PSNR</strong> improvement over state-of-the-art methods",
-                            "<strong>20% SSIM increase</strong>, 20% LPIPS decrease in quality metrics",
-                            "Outperformed <strong>EDSR, ESRGAN, SwinIR & HMANet</strong>",
-                            "Specialized for <strong>microscopy & nanoscience</strong> applications"
-                        ]
-                    }
-                ],
-                
-                techStack: ["Python", "TensorFlow", "Keras", "Computer Vision", "Deep Learning", "Image Processing"],
-                
-                links: [
-                    { name: "View Code", url: "https://github.com/randikapra/CSM-SR-Test3", icon: "fab fa-github" },
-                    { name: "Live Demo", url: "https://randikapra.github.io/CSM-SR-Test3/", icon: "fas fa-external-link-alt" },
-                    { name: "Case Study", url: "#", icon: "fas fa-file-alt" }
-                ]
-            },
-
-            
-            {
                 title: "GeoSales Intelligence Platform",
                 subtitle: "Next-Generation AI-Powered Spatial Business Intelligence",
                 category: "enterprise-ai",
@@ -4855,16 +7050,6 @@
                 // Primary highlights (always shown)
                 highlights: [
                     {
-                        type: "business-impact",
-                        title: "Business Impact",
-                        items: [
-                            "📈 <strong>35% increase in sales efficiency</strong> through optimized route planning and customer prioritization",
-                            "⏱️ <strong>40% reduction in operational costs</strong> via intelligent resource allocation and territory optimization", 
-                            "🎯 <strong>28% improvement in customer conversion</strong> through predictive analytics and behavioral insights",
-                            "🚨 <strong>60% faster anomaly detection</strong> enabling proactive business decision making"
-                        ]
-                    },
-                    {
                         type: "core-innovations",
                         title: "Core Innovations",
                         items: [
@@ -4873,7 +7058,18 @@
                             "🎯 <strong>Behavioral Pattern Recognition:</strong> Proprietary algorithms identify dealer efficiency patterns",
                             "🚀 <strong>Predictive Route Optimization:</strong> AI-powered genetic algorithms reduce travel time by 35%"
                         ]
+                    },
+                    {
+                        type: "business-impact",
+                        title: "Business Impact",
+                        items: [
+                            "📈 <strong>35% increase in sales efficiency</strong> through optimized route planning and customer prioritization",
+                            "⏱️ <strong>40% reduction in operational costs</strong> via intelligent resource allocation and territory optimization", 
+                            "🎯 <strong>28% improvement in customer conversion</strong> through predictive analytics and behavioral insights",
+                            "🚨 <strong>60% faster anomaly detection</strong> enabling proactive business decision making"
+                        ]
                     }
+                    
                 ],
                 
                 // Expandable detailed sections
@@ -5048,20 +7244,36 @@
 
         // Enhanced project card generation with new features
         // Enhanced project card generation to match featured projects style
-        function generateProjectCard(project) {
+        // Universal Project Card Generator - Handles all project types dynamically
+        function generateUniversalProjectCard(project) {
+            // Validate project data
+            if (!project || !project.title) {
+                console.warn('Invalid project data provided');
+                return '';
+            }
+
+            // Helper function to safely get nested properties
+            const safeGet = (obj, path, defaultValue = '') => {
+                return path.split('.').reduce((current, key) => 
+                    current && current[key] !== undefined ? current[key] : defaultValue, obj);
+            };
+
             // Helper function to render tech stack (handles both array and object formats)
-            const renderTechStack = (techStack) => {
+            const renderTechStack3 = (techStack) => {
+                if (!techStack) return '';
+                
                 if (Array.isArray(techStack)) {
-                    return techStack.map(tech => `<span class="tech-badge-item">${tech}</span>`).join('');
+                    return `<div class="tech-stack-simple3">${techStack.map(tech => 
+                        `<span class="tech-badge-item3">${tech}</span>`).join('')}</div>`;
                 } else if (typeof techStack === 'object') {
                     let html = '';
                     Object.entries(techStack).forEach(([category, technologies]) => {
-                        if (Array.isArray(technologies)) {
+                        if (Array.isArray(technologies) && technologies.length > 0) {
                             const categoryLabel = category.replace(/_/g, ' ').toUpperCase();
-                            html += `<div class="tech-category-group">
-                                <span class="tech-category-header">${categoryLabel}</span>
-                                <div class="tech-category-badges">
-                                    ${technologies.map(tech => `<span class="tech-badge-item">${tech}</span>`).join('')}
+                            html += `<div class="tech-category-group3">
+                                <span class="tech-category-header3">${categoryLabel}</span>
+                                <div class="tech-category-badges3">
+                                    ${technologies.map(tech => `<span class="tech-badge-item3">${tech}</span>`).join('')}
                                 </div>
                             </div>`;
                         }
@@ -5072,14 +7284,14 @@
             };
 
             // Helper function to dynamically render highlights sections
-            const renderHighlights = (highlights) => {
+            const renderHighlights3 = (highlights) => {
                 if (!highlights || !Array.isArray(highlights)) return '';
                 
                 return highlights.map(section => {
-                    if (!section.type || !section.title || !section.items) return '';
+                    if (!section.type || !section.title || !section.items || !Array.isArray(section.items)) return '';
                     
                     // Create section-specific CSS class
-                    const sectionClass = `highlight-section-${section.type.replace(/[-_]/g, '')}`;
+                    const sectionClass = `highlight-section3-${section.type.replace(/[-_]/g, '')}`;
                     
                     // Choose appropriate icon based on section type
                     const getIconForType = (type) => {
@@ -5087,7 +7299,9 @@
                             'key-achievements': 'fas fa-trophy',
                             'business-impact': 'fas fa-chart-line',
                             'technical-achievements': 'fas fa-cogs',
+                            'technical-breakthrough': 'fas fa-rocket',
                             'research-contributions': 'fas fa-microscope',
+                            'scientific-impact': 'fas fa-atom',
                             'core-features': 'fas fa-star',
                             'core-innovations': 'fas fa-lightbulb',
                             'market-analysis': 'fas fa-chart-pie',
@@ -5099,16 +7313,16 @@
                     const icon = getIconForType(section.type);
                     
                     return `
-                        <div class="project-highlight-section ${sectionClass}">
-                            <div class="highlight-section-header">
+                        <div class="project-highlight-section3 ${sectionClass}">
+                            <div class="highlight-section-header3">
                                 <i class="${icon}"></i>
-                                <span class="highlight-section-title">${section.title}</span>
+                                <span class="highlight-section-title3">${section.title}</span>
                             </div>
-                            <div class="highlight-items-container">
+                            <div class="highlight-items-container3">
                                 ${section.items.map(item => `
-                                    <div class="highlight-item-entry">
-                                        <i class="fas fa-check-circle highlight-item-icon"></i>
-                                        <span class="highlight-item-text">${item}</span>
+                                    <div class="highlight-item-entry3">
+                                        <i class="fas fa-check-circle highlight-item-icon3"></i>
+                                        <span class="highlight-item-text3">${item}</span>
                                     </div>
                                 `).join('')}
                             </div>
@@ -5118,141 +7332,236 @@
             };
 
             // Helper function to render problem statement if exists
-            const renderProblemStatement = (problemStatement) => {
+            const renderProblemStatement3 = (problemStatement) => {
                 if (!problemStatement) return '';
                 return `
-                    <div class="project-problem-section">
-                        <div class="problem-section-header">
+                    <div class="project-problem-section3">
+                        <div class="problem-section-header3">
                             <i class="fas fa-exclamation-circle"></i>
-                            <span class="problem-section-title">Problem Statement</span>
+                            <span class="problem-section-title3">Problem Statement</span>
                         </div>
-                        <p class="problem-description">${problemStatement}</p>
+                        <p class="problem-description3">${problemStatement}</p>
                     </div>
                 `;
             };
 
-            // Helper function to render expandable sections
-            const renderExpandableSections = (expandableSections) => {
-                if (!expandableSections || !Array.isArray(expandableSections)) return '';
+            // Helper function to render any expandable content
+            const renderExpandableContent3 = (project) => {
+                let expandableHTML = '';
                 
-                return expandableSections.map(section => {
-                    const sectionId = `expandable-${section.id}`;
-                    
-                    // Render content based on structure
-                    let contentHTML = '';
-                    if (section.content) {
-                        Object.entries(section.content).forEach(([key, value]) => {
-                            const subTitle = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                            
-                            if (Array.isArray(value)) {
-                                contentHTML += `
-                                    <div class="expandable-subsection">
-                                        <h5 class="expandable-subsection-title">${subTitle}</h5>
-                                        <div class="expandable-list-items">
-                                            ${value.map(item => `
-                                                <div class="expandable-list-item">
-                                                    <i class="fas fa-dot-circle"></i>
-                                                    <span>${item}</span>
-                                                </div>
-                                            `).join('')}
+                // Handle expandableSections
+                if (project.expandableSections && Array.isArray(project.expandableSections)) {
+                    expandableHTML += project.expandableSections.map(section => {
+                        if (!section.id || !section.title) return '';
+                        
+                        const sectionId = `expandable3-${section.id}`;
+                        
+                        // Render content based on structure
+                        let contentHTML = '';
+                        if (section.content && typeof section.content === 'object') {
+                            Object.entries(section.content).forEach(([key, value]) => {
+                                const subTitle = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                                
+                                if (Array.isArray(value)) {
+                                    contentHTML += `
+                                        <div class="expandable-subsection3">
+                                            <h5 class="expandable-subsection-title3">${subTitle}</h5>
+                                            <div class="expandable-list-items3">
+                                                ${value.map(item => `
+                                                    <div class="expandable-list-item3">
+                                                        <i class="fas fa-dot-circle"></i>
+                                                        <span>${item}</span>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
                                         </div>
-                                    </div>
-                                `;
-                            } else if (typeof value === 'string') {
-                                contentHTML += `
-                                    <div class="expandable-subsection">
-                                        <h5 class="expandable-subsection-title">${subTitle}</h5>
-                                        <p class="expandable-text-content">${value}</p>
-                                    </div>
-                                `;
-                            }
-                        });
-                    }
-                    
-                    return `
-                        <div class="project-expandable-section" id="${sectionId}">
-                            <div class="expandable-section-header">
-                                <i class="fas fa-layer-group"></i>
-                                <span class="expandable-section-title">${section.title}</span>
+                                    `;
+                                } else if (typeof value === 'string') {
+                                    contentHTML += `
+                                        <div class="expandable-subsection3">
+                                            <h5 class="expandable-subsection-title3">${subTitle}</h5>
+                                            <p class="expandable-text-content3">${value}</p>
+                                        </div>
+                                    `;
+                                } else if (typeof value === 'object' && value !== null) {
+                                    // Handle nested objects
+                                    const nestedContent = Object.entries(value).map(([nestedKey, nestedValue]) => {
+                                        const nestedTitle = nestedKey.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                                        if (Array.isArray(nestedValue)) {
+                                            return `
+                                                <div class="expandable-nested-section3">
+                                                    <h6 class="expandable-nested-title3">${nestedTitle}</h6>
+                                                    ${nestedValue.map(item => `
+                                                        <div class="expandable-nested-item3">
+                                                            <i class="fas fa-arrow-right"></i>
+                                                            <span>${item}</span>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            `;
+                                        } else if (typeof nestedValue === 'string') {
+                                            return `
+                                                <div class="expandable-nested-section3">
+                                                    <h6 class="expandable-nested-title3">${nestedTitle}</h6>
+                                                    <p class="expandable-nested-text3">${nestedValue}</p>
+                                                </div>
+                                            `;
+                                        }
+                                        return '';
+                                    }).join('');
+                                    
+                                    contentHTML += `
+                                        <div class="expandable-subsection3">
+                                            <h5 class="expandable-subsection-title3">${subTitle}</h5>
+                                            <div class="expandable-nested-container3">
+                                                ${nestedContent}
+                                            </div>
+                                        </div>
+                                    `;
+                                }
+                            });
+                        }
+                        
+                        return `
+                            <div class="project-expandable-section3" id="${sectionId}">
+                                <div class="expandable-section-header3">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span class="expandable-section-title3">${section.title}</span>
+                                </div>
+                                <div class="expandable-section-content3">
+                                    ${contentHTML}
+                                </div>
                             </div>
-                            <div class="expandable-section-content">
-                                ${contentHTML}
+                        `;
+                    }).join('');
+                }
+                
+                // Handle methodology if exists
+                if (project.methodology && typeof project.methodology === 'object') {
+                    expandableHTML += `
+                        <div class="project-expandable-section3">
+                            <div class="expandable-section-header3">
+                                <i class="fas fa-flask"></i>
+                                <span class="expandable-section-title3">Research Methodology</span>
+                            </div>
+                            <div class="expandable-section-content3">
+                                ${Object.entries(project.methodology).map(([key, value]) => {
+                                    const title = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                                    return `
+                                        <div class="expandable-subsection3">
+                                            <h5 class="expandable-subsection-title3">${title}</h5>
+                                            <p class="expandable-text-content3">${value}</p>
+                                        </div>
+                                    `;
+                                }).join('')}
                             </div>
                         </div>
                     `;
-                }).join('');
+                }
+                
+                // Handle roadmap
+                if (project.roadmap && Array.isArray(project.roadmap)) {
+                    expandableHTML += `
+                        <div class="project-roadmap-section3">
+                            <div class="roadmap-section-header3">
+                                <i class="fas fa-road"></i>
+                                <span class="roadmap-section-title3">Future Roadmap</span>
+                            </div>
+                            <div class="roadmap-items-container3">
+                                ${project.roadmap.map(item => `
+                                    <div class="roadmap-item3">
+                                        <i class="fas fa-arrow-right"></i>
+                                        <span>${item}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                return expandableHTML;
             };
 
-            // Check if there's expandable content
-            const hasExpandableContent = () => {
+            // Check if there's any expandable content
+            const hasExpandableContent3 = (project) => {
                 return (project.expandableSections && project.expandableSections.length > 0) ||
-                    project.roadmap ||
+                    (project.roadmap && project.roadmap.length > 0) ||
+                    project.methodology ||
                     project.technicalArchitecture ||
                     project.marketAnalysis;
             };
 
             // Generate project links
-            const generateProjectLinks = (links) => {
+            const generateProjectLinks3 = (links) => {
                 if (!links || !Array.isArray(links)) return '';
                 
-                return links.map(link => `
-                    <a href="${link.url}" class="project-action-link" target="_blank" title="${link.description || ''}">
-                        <i class="${link.icon}"></i>
-                        <span class="link-text">${link.name}</span>
-                        <i class="fas fa-external-link-alt link-external-icon"></i>
-                    </a>
-                `).join('');
+                return links.map(link => {
+                    if (!link.name || !link.url) return '';
+                    return `
+                        <a href="${link.url}" class="project-action-link3" target="_blank" 
+                        title="${link.description || link.name}">
+                            <i class="${link.icon || 'fas fa-link'}"></i>
+                            <span class="link-text3">${link.name}</span>
+                            <i class="fas fa-external-link-alt link-external-icon3"></i>
+                        </a>
+                    `;
+                }).filter(link => link !== '').join('');
             };
 
-            // Generate team avatars
-            const generateTeamInfo = (project) => {
+            // Generate team avatars and info
+            const generateTeamInfo3 = (project) => {
                 const avatars = project.avatars || [];
+                const teamSize = project.teamSize || 'Solo Project';
+                const role = project.role || 'Developer';
+                
                 const avatarHTML = avatars.map(initial => 
-                    `<div class="team-member-avatar">${initial}</div>`
+                    `<div class="team-member-avatar3">${initial}</div>`
                 ).join('');
                 
                 return `
-                    <div class="project-team-info">
-                        <div class="team-avatars-container">${avatarHTML}</div>
-                        <div class="team-details">
-                            <span class="team-size-info">${project.teamSize}</span>
-                            <span class="team-role-info">${project.role || 'Principal Developer'}</span>
+                    <div class="project-team-info3">
+                        <div class="team-avatars-container3">${avatarHTML}</div>
+                        <div class="team-details3">
+                            <span class="team-size-info3">${teamSize}</span>
+                            <span class="team-role-info3">${role}</span>
                         </div>
                     </div>
                 `;
             };
 
             // Enhanced status indicator with circular progress
-            const generateStatusIndicator = (project) => {
+            const generateStatusIndicator3 = (project) => {
                 const progress = project.progress || 0;
+                const status = project.status || 'ongoing';
+                
                 const statusMap = {
-                    'ongoing': { class: 'status-ongoing-indicator', text: 'In Progress', color: '#3b82f6' },
-                    'completed': { class: 'status-completed-indicator', text: 'Completed', color: '#10b981' },
-                    'production-ready': { class: 'status-production-indicator', text: 'Production Ready', color: '#059669' }
+                    'ongoing': { class: 'status-ongoing-indicator3', text: 'In Progress', color: '#3b82f6' },
+                    'completed': { class: 'status-completed-indicator3', text: 'Completed', color: '#10b981' },
+                    'production-ready': { class: 'status-production-indicator3', text: 'Production Ready', color: '#059669' },
+                    'peer-review': { class: 'status-review-indicator3', text: 'Peer Review', color: '#f59e0b' },
+                    'published': { class: 'status-published-indicator3', text: 'Published', color: '#8b5cf6' }
                 };
                 
-                const status = statusMap[project.status] || statusMap['ongoing'];
+                const statusInfo = statusMap[status] || statusMap['ongoing'];
                 
-                // Calculate stroke dash array for circular progress (circumference = 2 * π * r, where r = 18)
+                // Calculate stroke dash array for circular progress
                 const radius = 18;
                 const circumference = 2 * Math.PI * radius;
                 const strokeDasharray = circumference;
                 const strokeDashoffset = circumference - (progress / 100) * circumference;
                 
                 return `
-                    <div class="project-status-container1">
-                        <div class="status-left-section1">
-                            <div class="status-indicator-dot ${status.class}"></div>
-                            <span class="status-text">${status.text}</span>
+                    <div class="project-status-container3">
+                        <div class="status-left-section3">
+                            <div class="status-indicator-dot3 ${statusInfo.class}"></div>
+                            <span class="status-text3">${statusInfo.text}</span>
                         </div>
                         
-                        <div class="status-progress-section1">
-                            <!-- Circular Progress Indicator -->
-                            <div class="circular-progress-container1">
-                                <svg class="circular-progress-svg1" width="40" height="40" viewBox="0 0 40 40">
-                                    <!-- Background circle -->
+                        <div class="status-progress-section3">
+                            <div class="circular-progress-container3">
+                                <svg class="circular-progress-svg3" width="40" height="40" viewBox="0 0 40 40">
                                     <circle 
-                                        class="circular-progress-bg1" 
+                                        class="circular-progress-bg3" 
                                         cx="20" 
                                         cy="20" 
                                         r="${radius}"
@@ -5260,14 +7569,13 @@
                                         stroke="#e5e7eb" 
                                         stroke-width="3"
                                     />
-                                    <!-- Progress circle -->
                                     <circle 
-                                        class="circular-progress-fill1" 
+                                        class="circular-progress-fill3" 
                                         cx="20" 
                                         cy="20" 
                                         r="${radius}"
                                         fill="none" 
-                                        stroke="${status.color}" 
+                                        stroke="${statusInfo.color}" 
                                         stroke-width="3"
                                         stroke-linecap="round"
                                         stroke-dasharray="${strokeDasharray}"
@@ -5276,99 +7584,88 @@
                                         style="transition: stroke-dashoffset 0.6s ease-in-out;"
                                     />
                                 </svg>
-                                <div class="circular-progress-text1">${progress}%</div>
+                                <div class="circular-progress-text3">${progress}%</div>
                             </div>
-                            
-                            
                         </div>
                     </div>
                 `;
             };
 
-            // Category mapping
+            // Category mapping with fallback
             const categoryMap = {
                 'research': 'Research',
+                'computer-vision-research': 'Computer Vision Research',
                 'ai-ml': 'AI/ML',
                 'web-dev': 'Web Development',
                 'data-science': 'Data Science',
-                'enterprise-ai': 'Enterprise AI'
+                'enterprise-ai': 'Enterprise AI',
+                'machine-learning': 'Machine Learning',
+                'deep-learning': 'Deep Learning'
             };
 
-            // Main card HTML
-            return `
-                <div class="project-card1" data-category="${project.category}">
-                    <div class="project-header-section">
-                        <div class="project-category-badge">${categoryMap[project.category] || project.category}</div>
-                        ${generateStatusIndicator(project)}
+            const categoryDisplay = categoryMap[project.category] || 
+                                (project.category ? project.category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Project');
+
+            // Main card HTML generation
+            const cardHTML = `
+                <div class="project-card3" data-category="${project.category || 'general'}">
+                    <div class="project-header-section3">
+                        <div class="project-category-badge3">${categoryDisplay}</div>
+                        ${generateStatusIndicator3(project)}
                         
-                        <h3 class="project-main-title">${project.title}</h3>
-                        <div class="project-subtitle-container">
-                            <span class="project-subtitle-text">${project.subtitle}</span>
-                            <span class="project-duration-text">${project.duration}</span>
+                        <h3 class="project-main-title3">${project.title}</h3>
+                        <div class="project-subtitle-container3">
+                            <span class="project-subtitle-text3">${project.subtitle || ''}</span>
+                            <span class="project-duration-text3">${project.duration || ''}</span>
                         </div>
                     </div>
 
-                    <div class="project-content-section">
-                        ${generateTeamInfo(project)}
+                    <div class="project-content-section3">
+                        ${generateTeamInfo3(project)}
                         
-                        <div class="project-description-container">
-                            <p class="project-main-description">${project.description}</p>
+                        <div class="project-description-container3">
+                            <p class="project-main-description3">${project.description || ''}</p>
                         </div>
                         
-                        ${renderProblemStatement(project.problemStatement)}
+                        ${renderProblemStatement3(project.problemStatement)}
                         
-                        <div class="project-highlights-container">
-                            ${renderHighlights(project.highlights)}
+                        <div class="project-highlights-container3">
+                            ${renderHighlights3(project.highlights)}
                         </div>
                         
-                        <div class="project-tech-section">
-                            <div class="tech-section-header">
-                                <i class="fas fa-code"></i>
-                                <span class="tech-section-title">Technology Stack</span>
-                            </div>
-                            <div class="tech-stack-container">
-                                ${renderTechStack(project.techStack)}
-                            </div>
-                        </div>
-                        
-                        ${project.links ? `
-                            <div class="project-links-section">
-                                <div class="links-section-header">
-                                    <i class="fas fa-link"></i>
-                                    <span class="links-section-title">Project Links</span>
+                        ${project.techStack ? `
+                            <div class="project-tech-section3">
+                                <div class="tech-section-header3">
+                                    <i class="fas fa-code"></i>
+                                    <span class="tech-section-title3">Technology Stack</span>
                                 </div>
-                                <div class="project-links-container">
-                                    ${generateProjectLinks(project.links)}
+                                <div class="tech-stack-container3">
+                                    ${renderTechStack3(project.techStack)}
                                 </div>
                             </div>
                         ` : ''}
                         
-                        ${hasExpandableContent() ? `
-                            <div class="project-expandable-container">
-                                <button class="expand-details-btn" onclick="toggleProjectDetails(this)">
-                                    <span class="expand-btn-text">Show More Details</span>
-                                    <i class="fas fa-chevron-down expand-btn-icon"></i>
+                        ${project.links ? `
+                            <div class="project-links-section3">
+                                <div class="links-section-header3">
+                                    <i class="fas fa-link"></i>
+                                    <span class="links-section-title3">Project Links</span>
+                                </div>
+                                <div class="project-links-container3">
+                                    ${generateProjectLinks3(project.links)}
+                                </div>
+                            </div>
+                        ` : ''}
+                        
+                        ${hasExpandableContent3(project) ? `
+                            <div class="project-expandable-container3">
+                                <button class="expand-details-btn3" onclick="toggleProjectDetails3(this)">
+                                    <span class="expand-btn-text3">Show More Details</span>
+                                    <i class="fas fa-chevron-down expand-btn-icon3"></i>
                                 </button>
-                                <div class="expandable-content-wrapper" style="display: none;">
-                                    <div class="expandable-content-slider">
-                                        ${renderExpandableSections(project.expandableSections)}
-                                        
-                                        ${project.roadmap ? `
-                                            <div class="project-roadmap-section">
-                                                <div class="roadmap-section-header">
-                                                    <i class="fas fa-road"></i>
-                                                    <span class="roadmap-section-title">Future Roadmap</span>
-                                                </div>
-                                                <div class="roadmap-items-container">
-                                                    ${project.roadmap.map(item => `
-                                                        <div class="roadmap-item">
-                                                            <i class="fas fa-arrow-right"></i>
-                                                            <span>${item}</span>
-                                                        </div>
-                                                    `).join('')}
-                                                </div>
-                                            </div>
-                                        ` : ''}
+                                <div class="expandable-content-wrapper3" style="display: none;">
+                                    <div class="expandable-content-slider3">
+                                        ${renderExpandableContent3(project)}
                                     </div>
                                 </div>
                             </div>
@@ -5376,44 +7673,38 @@
                     </div>
                 </div>
             `;
+
+            return cardHTML;
         }
 
-        // Enhanced toggle function with smooth scrolling
-        function toggleProjectDetails(button) {
-            const expandableContainer = button.closest('.project-expandable-container');
-            const expandableWrapper = expandableContainer.querySelector('.expandable-content-wrapper');
-            const expandableSlider = expandableContainer.querySelector('.expandable-content-slider');
-            const expandText = button.querySelector('.expand-btn-text');
-            const chevron = button.querySelector('.expand-btn-icon');
+        // Enhanced toggle function with internal scrolling (NO page scrolling)
+        function toggleProjectDetails3(button) {
+            const expandableContainer = button.closest('.project-expandable-container3');
+            const expandableWrapper = expandableContainer.querySelector('.expandable-content-wrapper3');
+            const expandableSlider = expandableContainer.querySelector('.expandable-content-slider3');
+            const expandText = button.querySelector('.expand-btn-text3');
+            const chevron = button.querySelector('.expand-btn-icon3');
             
             if (expandableWrapper.style.display === 'none') {
-                // Expand
+                // Expand - content scrolls internally, NO page scrolling
                 expandableWrapper.style.display = 'block';
                 expandText.textContent = 'Show Less Details';
-                chevron.className = 'fas fa-chevron-up expand-btn-icon';
-                button.classList.add('expanded-state');
+                chevron.className = 'fas fa-chevron-up expand-btn-icon3';
+                button.classList.add('expanded-state3');
                 
-                // Smooth animation
+                // Smooth animation with fixed height for internal scrolling
                 setTimeout(() => {
-                    expandableWrapper.style.maxHeight = expandableSlider.scrollHeight + 'px';
+                    expandableWrapper.style.maxHeight = '440px'; // Fixed height + padding
                     expandableWrapper.style.opacity = '1';
                 }, 10);
-                
-                // Smooth scroll to expanded content
-                setTimeout(() => {
-                    button.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'center' 
-                    });
-                }, 300);
                 
             } else {
                 // Collapse
                 expandableWrapper.style.maxHeight = '0';
                 expandableWrapper.style.opacity = '0';
                 expandText.textContent = 'Show More Details';
-                chevron.className = 'fas fa-chevron-down expand-btn-icon';
-                button.classList.remove('expanded-state');
+                chevron.className = 'fas fa-chevron-down expand-btn-icon3';
+                button.classList.remove('expanded-state3');
                 
                 setTimeout(() => {
                     expandableWrapper.style.display = 'none';
@@ -5421,32 +7712,57 @@
             }
         }
 
-        // Enhanced modal functionality (keeping your existing modal structure but with new class names)
-        function openProjectModal(projectTitle) {
-            const project = allProjectsData.find(p => p.title === projectTitle);
-            if (!project) return;
+        // Universal project renderer - handles arrays of projects
+        function renderUniversalProjects(projectsArray, containerId) {
+            if (!Array.isArray(projectsArray) || projectsArray.length === 0) {
+                console.warn('No projects provided or invalid format');
+                return;
+            }
+            
+            const container = document.getElementById(containerId);
+            if (!container) {
+                console.error(`Container with ID '${containerId}' not found`);
+                return;
+            }
+            
+            // Generate all project cards
+            const projectsHTML = projectsArray.map(project => generateUniversalProjectCard(project)).join('');
+            
+            // Insert into container
+            container.innerHTML = projectsHTML;
+            
+            console.log(`Successfully rendered ${projectsArray.length} projects`);
+        }
+
+        // Example usage:
+        // renderUniversalProjects([project1, project2, project3], 'projects-container');
+
+        // Enhanced modal functionality for detailed view
+        function openUniversalProjectModal(project) {
+            if (!project || !project.title) return;
 
             const modal = document.createElement('div');
-            modal.className = 'project-modal-overlay';
+            modal.className = 'project-modal-overlay2';
             modal.innerHTML = `
-                <div class="project-modal-content">
-                    <button class="modal-close-btn" onclick="closeProjectModal()">
+                <div class="project-modal-content2">
+                    <button class="modal-close-btn2" onclick="closeUniversalProjectModal()">
                         <i class="fas fa-times"></i>
                     </button>
-                    <div class="modal-header-section">
-                        <div class="modal-category-badge">${project.category}</div>
-                        <h2 class="modal-main-title">${project.title}</h2>
-                        <p class="modal-subtitle">${project.subtitle}</p>
-                        <div class="modal-meta-info">
-                            <span><i class="fas fa-calendar"></i> ${project.duration}</span>
-                            <span><i class="fas fa-users"></i> ${project.teamSize}</span>
-                            <span class="modal-status-badge ${project.status}">${project.status.toUpperCase()}</span>
+                    <div class="modal-header-section2">
+                        <div class="modal-category-badge2">${project.category || 'Project'}</div>
+                        <h2 class="modal-main-title2">${project.title}</h2>
+                        <p class="modal-subtitle2">${project.subtitle || ''}</p>
+                        <div class="modal-meta-info2">
+                            ${project.duration ? `<span><i class="fas fa-calendar"></i> ${project.duration}</span>` : ''}
+                            ${project.teamSize ? `<span><i class="fas fa-users"></i> ${project.teamSize}</span>` : ''}
+                            <span class="modal-status-badge2 ${project.status || 'ongoing'}">${(project.status || 'ongoing').toUpperCase()}</span>
                             ${project.progress ? `<span><i class="fas fa-tasks"></i> ${project.progress}% Complete</span>` : ''}
                         </div>
                     </div>
-                    <div class="modal-body-section">
-                        <!-- Modal content would go here -->
-                        <p>Full project details would be displayed here...</p>
+                    <div class="modal-body-section2">
+                        <div class="modal-content-scroll2">
+                            ${generateUniversalProjectCard(project)}
+                        </div>
                     </div>
                 </div>
             `;
@@ -5455,14 +7771,14 @@
             document.body.style.overflow = 'hidden';
             
             setTimeout(() => {
-                modal.classList.add('modal-active');
+                modal.classList.add('modal-active2');
             }, 10);
         }
 
-        function closeProjectModal() {
-            const modal = document.querySelector('.project-modal-overlay');
+        function closeUniversalProjectModal() {
+            const modal = document.querySelector('.project-modal-overlay2');
             if (modal) {
-                modal.classList.remove('modal-active');
+                modal.classList.remove('modal-active2');
                 setTimeout(() => {
                     document.body.removeChild(modal);
                     document.body.style.overflow = 'auto';
@@ -5470,6 +7786,12 @@
             }
         }
 
+        // Export functions for global use
+        window.generateUniversalProjectCard = generateUniversalProjectCard;
+        window.renderUniversalProjects = renderUniversalProjects;
+        window.toggleProjectDetails3 = toggleProjectDetails3;
+        window.openUniversalProjectModal = openUniversalProjectModal;
+        window.closeUniversalProjectModal = closeUniversalProjectModal;
         // Tech icon mapping function
         function getTechIcon(tech) {
             const iconMap = {
@@ -5630,7 +7952,7 @@
             const projectsToShow = filteredProjects.slice(startIndex, endIndex);
             
             const projectsGrid = document.getElementById('allProjectsGrid');
-            const projectsHTML = projectsToShow.map(project => generateProjectCard(project)).join('');
+            const projectsHTML = projectsToShow.map(project => generateUniversalProjectCard(project)).join('');
             projectsGrid.innerHTML = projectsHTML;
             
             // Update pagination controls
@@ -5726,6 +8048,7 @@
             }, 200);
         }
         
+        window.goToPage = goToPage;
         // Filter function that works with pagination
         function filterProjectsWithPagination(category) {
             // Filter projects based on category
@@ -6193,7 +8516,7 @@
         document.addEventListener('keydown', (e) => {
             // Close modal with Escape key
             if (e.key === 'Escape') {
-                closeProjectModal();
+                closeUniversalProjectModal();
             }
             
             // Navigate project cards with arrow keys
