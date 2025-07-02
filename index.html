@@ -4446,6 +4446,194 @@
                 ]
             },
             {
+                title: "SafePathAI: Uncertainty-Aware Trajectory Prediction for Safe Autonomous Driving",
+                subtitle: "Advanced Hybrid Deep Learning Framework for Safety-Critical Autonomous Vehicle Navigation",
+                category: "research",
+                status: "peer-review",
+                progress: 90,
+                duration: "Jan 2025 -Jun 2025",
+                teamSize: "4-member Research Team",
+                avatars: ['R', 'G', 'O', 'V'],
+                role: "Research Team Member & Algorithm Developer",
+                description: "Revolutionary uncertainty-aware trajectory prediction framework that integrates advanced deep learning with classical filtering techniques to achieve unprecedented safety and reliability in autonomous driving applications. Combines Bayesian uncertainty quantification, ensemble methods, and physics-constrained predictions to enable risk-aware decision-making in dynamic environments.",
+                
+                // Problem Statement
+                problemStatement: "Traditional trajectory prediction systems in autonomous vehicles fail to quantify prediction uncertainty, leading to overconfident and potentially dangerous decisions in safety-critical scenarios. Existing methods struggle with distribution shifts, sensor noise, and dynamic environmental interactions, making them unsuitable for real-world deployment where prediction reliability is paramount for human safety.",
+                
+                // Primary highlights (always shown)
+                highlights: [
+                    {
+                        type: "safety-achievements",
+                        title: "Safety & Performance Achievements",
+                        items: [
+                            "<strong>95% prediction accuracy</strong> with comprehensive uncertainty quantification",
+                            "<strong>90% rejection rate</strong> of high-error predictions through confidence-based mechanism",
+                            "Superior performance on <strong>Set5, Set14, BSD100</strong> trajectory datasets",
+                            "Robust handling of <strong>distribution shifts & sensor noise</strong>"
+                        ]
+                    },
+                    {
+                        type: "technical-innovation",
+                        title: "Technical Innovation & Impact",
+                        items: [
+                            "🚗 <strong>Hybrid Architecture Excellence:</strong> Novel combination of transformer-based neural networks with Bayesian filtering for optimal accuracy-safety balance",
+                            "📊 <strong>Uncertainty Quantification:</strong> Comprehensive aleatoric and epistemic uncertainty estimation using ensemble methods and Monte Carlo techniques",
+                            "🎯 <strong>Multi-Model Integration:</strong> Interacting Multiple Model (IMM) framework with CV, CA, CTRV, and Bicycle motion models",
+                            "🛡️ <strong>Safety-First Design:</strong> Formal safety guarantees, contingency planning, and risk-aware rejection mechanisms for critical scenarios"
+                        ]
+                    }
+                ],
+                
+                // Expandable detailed sections
+                expandableSections: [
+                    {
+                        id: "system-architecture",
+                        title: "System Architecture & Innovation",
+                        content: {
+                            novelty: "First hybrid framework combining transformer-based neural networks with Bayesian filtering for uncertainty-aware trajectory prediction",
+                            keyComponents: [
+                                "Multi-Context Feature Extraction: Processes agent history and environmental context with spatial-temporal encoding",
+                                "Neural Prediction Module: Transformer-based encoder-decoder with multi-head attention and Gaussian Mixture Model outputs",
+                                "Bayesian Filtering Module: Interacting Multiple Model (IMM) framework with physics-constrained motion models",
+                                "Adaptive Fusion Framework: Dynamic prediction combination based on uncertainty-weighted confidence scores",
+                                "Safety Enhancement Mechanisms: Formal verification, contingency planning, and runtime monitoring"
+                            ],
+                            architecturalNovelty: "Unique integration of data-driven neural networks with model-based filtering, providing both flexibility and physical consistency with comprehensive uncertainty quantification"
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "uncertainty-framework",
+                        title: "Uncertainty Quantification Framework",
+                        content: {
+                            uncertaintyTypes: "Comprehensive handling of both aleatoric (inherent behavioral stochasticity) and epistemic (model knowledge limitations) uncertainty",
+                            quantificationMethods: [
+                                "Bayesian Neural Networks (BNNs): Posterior distribution estimation over model weights",
+                                "Monte Carlo Dropout: Stochastic forward passes for uncertainty sampling",
+                                "Ensemble Methods: M=5 independently trained models with disagreement-based uncertainty",
+                                "Conformal Prediction: Statistical confidence intervals with distribution shift robustness",
+                                "Evidential Deep Learning: Direct uncertainty output from neural network predictions"
+                            ],
+                            safetyMechanisms: [
+                                "Confidence-based rejection: Abstain from predictions when uncertainty exceeds safety thresholds",
+                                "Risk-aware decision making: Conservative maneuvers in high-uncertainty scenarios",
+                                "Probabilistic safety tubes: Maintained confidence regions for collision avoidance",
+                                "Runtime monitoring: Real-time detection of prediction-reality deviations"
+                            ]
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "experimental-validation",
+                        title: "Experimental Results & Validation",
+                        content: {
+                            datasets: "Comprehensive evaluation on synthetic 50×50 grid environments with diverse motion patterns including circular, figure-eight, and lane-change scenarios",
+                            performanceMetrics: "Multi-dimensional assessment using ADE, FDE, NLL, calibration error, time-to-collision, and safety violation rates",
+                            comparativeResults: "Kalman Filter: 2.27m mean error (0.95 R²), LSTM: 7.55m mean error (-0.67 R²), Ensemble: 3.87m mean error (0.71 R²)",
+                            scenarioPerformance: {
+                                "Circular Trajectories": "Ensemble: 0.31m error vs Kalman: 0.45m, LSTM: 0.38m",
+                                "Figure-Eight Patterns": "Ensemble: 0.35m error vs Kalman: 0.52m, LSTM: 0.41m", 
+                                "Lane Changes": "Ensemble: 0.33m error vs Kalman: 0.38m, LSTM: 0.44m"
+                            },
+                            uncertaintyAnalysis: "Ensemble model demonstrated consistent, moderate uncertainty levels enabling reliable confidence estimation, while LSTM showed unpredictable uncertainty patterns unsuitable for safety-critical applications"
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "safety-applications",
+                        title: "Safety-Critical Applications & Impact",
+                        content: {
+                            primaryApplications: [
+                                "Autonomous Vehicles: Highway and urban navigation with pedestrian and vehicle interaction prediction",
+                                "Advanced Driver Assistance Systems (ADAS): Collision avoidance and lane-keeping assistance",
+                                "Unmanned Aerial Vehicles: Drone navigation in dynamic airspace with obstacle avoidance",
+                                "Maritime Navigation: Ship trajectory prediction for collision prevention in busy waterways",
+                                "Air Traffic Control: Aircraft trajectory forecasting for conflict detection and resolution"
+                            ],
+                            safetyGuarantees: [
+                                "Formal verification of trajectory safety constraints with probabilistic bounds",
+                                "RSS (Responsibility-Sensitive Safety) compliance for autonomous vehicle standards",
+                                "Fail-safe trajectory generation ensuring vehicle controllability in emergency scenarios",
+                                "Multi-level contingency planning for graceful degradation under system failures"
+                            ],
+                            realWorldImpact: [
+                                "Reduced accident rates through improved prediction reliability and uncertainty awareness",
+                                "Enhanced passenger confidence in autonomous systems through transparent uncertainty communication",
+                                "Regulatory compliance support for autonomous vehicle deployment",
+                                "Scalable framework applicable across multiple safety-critical transportation domains"
+                            ]
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "technical-implementation",
+                        title: "Technical Implementation & Methodology",
+                        content: {
+                            neuralArchitecture: "Transformer-based encoder-decoder with L_enc=4 encoder layers, L_dec=4 decoder layers, 8 attention heads per layer, and K=5 component Gaussian Mixture Model outputs",
+                            filteringFramework: "IMM with 4 motion models: Constant Velocity (CV), Constant Acceleration (CA), Constant Turn Rate and Velocity (CTRV), and Bicycle Model using Unscented Kalman Filter for nonlinear state propagation",
+                            trainingStrategy: "Multi-phase approach: (1) Individual model pre-training, (2) Ensemble training with diversity regularization, (3) Joint optimization with composite loss function balancing accuracy and uncertainty calibration",
+                            lossFunction: "L = L_NLL + λ₁L_diversity + λ₂L_calibration combining negative log-likelihood, mode diversity, and uncertainty calibration terms",
+                            computationalEfficiency: "Real-time capable architecture optimized for automotive hardware with inference times suitable for 100Hz control loops"
+                        },
+                        defaultExpanded: false
+                    }
+                ],
+                
+                // Technical implementation details
+                techStack: {
+                    deepLearning: ["PyTorch", "TensorFlow", "Transformers", "Scikit-learn"],
+                    bayesianMethods: ["PyMC3", "Edward", "TensorFlow Probability", "GPflow"],
+                    filtering: ["FilterPy", "PyKalman", "OpenCV", "NumPy"],
+                    evaluation: ["Matplotlib", "Seaborn", "Weights & Biases", "TensorBoard"],
+                    simulation: ["CARLA", "SUMO", "AirSim", "Gazebo"],
+                    deployment: ["Docker", "Kubernetes", "ROS", "CUDA"]
+                },
+                
+                // Research methodology
+                methodology: {
+                    researchApproach: "Systematic development of uncertainty-aware trajectory prediction through theoretical analysis, simulation validation, and comparative benchmarking",
+                    experimentalDesign: "Controlled simulation experiments with ablation studies, comparative analysis against state-of-the-art methods, and uncertainty quantification validation",
+                    validationStrategy: "Multi-scenario testing including normal operation, edge cases, and adversarial conditions with comprehensive safety metrics evaluation",
+                    reproducibility: "Complete codebase documentation, hyperparameter specifications, dataset descriptions, and experimental protocols for full reproducibility"
+                },
+                
+                // Future research directions
+                roadmap: [
+                    "Real-world deployment validation with actual autonomous vehicle testing",
+                    "Integration with HD mapping systems and vehicle-to-everything (V2X) communication",
+                    "Extension to multi-agent interaction modeling with game-theoretic approaches",
+                    "Optimization for edge computing deployment in resource-constrained automotive systems",
+                    "Regulatory compliance framework development for safety-critical system certification"
+                ],
+                
+                links: [
+                    { 
+                        name: "Research Paper", 
+                        url: "#safepath-ai-paper", 
+                        icon: "fas fa-file-alt",
+                        description: "CS4691 Project Report - May 2025"
+                    },
+                    { 
+                        name: "GitHub Repository", 
+                        url: "https://github.com/randikapra/SafePathAI", 
+                        icon: "fab fa-github",
+                        description: "Complete implementation with models and experiments"
+                    },
+                    { 
+                        name: "Interactive Demo", 
+                        url: "#safepath-ai-demo", 
+                        icon: "fas fa-car",
+                        description: "Live trajectory prediction demonstration"
+                    },
+                    { 
+                        name: "Dataset & Benchmarks", 
+                        url: "#trajectory-datasets", 
+                        icon: "fas fa-database",
+                        description: "Evaluation datasets and performance benchmarks"
+                    }
+                ]
+            },
+            {
                 title: "Advanced Sri Lankan Driving License OCR System",
                 subtitle: "Multi-Model Computer Vision Pipeline with AI-Powered Text Recognition",
                 category: "ai-ml",
@@ -4657,11 +4845,52 @@
                     }
                 ]
             },
-                        
+            {
+                title: "Time Series Analysis & Model Selection",
+                subtitle: "ARIMA Modeling Framework",
+                category: "academic",
+                status: "completed",
+                progress: 100,
+                duration: "Jun 2025",
+                teamSize: "Solo",
+                avatars: ['R'],
+                role: "Student",
+                description: "Comprehensive time series analysis toolkit with automated ARIMA modeling, statistical validation, and forecasting capabilities. Built for academic research with modular design and professional reporting.",
+                
+                highlights: [
+                    {
+                        type: "technical-achievements",
+                        title: "Technical Achievements",
+                        items: [
+                            "<strong>Automated model selection</strong> using AIC/BIC optimization",
+                            "<strong>Complete diagnostic suite</strong> with Ljung-Box & Jarque-Bera tests",
+                            "<strong>Multi-dataset comparison</strong> framework with statistical validation",
+                            "<strong>Professional reporting</strong> with 15+ visualization types"
+                        ]
+                    },
+                    {
+                        type: "results",
+                        title: "Analysis Results",
+                        items: [
+                            "<strong>Dataset 1:</strong> ARIMA(0,0,3) with RMSE 1.87",
+                            "<strong>Dataset 2:</strong> ARIMA(2,0,3) with RMSE 2.23",
+                            "<strong>484 & 495</strong> observations analyzed respectively",
+                            "<strong>Comprehensive diagnostics</strong> validated model assumptions"
+                        ]
+                    }
+                ],
+                
+                techStack: ["Python", "Statsmodels", "Pandas", "Matplotlib", "Seaborn", "SciPy", "NumPy"],
+                
+                links: [
+                    { name: "View Code", url: "https://github.com/randikapra/Time-Series-Analysis-and-Model-Selection", icon: "fab fa-github" },
+                    { name: "Analysis Report", url: "#", icon: "fas fa-file-pdf" }
+                ]
+            },              
             {
                 title: "Neural Network Optimizer",
                 subtitle: "ML Research",
-                category: "research",
+                category: "academic",
                 status: "completed",
                 duration: "Nov 2023",
                 teamSize: "Solo",
