@@ -3408,6 +3408,208 @@
             }
         }
 
+        /* Enhanced Status Container with Circular Progress */
+        .project-status-container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .status-left-section1 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-progress-section1 {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* Circular Progress Styles */
+        .circular-progress-container1 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circular-progress-svg1 {
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .circular-progress-bg1 {
+            opacity: 0.3;
+        }
+
+        .circular-progress-fill1 {
+            transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .circular-progress-text1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            font-weight: 600;
+            color: #374151;
+            text-align: center;
+            line-height: 1;
+        }
+
+        /* Linear Progress Container */
+        .linear-progress-container1 {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 120px;
+        }
+
+        .progress-text-linear1 {
+            font-size: 11px;
+            color: #6b7280;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Enhanced existing progress indicator */
+        .progress-indicator {
+            width: 100%;
+            height: 6px;
+            background-color: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.3) 50%, 
+                transparent 100%);
+            animation: progressShimmer1 2s infinite;
+        }
+
+        @keyframes progressShimmer1 {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Status text styling */
+        .status-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        /* Status indicator dots */
+        .status-ongoing-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+            animation: pulseStatus1 2s infinite;
+        }
+
+        .status-completed-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #10b981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+        }
+
+        .status-production-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #059669;
+            box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+        }
+
+        @keyframes pulseStatus1 {
+            0%, 100% { 
+                box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+                transform: scale(1.1);
+            }
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .project-status-container1 {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            
+            .status-progress-section1 {
+                align-self: stretch;
+                justify-content: space-between;
+            }
+            
+            .linear-progress-container1 {
+                min-width: 100px;
+            }
+        }
+
+        /* Hover effects */
+        .project-status-container1:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .project-status-container1:hover .circular-progress-fill1 {
+            filter: brightness(1.1);
+        }
+
+        /* Additional utility classes for different progress states */
+        .progress-low1 .circular-progress-fill1 {
+            stroke: #ef4444;
+        }
+
+        .progress-medium1 .circular-progress-fill1 {
+            stroke: #f59e0b;
+        }
+
+        .progress-high1 .circular-progress-fill1 {
+            stroke: #10b981;
+        }
+
+        /* Animation for when progress updates */
+        @keyframes progressUpdate1 {
+            from { stroke-dashoffset: var(--start-offset); }
+            to { stroke-dashoffset: var(--end-offset); }
+        }
+
         /* 2701 */
         /* Skills Section */
         .skills {
@@ -4437,6 +4639,170 @@
         // Enhanced All Projects Data with additional metadata
         const allProjectsData = [
             {
+                title: "CSM-SR: Conditional Structure-Informed Multi-Scale Super-Resolution GAN",
+                subtitle: "Advanced Deep Learning Framework for High-Fidelity Scientific Image Reconstruction",
+                category: "computer-vision-research",
+                status: "peer-review",
+                progress: 90,
+                duration: "Jan 2024 - Present",
+                teamSize: "Research Team",
+                avatars: ['R', 'T', 'S'],
+                role: "Lead Research Engineer & Algorithm Developer",
+                description: "Novel deep learning architecture that revolutionizes super-resolution imaging for scientific applications by integrating structural coherence preservation, multi-scale feature processing, and semantic awareness to achieve unprecedented reconstruction quality in nanoscience and biomedical imaging.",
+                
+                // Problem Statement
+                problemStatement: "Current super-resolution methods fail to preserve critical structural details in scientific imaging, achieving only basic pixel enhancement while losing fine-grained features essential for accurate analysis. Existing approaches lack semantic understanding and structural coherence, making them unsuitable for precision-critical domains like nanoscience and biomedical research where structural integrity is paramount.",
+                
+                // Primary highlights (always shown)
+                highlights: [
+                    {
+                        type: "technical-breakthrough",
+                        title: "Technical Breakthroughs",
+                        items: [
+                            "📊 <strong>Superior benchmark performance:</strong> 38.79/0.978 PSNR/SSIM on nanoscale datasets, outperforming all state-of-the-art methods",
+                            "🔬 <strong>2.8dB PSNR improvement</strong> over competing methods with 0.171 increase in SSIM on scientific imaging",
+                            "⚡ <strong>Multi-scale feature learning:</strong> MCFL approach achieving 37.982 PSNR with 0.956 SSIM through progressive resolution processing",
+                            "🎯 <strong>Advanced loss function design:</strong> Hybrid SSL combining perceptual, contextual, and structural losses for optimal reconstruction"
+                        ]
+                    },
+                    {
+                        type: "scientific-impact",
+                        title: "Scientific Impact",
+                        items: [
+                            "🔬 <strong>Scientific Domain Excellence:</strong> Exceptional performance on SEM nanoscale imaging with fine cellular boundary preservation",
+                            "📈 <strong>Comprehensive Benchmark Results:</strong> State-of-the-art on Set5 (35.15 PSNR), Set14 (29.23 PSNR), BSD100 (28.05 PSNR), Urban100, Manga109",
+                            "🧬 <strong>Biomedical Applications:</strong> Superior fiber image reconstruction maintaining structural integrity for materials characterization",
+                            "🏆 <strong>Ablation Study Validation:</strong> Systematic component analysis demonstrating each module's critical contribution to performance"
+                        ]
+                    }
+                ],
+                
+                // Expandable detailed sections
+                expandableSections: [
+                    {
+                        id: "research-innovation",
+                        title: "Research Innovation",
+                        content: {
+                            novelty: "First framework to integrate structural coherence preservation with semantic conditioning for scientific super-resolution",
+                            keyContributions: [
+                                "CSM-SR architecture with encoder-based feature conditioning and multi-scale discriminator",
+                                "Novel Semantic Structural Loss (SSL) integrating Content Preservation, Structural Fidelity, and Texture Preservation losses",
+                                "Multi-Scale Feature Learning (MCFL) for progressive high-resolution reconstruction",
+                                "Adaptive Feature Fusion (AFF) mechanism balancing global-local information integration",
+                                "Comprehensive ablation study demonstrating individual component effectiveness"
+                            ],
+                            technicalNovelty: "Integration of encoder-based feature conditioning, hybrid semantic-structural loss, and multi-scale discriminator creates unprecedented reconstruction quality"
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "methodology-architecture",
+                        title: "Methodology & Architecture",
+                        content: {
+                            architecture: "Three-stage pipeline: Encoder-based feature conditioning → Multi-scale feature processing → Progressive high-resolution reconstruction",
+                            encoderModule: "Pre-trained feature extractor capturing global semantic and structural information for conditioning",
+                            generatorNetwork: "Multi-scale generator with Feature Processing Blocks (FPB) and Residual Dense Blocks (RDB)",
+                            discriminatorDesign: "Multi-Scale PatchGAN evaluating features across multiple resolutions for global structural coherence",
+                            lossFunction: "Novel SSL combining Content Preservation Loss, Structural Fidelity Loss, and Texture Preservation Loss"
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "experimental-validation",
+                        title: "Experimental Validation",
+                        content: {
+                            datasets: "Comprehensive evaluation on Set5, Set14, BSD100, Urban100, Manga109, and specialized SEM nanoscale imaging dataset",
+                            trainingStrategy: "Three-phase training: (1) Pre-training encoder with Gradient Loss, (2) Generator pre-training with SSL, (3) Joint fine-tuning with adversarial training",
+                            evaluationMetrics: "PSNR, SSIM, LPIPS for perceptual quality and structural coherence assessment",
+                            benchmarkResults: "Achieved superior performance: Set5 (35.15 PSNR/0.9600 SSIM), Set14 (29.23 PSNR/0.7906 SSIM), BSD100 (28.05 PSNR/0.7530 SSIM). On nanoscale SEM dataset: 38.79 PSNR/0.978 SSIM, representing 2.8dB improvement over competing methods",
+                            scientificValidation: "Extensive evaluation on fiber images demonstrating superior structural preservation and fine cellular boundary reconstruction. Ablation studies confirm each component's contribution to overall performance",
+                            lossComponentAnalysis: "Systematic ablation shows Content Preservation Loss (33.208 PSNR), Contextual Loss (18.55 PSNR), Texture Loss (32.702 PSNR), and Structural Loss (33.208 PSNR) individual contributions"
+                        },
+                        defaultExpanded: false
+                    },
+                    {
+                        id: "research-impact",
+                        title: "Research Impact & Applications",
+                        content: {
+                            scientificDomains: [
+                                "Nanoscience: SEM imaging with exceptional fine-detail preservation (38.79 PSNR/0.978 SSIM)",
+                                "Materials Science: Fiber structure analysis with superior cellular boundary reconstruction",
+                                "Biomedical Imaging: High-fidelity reconstruction maintaining diagnostic structural information",
+                                "Microscopy: Enhanced resolution for cellular and molecular imaging applications"
+                            ],
+                            comparativeAdvantages: [
+                                "Outperforms VDSR (26.97 PSNR), ESRGAN (31.26 PSNR), SFSR (31.10 PSNR) on nanoscale datasets",
+                                "Superior structural coherence compared to DSR-VAE, Style-Swap, and HMA-Net methods",
+                                "Consistent performance across diverse image types and scales",
+                                "Robust to various imaging conditions and noise levels"
+                            ],
+                            industryApplications: [
+                                "Medical imaging devices requiring high-fidelity reconstruction",
+                                "Scientific instrumentation for nanoscale analysis",
+                                "Quality control systems in semiconductor manufacturing",
+                                "Pharmaceutical research imaging pipelines"
+                            ],
+                            academicContributions: "Novel loss function formulation and multi-scale discriminator design contributing to computer vision research community"
+                        },
+                        defaultExpanded: false
+                    }
+                ],
+                
+                // Technical implementation details
+                techStack: {
+                    deepLearning: ["PyTorch", "TensorFlow", "CUDA", "cuDNN"],
+                    architectures: ["GANs", "ResNet", "DenseNet", "U-Net", "Attention Mechanisms"],
+                    optimization: ["Adam Optimizer", "Learning Rate Scheduling", "Gradient Clipping"],
+                    evaluation: ["PSNR", "SSIM", "LPIPS", "FID", "Structural Similarity"],
+                    infrastructure: ["NVIDIA A100 GPUs", "Docker", "Weights & Biases", "TensorBoard"],
+                    datasets: ["DIV2K", "Flickr2K", "SEM Nanoscale", "Medical Imaging"]
+                },
+                
+                // Research methodology
+                methodology: {
+                    researchApproach: "Systematic development of structure-aware super-resolution through theoretical analysis and empirical validation",
+                    experimentalDesign: "Comprehensive ablation studies, benchmark comparisons, and domain-specific evaluations",
+                    validationStrategy: "Multi-dataset evaluation with both quantitative metrics and qualitative assessment by domain experts",
+                    reproducibility: "Complete implementation details, hyperparameter specifications, and training procedures documented"
+                },
+                
+                // Future research directions
+                roadmap: [
+                    "Extension to video super-resolution with temporal consistency",
+                    "Integration with 3D volumetric reconstruction for medical imaging",
+                    "Real-time inference optimization for clinical deployment",
+                    "Multi-modal fusion incorporating additional sensor data",
+                    "Unsupervised adaptation for domain-specific optimization"
+                ],
+                
+                links: [
+                    { 
+                        name: "Research Paper", 
+                        url: "#csm-sr-paper", 
+                        icon: "fas fa-file-alt",
+                        description: "ICCV 2025 submission manuscript"
+                    },
+                    { 
+                        name: "Code Repository", 
+                        url: "github.com/research/csm-sr", 
+                        icon: "fab fa-github",
+                        description: "Complete implementation and experiments"
+                    },
+                    { 
+                        name: "Interactive Demo", 
+                        url: "#csm-sr-demo", 
+                        icon: "fas fa-microscope",
+                        description: "Live reconstruction demonstration"
+                    },
+                    { 
+                        name: "Supplementary Materials", 
+                        url: "#supplementary", 
+                        icon: "fas fa-chart-line",
+                        description: "Additional experiments and analysis"
+                    }
+                ]
+            },
+            {
                 title: "Structure-Informed Super Resolution Technique for Scientific Imaging",
                 subtitle: "Final Year Research Project",
                 category: "research",
@@ -4469,39 +4835,7 @@
                     { name: "Case Study", url: "#", icon: "fas fa-file-alt" }
                 ]
             },
-            
-            {
-                title: "Geo-Spatial Intelligence Platform",
-                subtitle: "Enterprise Solution",
-                category: "web-dev",
-                status: "ongoing",
-                progress: 75,
-                duration: "Dec 2024 - Present",
-                teamSize: "Solo",
-                avatars: ['R'],
-                role: "Lead Developer",
-                description: "Enterprise-grade sales analytics platform featuring real-time GPS tracking, advanced behavioral analysis, and automated report generation to deliver actionable business insights and optimize field operations.",
-                
-                highlights: [
-                    {
-                        type: "core-features",
-                        title: "Core Features",
-                        items: [
-                            "<strong>Real-time GPS tracking</strong> with intelligent route optimization",
-                            "<strong>ML-powered forecasting</strong> & customer segmentation",
-                            "<strong>Interactive dashboards</strong> with live analytics & KPIs",
-                            "<strong>Cross-platform</strong> mobile & web application"
-                        ]
-                    }
-                ],
-                
-                techStack: ["Python", "FastAPI", "React", "PostgreSQL", "Apache Kafka", "Redis", "Docker"],
-                
-                links: [
-                    { name: "View Code", url: "https://github.com/randikapra/geosales-intelligence-platform", icon: "fab fa-github" },
-                    { name: "Request Demo", url: "#", icon: "fas fa-play-circle" }
-                ]
-            },
+
             
             {
                 title: "GeoSales Intelligence Platform",
@@ -4888,7 +5222,7 @@
                 `;
             };
 
-            // Generate status indicator
+            // Enhanced status indicator with circular progress
             const generateStatusIndicator = (project) => {
                 const progress = project.progress || 0;
                 const statusMap = {
@@ -4899,13 +5233,53 @@
                 
                 const status = statusMap[project.status] || statusMap['ongoing'];
                 
+                // Calculate stroke dash array for circular progress (circumference = 2 * π * r, where r = 18)
+                const radius = 18;
+                const circumference = 2 * Math.PI * radius;
+                const strokeDasharray = circumference;
+                const strokeDashoffset = circumference - (progress / 100) * circumference;
+                
                 return `
-                    <div class="project-status-container">
-                        <div class="status-indicator-dot ${status.class}"></div>
-                        <span class="status-text">${status.text}</span>
-                        <div class="progress-indicator" title="${progress}% complete">
-                            <div class="progress-bar" style="width: ${progress}%"></div>
-                            <span class="progress-text">${progress}%</span>
+                    <div class="project-status-container1">
+                        <div class="status-left-section1">
+                            <div class="status-indicator-dot ${status.class}"></div>
+                            <span class="status-text">${status.text}</span>
+                        </div>
+                        
+                        <div class="status-progress-section1">
+                            <!-- Circular Progress Indicator -->
+                            <div class="circular-progress-container1">
+                                <svg class="circular-progress-svg1" width="40" height="40" viewBox="0 0 40 40">
+                                    <!-- Background circle -->
+                                    <circle 
+                                        class="circular-progress-bg1" 
+                                        cx="20" 
+                                        cy="20" 
+                                        r="${radius}"
+                                        fill="none" 
+                                        stroke="#e5e7eb" 
+                                        stroke-width="3"
+                                    />
+                                    <!-- Progress circle -->
+                                    <circle 
+                                        class="circular-progress-fill1" 
+                                        cx="20" 
+                                        cy="20" 
+                                        r="${radius}"
+                                        fill="none" 
+                                        stroke="${status.color}" 
+                                        stroke-width="3"
+                                        stroke-linecap="round"
+                                        stroke-dasharray="${strokeDasharray}"
+                                        stroke-dashoffset="${strokeDashoffset}"
+                                        transform="rotate(-90 20 20)"
+                                        style="transition: stroke-dashoffset 0.6s ease-in-out;"
+                                    />
+                                </svg>
+                                <div class="circular-progress-text1">${progress}%</div>
+                            </div>
+                            
+                            
                         </div>
                     </div>
                 `;
