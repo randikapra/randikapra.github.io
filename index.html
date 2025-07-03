@@ -4265,13 +4265,13 @@
             {
                 title: "Music Genre Classification Engine",
                 subtitle: "Big Data ML Pipeline",
-                duration: "Nov 2024",
+                duration: "Mar 2025 - Jun 2025",
                 category: "data-science",
                 status: "completed",
                 progress: 100,
                 description: "High-performance music genre classification system built on Apache Spark, designed for large-scale audio processing and distributed machine learning with enterprise-grade scalability.",
                 teamSize: "Solo Project",
-                role: "ML Engineering",
+                role: "Developer",
                 avatars: ["R"],
                 highlights: [
                     {
@@ -4326,7 +4326,7 @@
                 status: "peer-review",
                 progress: 90,
                 duration: "Jan 2024 - Present",
-                teamSize: "Research Team",
+                teamSize: "Research Team of 3 members",
                 avatars: ['R', 'O', 'G'],
                 role: "Lead Research Engineer & Algorithm Developer",
                 description: "Novel deep learning architecture that revolutionizes super-resolution imaging for scientific applications by integrating structural coherence preservation, multi-scale feature processing, and semantic awareness to achieve unprecedented reconstruction quality in nanoscience and biomedical imaging.",
@@ -4649,10 +4649,10 @@
                 category: "ai-ml",
                 status: "completed",
                 progress: 100,
-                duration: "Nov 2024",
+                duration: "Mar 2025 - Jun 2025",
                 teamSize: "Solo",
                 avatars: ['R'],
-                role: "ML Engineer",
+                role: "Developer",
                 description: "High-performance music genre classification system built on Apache Spark for large-scale audio processing and distributed machine learning with enterprise-grade scalability.",
                 
                 highlights: [
@@ -4859,7 +4859,7 @@
                 duration: "Apr 2025 - May 2025",
                 teamSize: "Solo",
                 avatars: ['R'],
-                role: "Lead AI/ML Engineer & Computer Vision Specialist",
+                role: "Developer",
                 description: "Revolutionary multi-model OCR pipeline that combines cutting-edge AI technologies (TrOCR, EasyOCR, Tesseract) with advanced computer vision techniques to achieve unprecedented accuracy in extracting structured data from Sri Lankan driving licenses. Features intelligent multi-factor orientation detection, adaptive image enhancement, and robust error correction mechanisms.",
                 
                 // Problem Statement
@@ -5063,6 +5063,128 @@
                 ]
             },
             {
+                title: "Grid World Reinforcement Learning & Sequential Decision Making",
+                subtitle: "Dynamic Programming Implementation for Markov Decision Processes",
+                category: "academic",
+                status: "completed",
+                progress: 100,
+                duration: "Jun 2025",
+                teamSize: "Solo",
+                avatars: ['R'],
+                role: "Student",
+                description: "Comprehensive reinforcement learning implementation demonstrating Policy Iteration and Value Iteration algorithms in a classic 4x3 grid world environment. Features rich visualizations, performance analysis, and educational tools for understanding sequential decision-making in uncertain environments.",
+                
+                highlights: [
+                    {
+                        type: "algorithm-performance",
+                        title: "Algorithm Performance",
+                        items: [
+                            "<strong>Policy Iteration:</strong> Converged in 3-4 iterations with 99.8% accuracy",
+                            "<strong>Value Iteration:</strong> Achieved optimal solution in 12-15 iterations",
+                            "<strong>Path Optimality:</strong> Generated shortest paths avoiding penalty states",
+                            "<strong>Convergence Analysis:</strong> Detailed utility function evolution tracking"
+                        ]
+                    },
+                    {
+                        type: "results",
+                        title: "Key Results",
+                        items: [
+                            "<strong>Dual Algorithm Implementation:</strong> Complete Policy & Value Iteration from scratch",
+                            "<strong>Stochastic Action Model:</strong> 80% intended action with 10% perpendicular drift",
+                            "<strong>Rich Visualization Suite:</strong> 8+ plot types including heatmaps and convergence analysis",
+                            "<strong>Educational Framework:</strong> Step-by-step algorithm execution with detailed logging"
+                        ]
+                    }
+                ],
+                
+                // Technical implementation details
+                techStack: ["Python", "NumPy", "Pandas", "Matplotlib", "Seaborn", "SciPy", "Jupyter Notebook"],
+                
+                // Core features
+                coreFeatures: {
+                    algorithms: [
+                        "Policy Iteration with evaluation-improvement cycle",
+                        "Value Iteration with Bellman equation updates",
+                        "Convergence analysis and performance tracking",
+                        "Optimal policy extraction and validation"
+                    ],
+                    visualization: [
+                        "Interactive grid world renderer",
+                        "Utility value heatmaps",
+                        "Policy arrow visualization",
+                        "Convergence plots and comparative analysis"
+                    ],
+                    analysis: [
+                        "State-by-state utility comparison",
+                        "Algorithm performance metrics",
+                        "Path optimality analysis",
+                        "Mathematical foundation verification"
+                    ]
+                },
+                
+                // Environment specifications
+                environmentSpecs: {
+                    gridSize: "4x3 (12 total states)",
+                    startState: "(1,1) bottom-left corner",
+                    terminalStates: "(4,3) +1 reward, (4,2) -1 penalty",
+                    obstacles: "(2,2) wall state",
+                    actionSpace: ["Up", "Down", "Left", "Right"],
+                    actionModel: "80% intended, 10% perpendicular each",
+                    discountFactor: 0.9,
+                    livingPenalty: -0.04
+                },
+                
+                // Educational value
+                educationalImpact: {
+                    concepts: [
+                        "Markov Decision Processes (MDPs)",
+                        "Bellman equations and dynamic programming",
+                        "Policy vs Value iteration trade-offs",
+                        "Convergence analysis and optimization"
+                    ],
+                    applications: [
+                        "Reinforcement learning fundamentals",
+                        "Algorithm comparison and analysis",
+                        "Visualization techniques for RL concepts",
+                        "Mathematical modeling of decision processes"
+                    ]
+                },
+                
+                // Performance metrics
+                performanceMetrics: {
+                    convergence: {
+                        policyIteration: "3-4 iterations",
+                        valueIteration: "12-15 iterations",
+                        accuracyLevel: "99.8%",
+                        convergenceThreshold: "1e-6"
+                    },
+                    efficiency: {
+                        speedComparison: "Policy Iteration 3-4x faster",
+                        pathOptimality: "100% optimal path generation",
+                        memoryUsage: "Minimal for 4x3 grid",
+                        scalability: "Extendable to larger grids"
+                    }
+                },
+                
+                // Future enhancements
+                futureRoadmap: [
+                    "Larger grid world environments",
+                    "Multi-agent reinforcement learning",
+                    "Q-Learning and temporal difference methods",
+                    "Interactive GUI for real-time parameter adjustment",
+                    "Deep reinforcement learning integration"
+                ],
+                
+                links: [
+                    { 
+                        name: "GitHub Repository", 
+                        url: "https://github.com/randikapra/gridworld-rl-algorithms", 
+                        icon: "fab fa-github",
+                        description: "Complete source code and implementation"
+                    }
+                ]
+            },
+            {
                 title: "Time Series Analysis & Model Selection",
                 subtitle: "ARIMA Modeling Framework",
                 category: "academic",
@@ -5112,7 +5234,7 @@
                 duration: "Nov 2023",
                 teamSize: "Solo",
                 avatars: ['R'],
-                role: "Research Scientist",
+                role: "Student",
                 description: "Novel optimization algorithm for neural network training with improved convergence rates and reduced computational complexity, contributing to the advancement of deep learning efficiency.",
                 
                 highlights: [
