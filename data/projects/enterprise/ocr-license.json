@@ -1,0 +1,49 @@
+{
+  "id": "ocr-license",
+  "title": "Advanced Sri Lankan Driving License OCR System",
+  "shortTitle": "Driving License OCR",
+  "category": "enterprise",
+  "subcategory": "Computer Vision / OCR",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": false,
+  "period": "Apr 2025 – May 2025",
+  "projectType": "Independent Project",
+  "team": {
+    "size": 1,
+    "role": "Lead Developer",
+    "initials": ["R"]
+  },
+  "tags": ["OCR", "Computer Vision", "TrOCR", "EasyOCR", "Tesseract", "Document AI"],
+  "techStack": {
+    "OCR Models": ["TrOCR", "EasyOCR", "Enhanced Tesseract"],
+    "Vision": ["OpenCV", "PyTorch", "Transformers"],
+    "Compute": ["CUDA", "Python"]
+  },
+  "summary": "Revolutionary multi-model OCR pipeline for Sri Lankan driving licenses, combining TrOCR, EasyOCR, and Enhanced Tesseract with intelligent multi-factor orientation detection and adaptive image enhancement.",
+  "problem": "Existing OCR solutions struggle with Sri Lankan driving licenses due to complex table structures, varying orientations, and poor image quality — achieving only 60–70% accuracy.",
+  "solution": "Multi-model ensemble OCR pipeline with 4-factor orientation detection, adaptive image preprocessing, and intelligent model routing based on detected document region type.",
+  "metrics": [
+    { "label": "Vehicle Class Extraction", "value": "96%", "color": "green", "icon": "fas fa-car" },
+    { "label": "Date Extraction Accuracy", "value": "92%", "color": "blue", "icon": "fas fa-calendar" },
+    { "label": "Orientation Detection", "value": "98%", "color": "purple", "icon": "fas fa-sync" },
+    { "label": "Processing Time", "value": "1.8s", "color": "gold", "icon": "fas fa-clock" }
+  ],
+  "achievements": [
+    "96% accuracy in vehicle class extraction, 92% in date extraction",
+    "4-factor orientation detection with 98% success rate",
+    "1.8 seconds average processing time per license",
+    "Significant improvement over 60–70% accuracy baseline of existing solutions"
+  ],
+  "expandable": {
+    "pipeline": {
+      "title": "Multi-Model OCR Pipeline",
+      "icon": "fas fa-layer-group",
+      "content": "Stage 1: 4-factor orientation detection (aspect ratio, text direction, content landmarks, edge analysis). Stage 2: Adaptive image enhancement (denoising, contrast normalization, perspective correction). Stage 3: Region-based model routing — TrOCR for handwritten/degraded text, EasyOCR for printed text, Enhanced Tesseract for structured table cells."
+    }
+  },
+  "links": {
+    "github": "#"
+  }
+}

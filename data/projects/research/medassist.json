@@ -1,0 +1,53 @@
+{
+  "id": "medassist",
+  "title": "MedAssist AI: Multi-Model RAG-Powered Medical Conversational System",
+  "shortTitle": "MedAssist AI",
+  "category": "research",
+  "subcategory": "NLP & Conversational AI",
+  "status": "in-progress",
+  "statusLabel": "In Progress",
+  "completion": 65,
+  "featured": false,
+  "period": "Aug 2025 – Present",
+  "projectType": "Independent Research Project",
+  "team": {
+    "size": 1,
+    "role": "Lead Developer",
+    "initials": ["R"]
+  },
+  "tags": ["RAG", "LLM", "NLP", "Multi-Model", "Healthcare AI", "Vector Database"],
+  "techStack": {
+    "AI & LLM": ["LangChain", "PyTorch", "OpenAI API", "Llama", "Gemini", "Claude"],
+    "Infrastructure": ["FastAPI", "Pinecone", "Docker", "CUDA"],
+    "Backend": ["Python", "Vector Search", "Conversation Memory"]
+  },
+  "summary": "RAG-powered medical chatbot with multi-model LLM integration, vector database semantic search, and intelligent query routing with conversation memory for accurate medical information retrieval.",
+  "problem": "Medical information systems lack intelligent query processing and source attribution. Traditional systems provide generic responses without leveraging comprehensive knowledge bases or maintaining conversation context across turns.",
+  "solution": "Built a RAG-powered system with multi-model LLM consensus routing (Llama, OpenAI, Gemini, Claude), Pinecone vector database for semantic search, and intelligent query classification with persistent conversation memory.",
+  "metrics": [
+    { "label": "Query Classification Accuracy", "value": "80%", "color": "blue", "icon": "fas fa-bullseye" },
+    { "label": "LLM Models Integrated", "value": "4", "color": "purple", "icon": "fas fa-robot" },
+    { "label": "Vector DB", "value": "Pinecone", "color": "green", "icon": "fas fa-database" }
+  ],
+  "achievements": [
+    "Multi-model consensus routing with 80% query classification accuracy",
+    "Integrated 4 LLM providers (Llama, OpenAI, Gemini, Claude) with intelligent fallback",
+    "Vector semantic search for accurate medical knowledge retrieval",
+    "Persistent conversation memory for context-aware multi-turn dialogs"
+  ],
+  "expandable": {
+    "routing": {
+      "title": "Multi-Model Routing Architecture",
+      "icon": "fas fa-route",
+      "content": "Intelligent router classifies incoming queries by type (diagnostic, informational, drug interaction, etc.) and routes to the best-suited LLM. Consensus mode aggregates responses from multiple models for high-stakes queries."
+    },
+    "rag": {
+      "title": "RAG Pipeline",
+      "icon": "fas fa-search",
+      "content": "Medical knowledge base chunked and embedded into Pinecone. At query time: semantic search retrieves top-k relevant chunks, which are injected into the LLM prompt as grounded context. Source attribution is included in every response."
+    }
+  },
+  "links": {
+    "github": "#"
+  }
+}

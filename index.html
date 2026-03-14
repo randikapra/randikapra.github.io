@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randika Prabashwara — Data Science Engineer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Randika Prabashwara — Data Science Engineer & Computer Vision Specialist. Building production AI systems that drive real-world impact.">
+  <meta name="keywords" content="Data Science, Machine Learning, Computer Vision, AI, Python, MLOps, Portfolio">
+  <meta name="author" content="Randika Prabashwara">
+  <meta property="og:title"       content="Randika Prabashwara — Data Science Engineer">
+  <meta property="og:description" content="Computer Vision Specialist building scalable AI systems.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://randikapra.github.io">
+  <meta name="theme-color"        content="#00C8FF">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       ANIMATED BACKGROUND
+  ═══════════════════════════════════════════════ -->
+  <div class="bg-canvas">
+    <canvas id="particles-canvas"></canvas>
+    <div class="gradient-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <header id="navbar">
+    <a href="#home" class="nav-brand">Randika.dev</a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#home"         class="nav-link active">Home</a></li>
+        <li><a href="#journey"      class="nav-link">Journey</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i><span>Light</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="nav-menu-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#home"         class="nav-link">Home</a>
+    <a href="#journey"      class="nav-link">Journey</a>
+    <a href="#publications" class="nav-link">Publications</a>
+    <a href="#projects"     class="nav-link">Projects</a>
+    <a href="#skills"          class="nav-link">Skills</a>
+    <a href="#certifications"  class="nav-link">Certifications</a>
+    <a href="#contact"         class="nav-link">Contact</a>
+  </nav>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section id="home">
+    <div class="container">
+      <div id="hero-root">
+        <!-- Rendered by HeroRenderer from profile.json -->
+        <div class="hero-inner reveal">
+          <div class="hero-greeting" style="font-size:1.5rem">Hi there! 👋</div>
+          <h1 class="hero-name">Randika Prabashwara</h1>
+          <div class="hero-role-wrapper">
+            <span class="hero-role" id="hero-role">Loading…</span>
+          </div>
+          <p class="hero-tagline" style="color:var(--text-3)">Loading portfolio data…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       JOURNEY (About + Experience + Education)
+  ═══════════════════════════════════════════════ -->
+  <section id="journey" class="section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fas fa-user"></i>The Story</div>
+        <h2 class="section-title">My Journey</h2>
+        <p class="section-subtitle">From mathematical olympiads to production ML systems — here's how I got here.</p>
+      </div>
+      <div id="journey-root">
+        <!-- Rendered by JourneyRenderer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PUBLICATIONS
+  ═══════════════════════════════════════════════ -->
+  <section id="publications" class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fas fa-newspaper"></i>Research</div>
+        <h2 class="section-title">Publications</h2>
+        <p class="section-subtitle">Peer-reviewed research contributing to the data science and AI community.</p>
+      </div>
+      <div class="pub-grid" id="pub-root">
+        <!-- Rendered by PublicationsRenderer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════════ -->
+  <section id="projects" class="section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fas fa-rocket"></i>Work</div>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">From research prototypes to enterprise production systems — solutions at the intersection of AI and real-world impact.</p>
+      </div>
+      <div id="projects-root">
+        <!-- Rendered by ProjectsRenderer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════════ -->
+  <section id="skills" class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fas fa-tools"></i>Toolkit</div>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <p class="section-subtitle">Cutting-edge technologies and frameworks I use to build production AI systems.</p>
+      </div>
+      <div id="skills-root">
+        <!-- Rendered by SkillsRenderer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CERTIFICATIONS
+  ═══════════════════════════════════════════════ -->
+  <section id="certifications" class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fas fa-certificate"></i>Credentials</div>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Verified credentials from AWS, NVIDIA, Stanford, and DeepLearning.AI.</p>
+      </div>
+      <div id="certs-root">
+        <!-- Rendered by CertificationsRenderer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════ -->
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fas fa-envelope"></i>Connect</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Open to research collaborations, opportunities, and interesting conversations.</p>
+      </div>
+      <div id="contact-root">
+        <!-- Rendered by ContactRenderer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-brand">Randika.dev</span>
+        <span class="footer-copy">
+          © <span id="footer-year"></span> <span id="footer-name">Randika Prabashwara</span> · Built with passion &amp; data
+        </span>
+        <span class="footer-copy" style="font-family:var(--font-mono);font-size:.7rem;color:var(--text-3)">
+          v2.0 · Data-driven architecture
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECT MODAL
+  ═══════════════════════════════════════════════ -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop" class="modal-backdrop"></div>
+    <div id="modal-panel" class="modal-panel">
+      <div id="modal-content">
+        <!-- Injected by Modal.open() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer year -->
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+  <!-- App -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

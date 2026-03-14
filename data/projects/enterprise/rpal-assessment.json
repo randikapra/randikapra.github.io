@@ -1,0 +1,51 @@
+{
+  "id": "rpal-assessment",
+  "title": "Automated Assessment System for RPAL Programming",
+  "shortTitle": "RPAL Auto-Grader",
+  "category": "enterprise",
+  "subcategory": "EdTech / Automation",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": false,
+  "period": "Jan 2025 – Jun 2025",
+  "projectType": "Teaching Assistant Project",
+  "team": {
+    "size": 1,
+    "role": "Sole Developer",
+    "initials": ["R"],
+    "members": [
+      { "initial": "R", "name": "Randika Prabashwara", "linkedin": "https://linkedin.com/in/randika-prabashwara", "github": "https://github.com/randikapra" }
+    ]
+  },
+  "tags": ["Automation", "EdTech", "RPAL", "Compiler", "Assessment", "Python"],
+  "techStack": {
+    "Core": ["Python", "Subprocess Management", "AST Analysis"],
+    "Testing": ["Automated Test Cases", "Output Validation", "Edge Case Detection"],
+    "Reporting": ["Grading Reports", "Feedback Generation", "CSV Export"]
+  },
+  "summary": "Developed an automated evaluation system for RPAL programming assignments that streamlined assessment of 100+ student projects and reduced grading time by 70%, while providing structured feedback to students.",
+  "problem": "Manual grading of 100+ RPAL programming assignments was extremely time-consuming for the teaching team. Grading was also inconsistent, and students received minimal actionable feedback on their code.",
+  "solution": "Built an automated assessment engine that compiles and executes student RPAL programs against a comprehensive test suite, checks for correctness, handles edge cases, and generates structured grading reports with per-student feedback.",
+  "metrics": [
+    { "label": "Grading Time Reduction", "value": "70%", "color": "green", "icon": "fas fa-tachometer-alt" },
+    { "label": "Students Assessed", "value": "100+", "color": "blue", "icon": "fas fa-users" },
+    { "label": "Consistency", "value": "100%", "color": "purple", "icon": "fas fa-check-double" }
+  ],
+  "achievements": [
+    "70% reduction in grading time across 100+ student assignments",
+    "Consistent, objective grading eliminating manual inconsistencies",
+    "Automated test case execution with comprehensive edge case coverage",
+    "Structured per-student feedback reports generated automatically"
+  ],
+  "expandable": {
+    "system": {
+      "title": "Assessment Engine",
+      "icon": "fas fa-cogs",
+      "content": "The system accepts student submission archives, extracts and compiles RPAL programs, executes them against a hidden test suite spanning normal inputs, edge cases, and error conditions, then computes weighted scores. Grading reports are generated as structured CSV with test-by-test breakdowns and feedback messages per failing case."
+    }
+  },
+  "links": {
+    "github": null
+  }
+}

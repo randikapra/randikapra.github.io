@@ -1,0 +1,11 @@
+[
+  { "id": "csm-sr",            "category": "research",   "featured": true,  "file": "data/projects/research/csm-sr.json" },
+  { "id": "medassist",         "category": "research",   "featured": false, "file": "data/projects/research/medassist.json" },
+  { "id": "geosales",          "category": "enterprise", "featured": true,  "file": "data/projects/enterprise/geosales.json" },
+  { "id": "dealer-dynamics",   "category": "enterprise", "featured": false, "file": "data/projects/enterprise/dealer-dynamics.json" },
+  { "id": "ocr-license",       "category": "enterprise", "featured": false, "file": "data/projects/enterprise/ocr-license.json" },
+  { "id": "cheque-ocr",        "category": "enterprise", "featured": false, "file": "data/projects/enterprise/cheque-ocr.json" },
+  { "id": "report-automation", "category": "enterprise", "featured": false, "file": "data/projects/enterprise/report-automation.json" },
+  { "id": "rpal-assessment",   "category": "enterprise", "featured": false, "file": "data/projects/enterprise/rpal-assessment.json" },
+  { "id": "music-genre",       "category": "bigdata",    "featured": false, "file": "data/projects/bigdata/music-genre.json" }
+]

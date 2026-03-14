@@ -1,0 +1,64 @@
+{
+  "id": "geosales",
+  "title": "GeoSales Intelligence Platform",
+  "shortTitle": "GeoSales Intelligence",
+  "category": "enterprise",
+  "subcategory": "Geospatial Analytics & MLOps",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": true,
+  "period": "Dec 2024 – Oct 2025",
+  "projectType": "Enterprise ML System",
+  "team": {
+    "size": 2,
+    "role": "Lead Data Scientist",
+    "initials": ["R", "G"],
+    "members": [
+      { "initial": "R", "name": "Randika Prabashwara", "linkedin": "https://linkedin.com/in/randika-prabashwara", "github": "https://github.com/randikapra" },
+      { "initial": "G", "name": "Gayani Wickramarathna" }
+    ]
+  },
+  "tags": ["Geospatial ML", "Real-Time GPS", "Clustering", "FastAPI", "Azure", "Sales Analytics"],
+  "techStack": {
+    "ML & Analytics": ["Python", "DBSCAN", "OPTICS", "Geospatial-Temporal Clustering"],
+    "Infrastructure": ["FastAPI", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "Azure"],
+    "Frontend": ["React"],
+    "DevOps": ["Git", "CI/CD"]
+  },
+  "summary": "Enterprise-grade sales analytics platform featuring real-time GPS tracking, territory clustering, advanced behavioral analysis, and automated report generation to optimize field sales operations.",
+  "problem": "Sales leadership had zero visibility into field operations — no data on territory coverage, route efficiency, or customer visit patterns. Business requirement was vague: 'better field visibility.'",
+  "solution": "Translated the ambiguous business need into a concrete ML solution: GPS-based route reconstruction, territory mapping via geospatial clustering, and predictive opportunity scoring delivered through a FastAPI microservices architecture.",
+  "metrics": [
+    { "label": "Sales Efficiency Increase", "value": "+35%", "color": "green", "icon": "fas fa-chart-line" },
+    { "label": "Operational Cost Reduction", "value": "−40%", "color": "blue", "icon": "fas fa-coins" },
+    { "label": "API Latency", "value": "<500ms", "color": "purple", "icon": "fas fa-bolt" },
+    { "label": "Prediction Accuracy", "value": "88%", "color": "gold", "icon": "fas fa-bullseye" }
+  ],
+  "achievements": [
+    "35% increase in sales efficiency and 40% reduction in operational costs",
+    "< 500ms API latency with 88% prediction accuracy in production",
+    "Proactively identified and resolved data quality issues, preventing a 2-week project delay",
+    "Publication: 'A Data-Driven Spatiotemporal Framework for Retail Analytics' — ADScAI Summit 2025"
+  ],
+  "expandable": {
+    "pipeline": {
+      "title": "ML Pipeline",
+      "icon": "fas fa-cogs",
+      "content": "GPS trace → Movement pattern reconstruction → Geospatial-temporal feature extraction (visit frequency, dwell time, territory overlap) → DBSCAN/OPTICS clustering for territory identification → Predictive opportunity scoring model → Real-time dashboard."
+    },
+    "kafka": {
+      "title": "Real-Time Streaming",
+      "icon": "fas fa-stream",
+      "content": "Apache Kafka ingests GPS streams from field devices. Custom consumer processes events with < 500ms end-to-end latency, updating territory coverage metrics and triggering alerts in real time."
+    },
+    "impact": {
+      "title": "Business Impact Details",
+      "icon": "fas fa-building",
+      "content": "Delivered end-to-end: scoping with stakeholders, data infrastructure, ML model development, API deployment on Azure, and React dashboard. Three major deliverables shipped within a 6-month internship."
+    }
+  },
+  "links": {
+    "github": "#"
+  }
+}

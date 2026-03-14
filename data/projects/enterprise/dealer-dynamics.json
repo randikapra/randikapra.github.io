@@ -1,0 +1,51 @@
+{
+  "id": "dealer-dynamics",
+  "title": "Dealer Dynamics — Sales Insight Navigator",
+  "shortTitle": "Dealer Dynamics",
+  "category": "enterprise",
+  "subcategory": "Sales Analytics",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": false,
+  "period": "Dec 2023 – May 2024",
+  "projectType": "Intern Project",
+  "team": {
+    "size": 2,
+    "role": "Data Scientist",
+    "initials": ["R", "G"],
+    "members": [
+      { "initial": "R", "name": "Randika Prabashwara", "linkedin": "https://linkedin.com/in/randika-prabashwara", "github": "https://github.com/randikapra" },
+      { "initial": "G", "name": "Gayani Wickramarathna" }
+    ]
+  },
+  "tags": ["GPS Tracking", "Sales Analytics", "Dashboard", "Behavioral Analysis", "Report Automation"],
+  "techStack": {
+    "Backend": ["Python", "FastAPI", "PostgreSQL"],
+    "Analytics": ["Geospatial Analysis", "Behavioral Modeling", "Automated Reporting"],
+    "Infrastructure": ["Docker", "Azure", "Redis"]
+  },
+  "summary": "Enterprise-grade sales analytics platform featuring real-time GPS tracking, advanced behavioral analysis, and automated report generation to deliver actionable business insights and optimize field operations.",
+  "problem": "Field sales teams lacked visibility into their own performance. Manual tracking was inconsistent and territory coverage was unmeasured, leading to missed opportunities and duplicated effort.",
+  "solution": "Built a comprehensive analytics platform with real-time GPS tracking, territory coverage analysis, performance scorecards, and automated opportunity identification — all presented in an interactive dashboard.",
+  "metrics": [
+    { "label": "Sales Efficiency", "value": "+35%", "color": "green", "icon": "fas fa-chart-line" },
+    { "label": "Manual Reporting", "value": "Eliminated", "color": "red", "icon": "fas fa-times-circle" }
+  ],
+  "achievements": [
+    "35% improvement in field sales team efficiency",
+    "Real-time GPS tracking with territory coverage heatmaps",
+    "Automated performance scorecards replacing weekly manual reports",
+    "Predictive opportunity identification from behavioral patterns"
+  ],
+  "expandable": {
+    "features": {
+      "title": "Core Features",
+      "icon": "fas fa-star",
+      "content": "Real-time GPS tracking and route visualization; territory coverage analysis with heatmaps; daily/weekly automated performance reports; opportunity scoring based on visit history and customer clustering; alert system for territory gaps."
+    }
+  },
+  "links": {
+    "github": "https://github.com/randikapra/Dealer_Dynamics"
+  }
+}

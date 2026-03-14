@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "name": "Randika Prabashwara",
+    "title": "Data Science Engineer",
+    "siteUrl": "https://randikapra.github.io",
+    "description": "Computer Vision Specialist building production AI systems for real-world impact.",
+    "photo": "assets/img/randika_web.jpg",
+    "resume": "assets/randika_CV_CSE_EI.pdf",
+    "favicon": "assets/img/favicon.ico"
+  },
+  "hero": {
+    "greeting": "Hi there! 👋",
+    "name": "Randika Prabashwara",
+    "roles": [
+      "Data Science Engineer",
+      "Computer Vision Specialist",
+      "Machine Learning Researcher",
+      "MLOps Engineer",
+      "Generative AI Developer",
+      "AI Systems Architect"
+    ],
+    "tagline": "Transforming complex data into intelligent solutions that drive real-world impact.",
+    "description": "Specializing in computer vision, machine learning, and building scalable AI systems that matter.",
+    "ctas": [
+      { "label": "Explore My Work", "icon": "fas fa-rocket", "href": "#projects", "style": "primary" },
+      { "label": "Get In Touch", "icon": "fas fa-envelope", "href": "#contact", "style": "secondary" }
+    ],
+    "stats": [
+      { "icon": "fas fa-code",      "value": "4+",  "label": "Years of Python" },
+      { "icon": "fas fa-layer-group","value": "9+",  "label": "Projects Built" },
+      { "icon": "fas fa-newspaper", "value": "2",   "label": "Publications" },
+      { "icon": "fas fa-trophy",    "value": "Top 83%", "label": "Kaggle Rank" }
+    ]
+  },
+  "journey": {
+    "bio": "Computer Science & Engineering graduate with hands-on Data Science & Engineering experience delivering production AI systems that drive measurable business impact. Expertise in Computer Vision, NLP, and Generative AI with a strong foundation in MLOps, cloud deployment, and cross-functional collaboration. Passionate about transforming strategic visions into scalable, business-ready ML solutions.",
+    "highlights": [
+      { "icon": "🏆", "text": "Island Rank 29 — A/L Physical Science Stream" },
+      { "icon": "🥇", "text": "Sri Lankan Mathematical Olympiad — High Distinction (2011–2017)" },
+      { "icon": "📊", "text": "Kaggle AMP® Parkinson's Disease Prediction — Top 83%" },
+      { "icon": "🎓", "text": "B.Sc. Engineering (Honours) — University of Moratuwa" }
+    ],
+    "education": [
+      {
+        "degree": "B.Sc. Engineering (Honours)",
+        "field": "Computer Science & Engineering",
+        "institution": "University of Moratuwa",
+        "location": "Sri Lanka",
+        "period": "Jun 2021 – Jun 2025",
+        "details": [
+          "Specialization: Data Science & Engineering",
+          "Minor: Mathematics — Time Series, Stochastic Processes, Linear Models & Multivariate Statistics"
+        ],
+        "icon": "fas fa-graduation-cap",
+        "color": "blue"
+      },
+      {
+        "degree": "G.C.E. Advanced Level",
+        "field": "Physical Science Stream",
+        "institution": "Prince of Wales College, Moratuwa",
+        "location": "Sri Lanka",
+        "period": "Jan 2010 – Aug 2019",
+        "details": [
+          "Z-score: 2.1848 | Island Rank: 29",
+          "All A passes — Combined Mathematics, Physics, Chemistry"
+        ],
+        "icon": "fas fa-school",
+        "color": "gold"
+      }
+    ],
+    "experience": [
+      {
+        "role": "Research Engineer",
+        "company": "Expert Intelligence™",
+        "companyUrl": "https://www.linkedin.com/company/expert-intelligence",
+        "location": "United States (Remote)",
+        "period": "Nov 2025 – Present",
+        "type": "Industry",
+        "typeColor": "green",
+        "highlights": [
+          "Building and deploying production-grade AI and machine learning systems",
+          "Working on advanced deep learning research and engineering at the intersection of academia and industry",
+          "Collaborating on cutting-edge AI solutions with international cross-functional teams"
+        ],
+        "icon": "fas fa-microchip"
+      },
+      {
+        "role": "Research Assistant",
+        "company": "University of Moratuwa",
+        "location": "Sri Lanka",
+        "period": "Jul 2025 – Feb 2026",
+        "type": "Research",
+        "typeColor": "purple",
+        "highlights": [
+          "Developed hybrid deep learning architectures combining GANs with physics-informed neural networks (PINNs) and diffusion models for multi-scale super-resolution",
+          "Collaborated on interdisciplinary projects spanning computer vision, multi-modal learning, and financial AI",
+          "Achieved significant improvements in model performance and computational efficiency across multiple research domains"
+        ],
+        "icon": "fas fa-flask"
+      },
+      {
+        "role": "Teaching Assistant",
+        "company": "University of Moratuwa",
+        "location": "Sri Lanka",
+        "period": "Jan 2025 – Jun 2025",
+        "type": "Academic",
+        "typeColor": "teal",
+        "highlights": [
+          "Developed automated evaluation system for RPAL programming assignments",
+          "Streamlined assessment of 100+ student projects, reducing grading time by 70%"
+        ],
+        "icon": "fas fa-chalkboard-teacher"
+      },
+      {
+        "role": "Data Science Engineer Intern",
+        "company": "Brown and Company PLC",
+        "location": "Colombo 03, Sri Lanka",
+        "period": "Dec 2023 – Jun 2024",
+        "type": "Industry",
+        "typeColor": "green",
+        "highlights": [
+          "Delivered three major ML projects end-to-end — from ambiguous business requirements to production",
+          "Led GeoSales platform: GPS-based sales analytics improving team efficiency by 35%",
+          "Built Cheque OCR System using Google Cloud Vision, Azure CV, and custom vision models",
+          "Architected automated reporting pipeline eliminating manual Excel-based reporting processes"
+        ],
+        "icon": "fas fa-building"
+      }
+    ]
+  },
+  "skills": {
+    "ML & AI": {
+      "icon": "fas fa-brain",
+      "color": "blue",
+      "items": ["Python", "TensorFlow", "Keras", "PyTorch", "OpenCV", "Scikit-learn", "Hugging Face Transformers", "LangChain", "LlamaIndex", "CUDA", "pandas", "NumPy"]
+    },
+    "MLOps & DevOps": {
+      "icon": "fas fa-cogs",
+      "color": "green",
+      "items": ["MLflow", "Docker", "Kubernetes", "CI/CD Pipelines", "Model Monitoring", "A/B Testing", "Model Optimization", "Feature Engineering at Scale", "Git"]
+    },
+    "Cloud & Infrastructure": {
+      "icon": "fas fa-cloud",
+      "color": "cyan",
+      "items": ["Google Cloud Platform", "AWS (EC2, S3, Lambda)", "Azure", "Apache Spark", "PySpark", "Hadoop", "CUDA", "Distributed Computing"]
+    },
+    "Data Engineering": {
+      "icon": "fas fa-database",
+      "color": "orange",
+      "items": ["MySQL", "PostgreSQL", "MongoDB", "Pinecone (Vector DB)", "Redis", "GraphDB", "HBase", "ETL/ELT Processes", "Data Pipelines", "Feature Engineering"]
+    },
+    "AI Specializations": {
+      "icon": "fas fa-robot",
+      "color": "purple",
+      "items": ["Computer Vision", "Natural Language Processing", "Time-Series Forecasting", "Generative AI", "RAG Systems", "Multi-Modal Learning", "Image Processing"]
+    },
+    "API & Backend": {
+      "icon": "fas fa-server",
+      "color": "teal",
+      "items": ["FastAPI", "Flask", "RESTful APIs", "Microservices Architecture", "Apache Kafka", "Model Serving"]
+    },
+    "Languages": {
+      "icon": "fas fa-code",
+      "color": "red",
+      "items": ["Python (4+ yrs)", "Java (3+ yrs)", "C++", "JavaScript", "C#"]
+    },
+    "Frontend": {
+      "icon": "fas fa-palette",
+      "color": "pink",
+      "items": ["ReactJS", "JavaScript", "HTML/CSS"]
+    }
+  },
+  "publications": [
+    {
+      "id": "gsm-sr-2025",
+      "title": "GSM-SR: Generalized Structure-Informed Multi-Scale GAN for Efficient Image Super-Resolution",
+      "authors": ["Gayani Wickramarathna", "Oshadi Perera", "Randika Prabashwara", "Uthayasanker Thayasivam"],
+      "venue": "2025 10th International Conference on Information Technology Research (ICITR)",
+      "year": "2025",
+      "type": "Conference Paper",
+      "status": "IEEE Published",
+      "abstract": "Presents GSM-SR, a generalized structure-informed multi-scale GAN architecture for efficient image super-resolution, achieving superior structural fidelity and perceptual quality on benchmark datasets.",
+      "metrics": [
+        { "label": "Conference", "value": "ICITR 2025" },
+        { "label": "Publisher", "value": "IEEE" },
+        { "label": "Paper ID", "value": "ICITR2025-145" }
+      ],
+      "links": {
+        "pdf": null,
+        "doi": null,
+        "github": "https://github.com/randikapra"
+      }
+    },
+    {
+      "id": "dsfra-2025",
+      "title": "A Data-Driven Spatiotemporal Framework for Retail Analytics",
+      "authors": ["Randika Prabashwara", "H.K. Gayani V.L. Wickramarathna", "Uthayasanker Thayasivam"],
+      "venue": "Applied Data Science & Artificial Intelligence (ADScAI) Symposium 2025",
+      "year": "2025",
+      "type": "Conference Paper",
+      "status": "Published",
+      "abstract": "Introduces DSFRA, a novel framework integrating Spatial-Aware LSTM and Adaptive Spatiotemporal DBSCAN for enhanced retail analytics, achieving 86.5% prediction accuracy and 20.3% delivery cost reduction.",
+      "metrics": [
+        { "label": "Prediction Accuracy", "value": "86.5%" },
+        { "label": "Cost Reduction", "value": "20.3%" }
+      ],
+      "links": {
+        "pdf": null,
+        "doi": "https://dl.lib.uom.lk/handle/123/24385",
+        "github": "https://github.com/randikapra/Dealer_Dynamics"
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Academy Graduate — Data Engineering",
+      "issuer": "Amazon Web Services",
+      "icon": "fab fa-aws",
+      "color": "orange",
+      "year": "2024"
+    },
+    {
+      "title": "Machine Learning for NLP",
+      "issuer": "Amazon Web Services",
+      "icon": "fab fa-aws",
+      "color": "orange",
+      "year": "2024"
+    },
+    {
+      "title": "Fundamentals of Deep Learning",
+      "issuer": "NVIDIA Deep Learning Institute",
+      "icon": "fas fa-microchip",
+      "color": "green",
+      "year": "2024"
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "issuer": "Stanford University (Coursera)",
+      "icon": "fas fa-graduation-cap",
+      "color": "red",
+      "year": "2023"
+    },
+    {
+      "title": "Mathematics for Machine Learning & Data Science",
+      "issuer": "DeepLearning.AI",
+      "icon": "fas fa-square-root-alt",
+      "color": "blue",
+      "year": "2023"
+    }
+  ],
+  "contact": {
+    "email": "randikaprabashwara@gmail.com",
+    "phone": "+94 77 574 7823",
+    "location": "Sri Lanka",
+    "availability": "Open to opportunities",
+    "socials": [
+      { "platform": "GitHub", "url": "https://github.com/randikapra", "icon": "fab fa-github", "color": "#fff" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/in/randika-prabashwara", "icon": "fab fa-linkedin", "color": "#0A66C2" },
+      { "platform": "Email", "url": "mailto:randikaprabashwara@gmail.com", "icon": "fas fa-envelope", "color": "#EA4335" }
+    ]
+  }
+}

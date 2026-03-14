@@ -1,0 +1,48 @@
+{
+  "_instructions": "Copy this file to the appropriate category folder (research/enterprise/bigdata), rename it, fill in your data, then add an entry to data/projects/manifest.json",
+  "id": "your-project-id",
+  "title": "Full Project Title",
+  "shortTitle": "Short Display Name",
+  "category": "research | enterprise | bigdata",
+  "subcategory": "e.g. Computer Vision, NLP, Data Engineering",
+  "status": "completed | in-progress | peer-review | ongoing",
+  "statusLabel": "Completed | In Progress | Peer Review | Ongoing",
+  "completion": 100,
+  "featured": false,
+  "period": "Mon YYYY – Mon YYYY",
+  "projectType": "e.g. Research Project, Intern Project, Independent Project",
+  "team": {
+    "size": 1,
+    "role": "Your Role",
+    "initials": ["R"]
+  },
+  "tags": ["Tag1", "Tag2", "Tag3"],
+  "techStack": {
+    "Category1": ["Tech1", "Tech2"],
+    "Category2": ["Tech3", "Tech4"]
+  },
+  "summary": "One or two sentence summary shown on the project card.",
+  "problem": "What problem did this project solve? What was missing?",
+  "solution": "How did you solve it? What was your approach?",
+  "metrics": [
+    { "label": "Metric Name", "value": "XX%", "color": "blue | green | purple | red | gold | cyan | orange | teal | pink", "icon": "fas fa-chart-line" }
+  ],
+  "achievements": [
+    "Key achievement 1",
+    "Key achievement 2",
+    "Key achievement 3"
+  ],
+  "expandable": {
+    "section-id": {
+      "title": "Section Title",
+      "icon": "fas fa-icon-name",
+      "content": "Detailed content for this expandable section."
+    }
+  },
+  "links": {
+    "github": "https://github.com/randikapra/...",
+    "demo": null,
+    "paper": null,
+    "dataset": null
+  }
+}

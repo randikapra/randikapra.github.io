@@ -1,0 +1,50 @@
+{
+  "id": "music-genre",
+  "title": "Music Genre Classification Engine",
+  "shortTitle": "Music Genre ML",
+  "category": "bigdata",
+  "subcategory": "Distributed Machine Learning",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": false,
+  "period": "Mar 2025 – Jun 2025",
+  "projectType": "Big Data Project",
+  "team": {
+    "size": 1,
+    "role": "Lead Developer",
+    "initials": ["R"]
+  },
+  "tags": ["Apache Spark", "PySpark", "Distributed ML", "Audio Processing", "Ensemble Learning", "MLOps"],
+  "techStack": {
+    "Big Data": ["Apache Spark", "PySpark", "PySpark MLlib"],
+    "ML": ["Random Forest", "Gradient Boosting Trees", "Logistic Regression", "Ensemble Methods"],
+    "Audio": ["Audio Feature Extraction", "Librosa"],
+    "MLOps": ["MLflow", "Python"]
+  },
+  "summary": "Spark-native distributed machine learning pipeline for music genre classification using an ensemble approach combining Random Forest, Gradient Boosting Trees, and Logistic Regression across distributed clusters.",
+  "problem": "Music genre classification at scale requires processing large audio datasets with complex spectral features. Single-machine solutions don't scale, and naive distributed approaches lose ML accuracy.",
+  "solution": "Built a fully Spark-native pipeline: distributed audio feature extraction, distributed ensemble model training, and parallelized hyperparameter tuning — all without leaving the Spark ecosystem.",
+  "metrics": [
+    { "label": "Models in Ensemble", "value": "3", "color": "blue", "icon": "fas fa-layer-group" },
+    { "label": "Processing", "value": "Distributed", "color": "green", "icon": "fas fa-server" },
+    { "label": "Platform", "value": "Apache Spark", "color": "orange", "icon": "fas fa-fire" }
+  ],
+  "achievements": [
+    "Fully Spark-native pipeline from feature extraction to model serving",
+    "Ensemble combining Random Forest, GBT, and Logistic Regression with diversity regularization",
+    "Scalable distributed feature extraction across audio datasets",
+    "MLflow tracking for experiment management and model versioning"
+  ],
+  "expandable": {
+    "architecture": {
+      "title": "Distributed Pipeline Architecture",
+      "icon": "fas fa-sitemap",
+      "content": "Stage 1: Distributed audio loading and resampling using Spark RDDs. Stage 2: Parallel feature extraction (MFCCs, spectral centroids, chroma features, zero-crossing rate) via PySpark UDFs. Stage 3: Distributed model training with cross-validation. Stage 4: Ensemble aggregation with soft voting. Stage 5: MLflow model registration."
+    }
+  },
+  "links": {
+    "github": "#",
+    "demo": "#"
+  }
+}

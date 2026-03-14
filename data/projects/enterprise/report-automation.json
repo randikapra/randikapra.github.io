@@ -1,0 +1,52 @@
+{
+  "id": "report-automation",
+  "title": "Automated Report Generation Pipeline",
+  "shortTitle": "Report Automation",
+  "category": "enterprise",
+  "subcategory": "Data Engineering / Automation",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": false,
+  "period": "Dec 2023 – Jun 2024",
+  "projectType": "Intern Project — Independent",
+  "team": {
+    "size": 1,
+    "role": "Sole Developer",
+    "initials": ["R"],
+    "members": [
+      { "initial": "R", "name": "Randika Prabashwara", "linkedin": "https://linkedin.com/in/randika-prabashwara", "github": "https://github.com/randikapra" }
+    ]
+  },
+  "tags": ["Automation", "Data Pipeline", "EDA", "Visualization", "ETL", "Python"],
+  "techStack": {
+    "Data": ["Python", "pandas", "NumPy"],
+    "Visualization": ["Matplotlib", "Seaborn", "Plotly"],
+    "Automation": ["Scheduled Pipeline", "Jinja2 Templates", "Python-pptx"],
+    "Infrastructure": ["Azure", "PostgreSQL"]
+  },
+  "summary": "Architected an automated data pipeline that replaced entirely manual Excel-based weekly reporting — delivering data extraction, comprehensive EDA, and dynamic visualization generation on a scheduled basis.",
+  "problem": "Business analysts spent hours each week manually pulling data, running analysis in Excel, and copy-pasting charts into PowerPoint reports. The process was repetitive, error-prone, and produced inconsistent outputs.",
+  "solution": "Independently designed and built a full automation pipeline: scheduled data extraction from PostgreSQL, automated EDA with anomaly flagging, dynamic chart generation, and templated report assembly — all triggered on a cron schedule.",
+  "metrics": [
+    { "label": "Manual Reporting", "value": "Eliminated", "color": "red", "icon": "fas fa-times-circle" },
+    { "label": "Report Types", "value": "Multiple", "color": "blue", "icon": "fas fa-file-alt" },
+    { "label": "Delivery", "value": "Scheduled", "color": "green", "icon": "fas fa-clock" }
+  ],
+  "achievements": [
+    "Fully eliminated repetitive manual Excel-based weekly reporting process",
+    "Automated data extraction, EDA, anomaly detection, and chart generation",
+    "Dynamic visualization generation with consistent formatting and branding",
+    "Scheduled pipeline delivering reports automatically to stakeholders"
+  ],
+  "expandable": {
+    "architecture": {
+      "title": "Pipeline Architecture",
+      "icon": "fas fa-cogs",
+      "content": "Cron-triggered pipeline: (1) Data extraction layer pulls structured data from PostgreSQL with configurable date ranges; (2) EDA engine computes KPIs, trend analysis, and flags statistical anomalies; (3) Visualization engine generates charts via Matplotlib/Plotly; (4) Report assembler injects charts and tables into Jinja2-templated outputs; (5) Delivery layer emails final reports to stakeholders."
+    }
+  },
+  "links": {
+    "github": null
+  }
+}

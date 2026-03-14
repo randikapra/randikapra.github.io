@@ -1,0 +1,67 @@
+{
+  "id": "csm-sr",
+  "title": "CSM-SR: Conditional Structure-Informed Multi-Scale Super-Resolution GAN",
+  "shortTitle": "CSM-SR",
+  "category": "research",
+  "subcategory": "Computer Vision",
+  "status": "peer-review",
+  "statusLabel": "Peer Review",
+  "completion": 90,
+  "featured": true,
+  "period": "Jun 2024 – Oct 2025",
+  "projectType": "Final Year Research Project",
+  "team": {
+    "size": 3,
+    "role": "Principal Researcher",
+    "initials": ["R", "O", "G"],
+    "members": [
+      { "initial": "R", "name": "Randika Prabashwara", "linkedin": "https://linkedin.com/in/randika-prabashwara", "github": "https://github.com/randikapra" },
+      { "initial": "O", "name": "Oshadi Perera" },
+      { "initial": "G", "name": "Gayani Wickramarathna" }
+    ]
+  },
+  "tags": ["Deep Learning", "GAN", "Super-Resolution", "Computer Vision", "Scientific Imaging"],
+  "techStack": {
+    "Core ML": ["Python", "PyTorch", "TensorFlow", "Keras"],
+    "Vision & Compute": ["OpenCV", "CUDA"],
+    "Architecture": ["Custom GAN", "Multi-Scale Discriminator", "Physics-Informed Loss"]
+  },
+  "summary": "Pioneering super-resolution framework for microscopy and nanoscience imaging using hierarchical multi-scale learning and adaptive feature fusion to achieve unprecedented image quality.",
+  "problem": "Scientific imaging applications require ultra-high resolution reconstruction while preserving critical structural details. Traditional super-resolution methods achieve only basic pixel enhancement, losing fine-grained features crucial for nanoscience and biomedical research.",
+  "solution": "Developed a novel deep learning architecture integrating encoder-based feature conditioning, multi-scale discriminator design, and a custom Semantic Structural Loss (SSL) function — all within a three-stage pipeline designed for scientific image fidelity.",
+  "metrics": [
+    { "label": "PSNR Improvement", "value": "+3.5 dB", "color": "blue", "icon": "fas fa-chart-line" },
+    { "label": "SSIM Increase", "value": "+20%", "color": "green", "icon": "fas fa-expand-arrows-alt" },
+    { "label": "LPIPS Decrease", "value": "−20%", "color": "purple", "icon": "fas fa-compress-arrows-alt" },
+    { "label": "SEM PSNR", "value": "38.79", "color": "gold", "icon": "fas fa-microscope" }
+  ],
+  "achievements": [
+    "3.5 dB PSNR improvement over state-of-the-art methods",
+    "38.79 PSNR / 0.978 SSIM / 0.178 LPIPS on SEM datasets (2.8 dB PSNR gain over competitors)",
+    "Outperformed EDSR, ESRGAN, SwinIR, and HMANet on Set5, Set14, BSD100 benchmarks",
+    "20% SSIM increase and 20% LPIPS decrease vs. competitors"
+  ],
+  "expandable": {
+    "architecture": {
+      "title": "Architecture Details",
+      "icon": "fas fa-sitemap",
+      "content": "Three-stage pipeline: (1) Feature conditioning via encoder that extracts structural priors from low-resolution input; (2) Multi-scale generation with hierarchical upsampling; (3) Multi-scale discriminator enforcing both global coherence and local structural accuracy."
+    },
+    "loss": {
+      "title": "Semantic Structural Loss (SSL)",
+      "icon": "fas fa-function",
+      "content": "Custom hybrid loss combining perceptual loss (VGG features), contextual loss (non-local similarity), and a novel structural loss term that penalizes deviation from domain-specific structural priors. This three-component formulation is the core innovation of CSM-SR."
+    },
+    "contribution": {
+      "title": "Research Contributions",
+      "icon": "fas fa-award",
+      "content": "Novel SSL formulation applicable beyond super-resolution; multi-scale discriminator design that can be adapted to other generative tasks in scientific imaging; open-source benchmarks on SEM and nanoscience datasets."
+    }
+  },
+  "links": {
+    "github": "#",
+    "demo": "#",
+    "supplementary": "#",
+    "dataset": "#"
+  }
+}
