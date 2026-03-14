@@ -185,8 +185,8 @@
         { "label": "Publisher", "value": "IEEE" }
       ],
       "links": {
-        "pdf": null,
-        "doi": null,
+        "pdf": "https://ieeexplore.ieee.org/document/11353736",
+        "doi": "https://doi.org/10.1109/ICITR69413.2025.11353736",
         "github": "https://github.com/randikapra"
       }
     },
@@ -204,8 +204,8 @@
         { "label": "Cost Reduction", "value": "20.3%" }
       ],
       "links": {
-        "pdf": null,
-        "doi": "https://dl.lib.uom.lk/handle/123/24385",
+        "pdf": "https://dl.lib.uom.lk/handle/123/24399",
+        "doi": "https://doi.org/10.31705/ADScAI.2025.51",
         "github": "https://github.com/randikapra/Dealer_Dynamics"
       }
     }
