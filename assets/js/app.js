@@ -438,32 +438,43 @@ const ProjectsRenderer = {
   active: 'all',
   query: '',
   counts: {},
+  page: 1,
+  perPage: 6,
 
   render(projects) {
     this.projects = projects;
     const el = document.getElementById('projects-root');
     if (!el) return;
 
-    // Count per category
     this.counts = { all: projects.length };
     projects.forEach(p => { this.counts[p.category] = (this.counts[p.category] || 0) + 1; });
 
+    const cats = [
+      ['all','All'], ['research','Research'], ['enterprise','Enterprise'],
+      ['aiml','AI & ML'], ['datascience','Data Science'],
+      ['academic','Academic'], ['bigdata','Big Data'],
+    ];
+
     el.innerHTML = `
       <div class="projects-controls reveal">
-        <div class="filter-tabs">
-          ${[['all','All'], ['research','Research'], ['enterprise','Enterprise'], ['bigdata','Big Data']]
-            .map(([cat, label]) => `
-              <button class="filter-tab ${cat === 'all' ? 'active' : ''}" data-cat="${cat}">
-                ${label} <span class="filter-count">${this.counts[cat] || 0}</span>
-              </button>
-            `).join('')}
+        <div class="filter-tabs-wrap">
+          <div class="filter-tabs" id="filter-tabs">
+            ${cats.filter(([cat]) => cat === 'all' || this.counts[cat])
+              .map(([cat, label]) => `
+                <button class="filter-tab ${cat === 'all' ? 'active' : ''}" data-cat="${cat}">
+                  ${label} <span class="filter-count">${this.counts[cat] || 0}</span>
+                </button>
+              `).join('')}
+          </div>
         </div>
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="project-search" placeholder="Search projects…">
+          <input type="text" id="project-search" placeholder="Search by name, tech, tag…">
+          <span id="search-clear" style="display:none;cursor:pointer;color:var(--text-3);font-size:.85rem;padding:0 4px">✕</span>
         </div>
       </div>
       <div class="projects-grid" id="projects-grid"></div>
+      <div class="pagination-bar" id="pagination-bar"></div>
     `;
 
     this.renderGrid();
@@ -473,12 +484,24 @@ const ProjectsRenderer = {
         el.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         this.active = tab.dataset.cat;
+        this.page = 1;
         this.renderGrid();
       });
     });
 
-    document.getElementById('project-search')?.addEventListener('input', (e) => {
+    const searchInput = document.getElementById('project-search');
+    const searchClear = document.getElementById('search-clear');
+    searchInput?.addEventListener('input', (e) => {
       this.query = e.target.value.toLowerCase();
+      this.page = 1;
+      searchClear.style.display = this.query ? 'inline' : 'none';
+      this.renderGrid();
+    });
+    searchClear?.addEventListener('click', () => {
+      searchInput.value = '';
+      this.query = '';
+      this.page = 1;
+      searchClear.style.display = 'none';
       this.renderGrid();
     });
 
@@ -489,49 +512,100 @@ const ProjectsRenderer = {
     return this.projects.filter(p => {
       const catMatch = this.active === 'all' || p.category === this.active;
       const q = this.query;
-      const qMatch = !q || [p.title, p.summary, p.category, ...(p.tags || []),
-        ...Object.values(p.techStack || {}).flat()].some(s => s?.toLowerCase().includes(q));
+      const qMatch = !q || [
+        p.title, p.shortTitle, p.summary, p.category, p.subcategory, p.projectType,
+        p.problem, p.solution,
+        ...(p.tags || []),
+        ...Object.values(p.techStack || {}).flat(),
+        ...Object.values(p.expandable || {}).map(s => s.content || ''),
+      ].some(s => s?.toLowerCase().includes(q));
       return catMatch && qMatch;
+    });
+  },
+
+  sorted(list) {
+    return [...list].sort((a, b) => {
+      const pa = a.priority ?? 99, pb = b.priority ?? 99;
+      if (pa !== pb) return pa - pb;
+      if (b.featured !== a.featured) return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+      const so = { 'in-progress': 0, 'ongoing': 0, 'peer-review': 1, 'completed': 2 };
+      return (so[a.status] ?? 3) - (so[b.status] ?? 3);
     });
   },
 
   renderGrid() {
     const grid = document.getElementById('projects-grid');
+    const pbar = document.getElementById('pagination-bar');
     if (!grid) return;
 
-    const list = this.filtered();
-    // Sort: featured first
-    list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    const all = this.sorted(this.filtered());
+    const total = all.length;
+    const totalPages = Math.ceil(total / this.perPage);
+    this.page = Math.min(this.page, totalPages || 1);
+    const start = (this.page - 1) * this.perPage;
+    const list  = all.slice(start, start + this.perPage);
 
-    if (!list.length) {
+    if (!total) {
       grid.innerHTML = `
         <div class="projects-empty">
           <i class="fas fa-search"></i>
-          <p>No projects match your search.</p>
-        </div>
-      `;
+          <p>No projects match <strong>"${this.query}"</strong></p>
+          <p style="font-size:.8rem;margin-top:8px;color:var(--text-3)">Try: PyTorch · GAN · FastAPI · GPS · OCR</p>
+        </div>`;
+      if (pbar) pbar.innerHTML = '';
       return;
     }
 
     grid.innerHTML = list.map(p => this.makeCard(p)).join('');
 
-    // Animate rings
     grid.querySelectorAll('.completion-ring').forEach(ring => {
       const pct = parseInt(ring.dataset.pct);
-      const r = 16;
-      const circ = 2 * Math.PI * r;
+      const r = 16, circ = 2 * Math.PI * r;
       const fill = ring.querySelector('.ring-fill');
       fill.style.strokeDasharray = circ;
-      fill.style.strokeDashoffset = circ - (circ * pct / 100);
+      fill.style.strokeDashoffset = circ;
+      setTimeout(() => { fill.style.strokeDashoffset = circ - (circ * pct / 100); }, 100);
     });
 
-    // Card click → modal
     grid.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', () => {
         const proj = this.projects.find(p => p.id === card.dataset.id);
         if (proj) Modal.open(proj);
       });
     });
+
+    // Pagination bar
+    if (!pbar) return;
+    if (totalPages <= 1) { pbar.innerHTML = ''; return; }
+
+    const s = start + 1, e = Math.min(start + this.perPage, total);
+    pbar.innerHTML = `
+      <div class="pagination">
+        <span class="page-info">Showing ${s}–${e} of ${total} projects</span>
+        <div class="page-btns">
+          <button class="page-btn" id="pg-prev" ${this.page === 1 ? 'disabled' : ''}>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          ${Array.from({ length: totalPages }, (_, i) => i + 1).map(n => `
+            <button class="page-btn page-num ${n === this.page ? 'active' : ''}" data-page="${n}">${n}</button>
+          `).join('')}
+          <button class="page-btn" id="pg-next" ${this.page === totalPages ? 'disabled' : ''}>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    `;
+    pbar.querySelector('#pg-prev')?.addEventListener('click', () => this.goPage(this.page - 1));
+    pbar.querySelector('#pg-next')?.addEventListener('click', () => this.goPage(this.page + 1));
+    pbar.querySelectorAll('.page-num').forEach(btn => {
+      btn.addEventListener('click', () => this.goPage(parseInt(btn.dataset.page)));
+    });
+  },
+
+  goPage(n) {
+    this.page = n;
+    this.renderGrid();
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   },
 
   makeCard(p) {
@@ -674,16 +748,20 @@ const Modal = {
         <!-- Team members -->
         ${p.team?.members?.length ? `
         <div class="team-member-links" style="margin-top:12px">
+          <span style="font-size:.7rem;color:var(--text-3);margin-right:4px">
+            <i class="fas fa-users"></i> Team of ${p.team.size}
+          </span>
           ${p.team.members.map(m => `
             <div class="team-member-chip">
               <div class="chip-avatar">${m.initial}</div>
-              <span>${m.name}</span>
-              ${(m.linkedin || m.github) ? `
-                <div class="chip-social-links">
-                  ${m.linkedin ? `<a href="${m.linkedin}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="LinkedIn"><i class="fab fa-linkedin"></i></a>` : ''}
-                  ${m.github   ? `<a href="${m.github}"   target="_blank" rel="noopener" onclick="event.stopPropagation()" title="GitHub"><i class="fab fa-github"></i></a>`   : ''}
-                </div>
-              ` : ''}
+              <div class="chip-tooltip">
+                <div class="chip-tooltip-name">${m.name}</div>
+                ${(m.linkedin || m.github) ? `
+                  <div class="chip-social-links">
+                    ${m.linkedin ? `<a href="${m.linkedin}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>` : ''}
+                    ${m.github   ? `<a href="${m.github}"   target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>`   : ''}
+                  </div>` : ''}
+              </div>
             </div>
           `).join('')}
         </div>` : `
@@ -728,12 +806,12 @@ const Modal = {
         ${p.problem ? `
         <div class="modal-section">
           <div class="modal-section-title"><i class="fas fa-exclamation-circle"></i>Problem</div>
-          <p class="modal-text">${p.problem}</p>
+          <div class="modal-ps-card problem">${p.problem}</div>
         </div>` : ''}
         ${p.solution ? `
         <div class="modal-section">
           <div class="modal-section-title"><i class="fas fa-lightbulb"></i>Solution</div>
-          <p class="modal-text">${p.solution}</p>
+          <div class="modal-ps-card solution">${p.solution}</div>
         </div>` : ''}
 
         <!-- METRICS -->
@@ -743,6 +821,9 @@ const Modal = {
           <div class="metrics-grid">
             ${p.metrics.map(m => `
               <div class="metric-card">
+                <div class="metric-icon" style="color:${(metricGrads[m.color]||'').includes('#') ? m.color : 'var(--accent-blue)'}">
+                  <i class="${m.icon || 'fas fa-chart-bar'}"></i>
+                </div>
                 <div class="metric-value" style="--metric-gradient:${metricGrads[m.color] || metricGrads.blue}">${m.value}</div>
                 <div class="metric-label">${m.label}</div>
               </div>

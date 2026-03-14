@@ -1,0 +1,53 @@
+{
+  "id": "cheque-ocr",
+  "title": "Cheque OCR System — Mobile Banking Integration",
+  "shortTitle": "Cheque OCR",
+  "category": "aiml",
+  "subcategory": "Computer Vision / OCR",
+  "status": "completed",
+  "statusLabel": "Completed",
+  "completion": 100,
+  "featured": false,
+  "period": "Dec 2023 – Jun 2024",
+  "projectType": "Intern Project",
+  "team": {
+    "size": 3,
+    "role": "Core CV Engineer",
+    "initials": ["R", "G", "O"],
+    "members": [
+      { "initial": "R", "name": "Randika Prabashwara", "linkedin": "https://linkedin.com/in/randika-prabashwara", "github": "https://github.com/randikapra" },
+      { "initial": "G", "name": "Team Member" },
+      { "initial": "O", "name": "Team Member" }
+    ]
+  },
+  "tags": ["OCR", "Computer Vision", "Google Cloud Vision", "Azure CV", "Mobile Integration"],
+  "techStack": {
+    "Cloud Vision APIs": ["Google Cloud Vision API", "Azure Computer Vision API"],
+    "Custom Models": ["Custom Vision Models", "Python", "OpenCV"],
+    "Integration": ["Mobile SDK", "REST API", "FastAPI"]
+  },
+  "summary": "Eliminated manual data entry bottlenecks in cheque processing by building a multi-model OCR pipeline using Google Cloud Vision, Azure Computer Vision, and custom vision models for mobile banking integration.",
+  "problem": "Manual cheque data entry was slow, error-prone, and created significant processing bottlenecks. Existing off-the-shelf OCR solutions failed on Sri Lankan bank cheque formats, varying fonts, and handwriting styles.",
+  "solution": "Built a 3-layer OCR pipeline: cloud APIs for initial extraction, custom vision models for domain-specific fields (amount in words, MICR code), and a reconciliation layer that cross-validates results across all three models.",
+  "metrics": [
+    { "label": "Models in Pipeline", "value": "3", "color": "blue", "icon": "fas fa-layer-group" },
+    { "label": "Processing", "value": "Real-time", "color": "green", "icon": "fas fa-bolt" },
+    { "label": "Manual Entry", "value": "Eliminated", "color": "red", "icon": "fas fa-times-circle" }
+  ],
+  "achievements": [
+    "Eliminated manual data entry bottlenecks across bank cheque processing workflows",
+    "Multi-model reconciliation approach handling diverse cheque formats and handwriting styles",
+    "Successfully integrated with mobile banking application via REST API",
+    "Handled MICR code extraction, amount parsing (numerical and words), and signature region detection"
+  ],
+  "expandable": {
+    "pipeline": {
+      "title": "Multi-Model OCR Strategy",
+      "icon": "fas fa-sitemap",
+      "content": "Stage 1: Google Cloud Vision API for initial layout and text detection. Stage 2: Azure Computer Vision for secondary extraction and confidence scoring. Stage 3: Custom vision model trained on Sri Lankan cheque dataset for MICR codes and handwritten amount fields. A reconciliation layer cross-validates outputs and picks the highest-confidence result per field."
+    }
+  },
+  "links": {
+    "github": null
+  }
+}
