@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Randika Prabashwara",
-    "title": "Data Science Engineer",
+    "title": "Research Engineer",
     "siteUrl": "https://randikapra.github.io",
     "description": "Computer Vision Specialist building production AI systems for real-world impact.",
     "photo": "assets/img/randika_web.jpg",
@@ -12,10 +12,10 @@
     "greeting": "Hi there! 👋",
     "name": "Randika Prabashwara",
     "roles": [
-      "Data Science Engineer",
+      "Research Engineer",
       "Computer Vision Specialist",
       "Machine Learning Researcher",
-      "MLOps Engineer",
+      "Data Science Engineer",
       "Generative AI Developer",
       "AI Systems Architect"
     ],
@@ -174,7 +174,7 @@
     {
       "id": "gsm-sr-2025",
       "title": "GSM-SR: Generalized Structure-Informed Multi-Scale GAN for Efficient Image Super-Resolution",
-      "authors": ["Gayani Wickramarathna", "Oshadi Perera", "Randika Prabashwara", "Uthayasanker Thayasivam"],
+      "authors": ["Randika Prabashwara", "Gayani Wickramarathna", "Oshadi Perera", "Uthayasanker Thayasivam"],
       "venue": "2025 10th International Conference on Information Technology Research (ICITR)",
       "year": "2025",
       "type": "Conference Paper",
