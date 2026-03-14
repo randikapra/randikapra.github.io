@@ -182,8 +182,7 @@
       "abstract": "Presents GSM-SR, a generalized structure-informed multi-scale GAN architecture for efficient image super-resolution, achieving superior structural fidelity and perceptual quality on benchmark datasets.",
       "metrics": [
         { "label": "Conference", "value": "ICITR 2025" },
-        { "label": "Publisher", "value": "IEEE" },
-        { "label": "Paper ID", "value": "ICITR2025-145" }
+        { "label": "Publisher", "value": "IEEE" }
       ],
       "links": {
         "pdf": null,
